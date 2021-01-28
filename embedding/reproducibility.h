@@ -6,21 +6,18 @@
 #define SCHICTOOLS_REPRODUCIBILITY_H
 
 #include <utility>
-#include "xtensor/xio.hpp"
-#include "xtensor/xview.hpp"
-#include "xtensor-blas/xlinalg.hpp"
-
+#include <Eigen/Dense>
 using namespace std;
 using namespace std::chrono;
+using namespace Eigen;
+double pearsoncoeff(MatrixXd x, MatrixXd y, double size);
 
-double pearsoncoeff(xt::xarray<double> x, xt::xarray<double> y, double size);
+MatrixXd euc_pdist_square(MatrixXd x);
 
-xt::xarray<double> euc_pdist_square(xt::xarray<double> x);
+MatrixXd zscore_prop(MatrixXd a, int axis);
 
-xt::xarray<double> zscore_prop(xt::xarray<double> a, int axis);
-
-pair<xt::xarray<double>,double>
-pairwise_distance(vector<xt::xarray<double>> all_strata, string similarity_method,
+double
+pairwise_distance(vector<MatrixXd> all_strata, string similarity_method,
                   bool print_time = false, double sigma = .5,
                   unsigned window_size = 10);
 

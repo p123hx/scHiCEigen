@@ -11,11 +11,11 @@
 #include <iostream>
 #include <list>
 #include "processing_utils.h"
-#include <filesystem>
-
+#include <Eigen/Dense>
+#include <vector>
+#include <iterator>
 using namespace std;
-
-static string my_path = "";
+using namespace Eigen;
 
 int _res_change(int length, int res) {
     return ceil((double) length / (double) res);
@@ -26,10 +26,10 @@ struct Flg {
     vector<double> vs;
 };
 
-Flg file_line_generator(string file,
+Flg file_line_generator(const string& file,
                         vector<int> format =
-                        vector<int>(), string
-                        chrom = "", int header = 0, int resolution = 1,
+                        vector<int>(), const string&
+chrom = "", int header = 0, int resolution = 1,
                         bool resolution_adjust = true, double
                         mapping_filter = 0., bool gzip = false) {
     if (gzip) throw "gzip opening not implemented yet";
@@ -75,8 +75,8 @@ Flg file_line_generator(string file,
             double v;
             if (format.size() == 4 || format.size() == 6) v = 1.0;
             else if (format.size() == 5) {
-                v = stod(lst[format[4] - 1]); }
-            else {
+                v = stod(lst[format[4] - 1]);
+            } else {
                 throw "Wrong custom format!";
             }
             ans.p1s.push_back(p1);
@@ -140,13 +140,13 @@ get_chromosome_lengths(const string &ref_str, const string &chromosomes, int res
 
 //ref_map: char int or string int
 pair<set<string>, map<string, int>>
-get_chromosome_lengths(map<string, int> ref_map, string chromosomes,
-                       set<string> chrom_set, int res = 1) {
+get_chromosome_lengths(const map<string, int>& ref_map, const string& chromosomes,
+                       const set<string>& chrom_set, int res = 1) {
     map<string, int> length;
     set<string> chroms;
-    for (auto it = ref_map.begin(); it != ref_map.end(); it++) {
-        length.insert(pair<string, int>(it->first, _res_change(it->second, res)));
-        chroms.insert(it->first);
+    for (auto & it : ref_map) {
+        length.insert(pair<string, int>(it.first, _res_change(it.second, res)));
+        chroms.insert(it.first);
     }
     if (chromosomes == "except X") length.erase("chrX");
     else if (chromosomes == "except Y") length.erase("chrY");
@@ -157,40 +157,41 @@ get_chromosome_lengths(map<string, int> ref_map, string chromosomes,
     map<string, int> length2;
 
     if (!chrom_set.empty()) {
-        for (string elm : chrom_set) {
+        for (const string& elm : chrom_set) {
             length2[elm] = length[elm];
         }
         return make_pair(chrom_set, length2);
     }
     return make_pair(chroms, length2);
 }
-
-pair<xt::xarray<double>, vector<xt::xarray<double>>> load_HiC(string file, map<string,
+pair<MatrixXd, vector<MatrixXd>> load_HiC(string file, map<string,
         int> genome_length,
-                                                              string
-                                                              format,
-                                                              int custom_format,
-                                                              int header,
-                                                              string chromosome,
-                                                              int resolution,
-                                                              bool resolution_adjust,
-                                                              double map_filter,
-                                                              bool sparse,
-                                                              bool gzip,
-                                                              int keep_n_strata,
-                                                              vector<string>
-                                                              operations) {
+                                          string
+                                          format ,
+                                          int custom_format,
+                                          int header ,
+                                          string chromosome ,
+                                          int resolution ,
+                                          bool resolution_adjust ,
+                                          double map_filter ,
+                                          bool sparse ,
+                                          bool gzip ,
+                                          int keep_n_strata ,
+                                          string
+                                          operations
+){
+    vector<MatrixXd> strata = vector<MatrixXd>();
     int size = genome_length[chromosome];
     transform(format.begin(), format.end(), format.begin(), ::tolower);
     Flg gen;
     if (format == "shortest_score") {
-        gen = file_line_generator(file, vector<int>{1, 2, 3, 4,5}, chromosome, header,
+        gen = file_line_generator(file, vector<int>{1, 2, 3, 4, 5}, chromosome, header,
                                   resolution,
                                   resolution_adjust, 0, gzip);
     } else {
         throw "Not implemented yet";
     }
-    xt::xarray<double> mat = xt::zeros<double>({size, size});
+    MatrixXd mat = MatrixXd::Zero(size, size);
     int gen_size = gen.vs.size();
     if (gen.vs.empty()) throw "empty vs";
 
@@ -206,18 +207,14 @@ pair<xt::xarray<double>, vector<xt::xarray<double>>> load_HiC(string file, map<s
         if (p1 != p2) mat(p2, p1) += val;
     }
 
-    if (operations.empty()){cout<<"Warning: operation empty\n";}
-    xt::xarray<double> mat2 = matrix_operation(mat, operations);
-    vector<xt::xarray<double>> strata = vector<xt::xarray<double>>();
+    MatrixXd mat2 = matrix_operation(mat, operations);
+
     if (keep_n_strata) {
-        int matSize = mat2.shape(0);
+        int matSize = mat2.rows();
         for (int i = 0; i < keep_n_strata; i++) {
-            strata.push_back(xt::diagonal(xt::view(mat2, xt::range(i,
-                                                                   xt::placeholders::_),
-                                               xt::range(xt::placeholders::_,
-                                                         matSize - i))));
+            strata.push_back(mat2.block(i,0,matSize-i,matSize-i).diagonal());
         }
-    } else{
+    } else {
         throw "Not implemented yet";
     }
     if (sparse) throw "Not implemented yet";

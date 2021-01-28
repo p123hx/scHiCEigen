@@ -14,7 +14,7 @@ using namespace std;
 scHiCs::scHiCs(vector<string> list_of_files, string reference_genome, int resolution,int
 kernel_shape,int max_distance,
                bool adjust_resolution, string chromosomes, string format,
-               int keep_n_strata, bool store_full_map, vector<string> operations,
+               int keep_n_strata, bool store_full_map, string operations,
                int header, int customized_format, double map_filter, bool gzip,
                bool parallelize, int n_processes, bool sparse) {
     {
@@ -26,18 +26,15 @@ kernel_shape,int max_distance,
         this->num_of_cells = list_of_files.size();
         this->sparse = sparse;
         this->keep_n_strata = keep_n_strata;
-        this->contacts = xt::zeros<int>({this->num_of_cells});
-        this->  short_range = xt::zeros<double>({this->num_of_cells});
-        this->mitotic = xt::zeros<double>({this->num_of_cells});
         this->files = list_of_files;
 
         if (keep_n_strata) {
             for (string ch : this->chromosomes) {
 
                 for (int i = 0; i < keep_n_strata; i++) {
-                    this->strata[ch].push_back(xt::zeros<double>({this->num_of_cells,
-                                                                  this->chromosome_lengths[ch] -
-                                                                  i})) ;
+                    this->strata[ch].push_back(MatrixXd::Zero(this->num_of_cells,
+                                                              this->chromosome_lengths[ch] -
+                                                              i));
                 }
 
             }
@@ -47,7 +44,7 @@ kernel_shape,int max_distance,
         cout << "Loading HiC data...\n";
         if (parallelize) {
             throw "Not implemented yet";
-        } else {
+        }else {
             int idx = 0;
             for (string file : this->files) {
                 cout<<"loading: "<<file<<endl;
@@ -56,8 +53,8 @@ kernel_shape,int max_distance,
                     if (index != string::npos && ch.find("chr") == string::npos) {
                         ch.replace(index, 2, "chr");
                     }
-                    xt::xarray<double> mat;
-                    vector<xt::xarray<double>> strata_local;
+                    MatrixXd mat;
+                    vector<MatrixXd> strata_local;
                     tie(mat, strata_local) = load_HiC(
                             file, this->chromosome_lengths,
                             format, customized_format,
@@ -66,23 +63,11 @@ kernel_shape,int max_distance,
                             map_filter, sparse, gzip,
                             keep_n_strata, operations = operations
                     );
-                    this->contacts[idx] += xt::sum(mat)() / 2 + xt::linalg::trace(mat)
-                                                                        () / 2;
-                    for (int i = 0; i < mat.size(); i++) {
-                        this->short_range(idx) += xt::sum(xt::view(mat, i, xt::range(i,
-                                                                                     i +
-                                                                                     int(2000000 /
-                                                                                         this->resolution))))();
-                        this->mitotic(idx)+=xt::sum(xt::view(mat,i,xt::range(i+int
-                        (2000000 /this->resolution),i+int(12000000/this->resolution))))();
-                    }
-//                    if(store_full_map) {
-//                        cout<<"full_map not implemented!\n";
-//                    }
-                   if(keep_n_strata){
+
+                    if(keep_n_strata){
                         int strata_idx = 0;
-                        for(xt::xarray<double> stratum : strata_local){
-                            xt::row(this->strata[ch][strata_idx],idx) = stratum;
+                        for(MatrixXd stratum : strata_local){
+                            this->strata[ch][strata_idx].row(idx) =stratum.transpose();
                             strata_idx++;
 //                            cout<<stratum<<endl;
                         }
@@ -95,6 +80,7 @@ kernel_shape,int max_distance,
     }
 }
 
-map<string, vector<xt::xarray<double>>> scHiCs::get_strata() {
+
+map<string, vector<MatrixXd>> scHiCs::get_strata() {
     return this->strata;
 }

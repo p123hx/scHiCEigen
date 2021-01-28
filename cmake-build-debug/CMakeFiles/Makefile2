@@ -64,16 +64,16 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/bj/CLionProjects/scHiCtest
+CMAKE_SOURCE_DIR = /Users/bj/CLionProjects/scHiCtestEigen
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/bj/CLionProjects/scHiCtest/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/scHiCtools.dir/all
+all: CMakeFiles/scHiCtest.dir/all
 
 .PHONY : all
 
@@ -83,36 +83,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/scHiCtools.dir/clean
+clean: CMakeFiles/scHiCtest.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/scHiCtools.dir
+# Target rules for target CMakeFiles/scHiCtest.dir
 
 # All Build rule for target.
-CMakeFiles/scHiCtools.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/scHiCtools.dir/build.make CMakeFiles/scHiCtools.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/scHiCtools.dir/build.make CMakeFiles/scHiCtools.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bj/CLionProjects/scHiCtest/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target scHiCtools"
-.PHONY : CMakeFiles/scHiCtools.dir/all
+CMakeFiles/scHiCtest.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scHiCtest.dir/build.make CMakeFiles/scHiCtest.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scHiCtest.dir/build.make CMakeFiles/scHiCtest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target scHiCtest"
+.PHONY : CMakeFiles/scHiCtest.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/scHiCtools.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bj/CLionProjects/scHiCtest/cmake-build-debug/CMakeFiles 8
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/scHiCtools.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bj/CLionProjects/scHiCtest/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/scHiCtools.dir/rule
+CMakeFiles/scHiCtest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/scHiCtest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/scHiCtest.dir/rule
 
 # Convenience name for target.
-scHiCtools: CMakeFiles/scHiCtools.dir/rule
+scHiCtest: CMakeFiles/scHiCtest.dir/rule
 
-.PHONY : scHiCtools
+.PHONY : scHiCtest
 
 # clean rule for target.
-CMakeFiles/scHiCtools.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/scHiCtools.dir/build.make CMakeFiles/scHiCtools.dir/clean
-.PHONY : CMakeFiles/scHiCtools.dir/clean
+CMakeFiles/scHiCtest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scHiCtest.dir/build.make CMakeFiles/scHiCtest.dir/clean
+.PHONY : CMakeFiles/scHiCtest.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

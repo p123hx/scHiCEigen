@@ -59,6 +59,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Users/bj/opt/anaconda3/lib/cmake/xtl/xtlTargets.cmake"
   "/usr/local/lib/cmake/TBB/TBBConfig.cmake"
   "/usr/local/lib/cmake/TBB/TBBConfigVersion.cmake"
+  "/usr/local/share/eigen3/cmake/Eigen3Config.cmake"
+  "/usr/local/share/eigen3/cmake/Eigen3ConfigVersion.cmake"
+  "/usr/local/share/eigen3/cmake/Eigen3Targets.cmake"
   )
 
 # The corresponding makefile is:
@@ -74,5 +77,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/scHiCtools.dir/DependInfo.cmake"
+  "CMakeFiles/scHiCtest.dir/DependInfo.cmake"
   )

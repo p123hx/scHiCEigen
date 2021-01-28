@@ -10,16 +10,16 @@
 #include <vector>
 #include<set>
 #include <map>
-
+#include <Eigen/Dense>
 using namespace std;
-
+using namespace Eigen;
 class scHiCs {
 public:
     scHiCs(vector<string> list_of_files, string reference_genome, int resolution, int
     kernel_shape,int max_distance, bool
-    adjust_resolution = true,  string chromosomes = "all", string
+           adjust_resolution = true,  string chromosomes = "all", string
            format = "customized", int keep_n_strata = 10, bool store_full_map = false,
-           vector<string> operations = {}, int header = 0, int customized_format =
+           string operations="", int header = 0, int customized_format =
     0,
            double map_filter = 0., bool gzip = false,
            bool parallelize = false, int n_processes = 0,bool sparse = false
@@ -27,14 +27,12 @@ public:
     );
 
 
-    map<string, vector<xt::xarray<double>>> get_strata();
+    map<string, vector<MatrixXd>> get_strata();
 private:
     vector<string> files, operations;
     string reference_genome, format;
     set<string> chromosomes;
-    xt::xarray<int> contacts;
-    xt::xarray<double> short_range, mitotic;
-    map<string, vector<xt::xarray<double>>> strata;
+    map<string, vector<MatrixXd>> strata;
     map<string, int> chromosome_lengths;
     int
             resolution, keep_n_strata, header, customized_format, n_processes,
