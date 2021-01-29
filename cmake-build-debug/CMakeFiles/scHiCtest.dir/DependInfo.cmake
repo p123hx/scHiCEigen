@@ -21,6 +21,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/Users/bj/opt/anaconda3/include"
+  "/usr/local/include"
   "/usr/local/include/eigen3"
   )
 

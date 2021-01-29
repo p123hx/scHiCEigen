@@ -11,30 +11,30 @@
 				<Option working_dir="/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="scHiCtest">
@@ -46,19 +46,14 @@
 				<Compiler>
 					<Add option="-DHAVE_CBLAS=1"/>
 					<Add directory="/Users/bj/opt/anaconda3/include"/>
-					<Add directory="/usr/local/include/eigen3"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/local/include/eigen3"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 scHiCtest"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 scHiCtest"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="scHiCtest/fast">
@@ -70,19 +65,14 @@
 				<Compiler>
 					<Add option="-DHAVE_CBLAS=1"/>
 					<Add directory="/Users/bj/opt/anaconda3/include"/>
-					<Add directory="/usr/local/include/eigen3"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/local/include/eigen3"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 scHiCtest/fast"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 scHiCtest/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>

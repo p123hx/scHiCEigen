@@ -25,10 +25,13 @@ int main(){
                         "chr8", "chr9", "chr10", "chr11", "chr12", "chr13", "chr14",
                         "chr15", "chr16", "chr17", "chr18", "chr19"}; //since "except Y"
     double tsum = 0.0;
-    for (string s:chrs) {
-        cout << "\n" << s << ":\n";
-        vector<MatrixXd> chr = y.get_strata()[s];
-        tsum += (fastHicP(chr));
+    for(int i=100;i>0;i--){
+        for (string s:chrs) {
+            cout << "\n" << s << ":\n";
+            vector<MatrixXd> chr = y.get_strata()[s];
+            tsum += (fastHicP(chr));
+        }
     }
-    cout << "time1 + time2 fastHiCrep 100 cells: " << tsum << " in milliseconds\n";
+
+    cout << "Total average fastHiCrep " << tsum/100 << " in milliseconds\n";
 }

@@ -174,6 +174,7 @@ scHiCtest: CMakeFiles/scHiCtest.dir/embedding/embedding.cpp.o
 scHiCtest: CMakeFiles/scHiCtest.dir/test/test_reproducibility.cpp.o
 scHiCtest: CMakeFiles/scHiCtest.dir/load/processing_utils.cpp.o
 scHiCtest: CMakeFiles/scHiCtest.dir/build.make
+scHiCtest: /usr/local/lib/libomp.dylib
 scHiCtest: CMakeFiles/scHiCtest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable scHiCtest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scHiCtest.dir/link.txt --verbose=$(VERBOSE)
