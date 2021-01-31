@@ -4,7 +4,7 @@
 
 #ifndef SCHICTOOLS_LOAD_HIC_FILE_H
 #define SCHICTOOLS_LOAD_HIC_FILE_H
-
+#include <vector>
 #include <cmath>
 #include <set>
 #include <map>
