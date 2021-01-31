@@ -6,9 +6,9 @@
 #include "ContactMaps.h"
 #include "load_hic_file.h"
 #include <vector>
-#include<set>
+#include <set>
 #include <map>
-
+#include <tuple>
 using namespace std;
 
 scHiCs::scHiCs(vector<string> list_of_files, string reference_genome, int resolution,int
@@ -19,8 +19,7 @@ kernel_shape,int max_distance,
                bool parallelize, int n_processes, bool sparse) {
     {
         this->resolution = resolution;
-        tie(this->chromosomes,
-            this->chromosome_lengths) = get_chromosome_lengths(reference_genome,
+        tie(this->chromosomes,this->chromosome_lengths) = get_chromosome_lengths(reference_genome,
                                                                chromosomes,
                                                                resolution);
         this->num_of_cells = list_of_files.size();

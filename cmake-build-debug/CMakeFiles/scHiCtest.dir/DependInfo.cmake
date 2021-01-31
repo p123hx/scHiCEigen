@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/bj/CLionProjects/scHiCtestEigen/embedding/embedding.cpp" "/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/CMakeFiles/scHiCtest.dir/embedding/embedding.cpp.o"
   "/Users/bj/CLionProjects/scHiCtestEigen/embedding/reproducibility.cpp" "/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/CMakeFiles/scHiCtest.dir/embedding/reproducibility.cpp.o"
   "/Users/bj/CLionProjects/scHiCtestEigen/load/ContactMaps.cpp" "/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/CMakeFiles/scHiCtest.dir/load/ContactMaps.cpp.o"
   "/Users/bj/CLionProjects/scHiCtestEigen/load/load_hic_file.cpp" "/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/CMakeFiles/scHiCtest.dir/load/load_hic_file.cpp.o"
@@ -20,7 +19,6 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/Users/bj/opt/anaconda3/include"
   "/usr/local/include"
   "/usr/local/include/eigen3"
   )

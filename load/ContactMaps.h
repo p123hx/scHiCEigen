@@ -8,7 +8,7 @@
 #include <string>
 #include "load_hic_file.h"
 #include <vector>
-#include<set>
+#include <set>
 #include <map>
 #include <Eigen/Dense>
 using namespace std;
@@ -27,19 +27,18 @@ public:
     );
 
 
-    map<string, vector<MatrixXd>> get_strata();
+    map<string, vector<MatrixXd> > get_strata();
 private:
     vector<string> files, operations;
     string reference_genome, format;
     set<string> chromosomes;
-    map<string, vector<MatrixXd>> strata;
+    map<string, vector<MatrixXd> > strata;
     map<string, int> chromosome_lengths;
     int
             resolution, keep_n_strata, header, customized_format, n_processes,
             num_of_cells;
     bool
             adjust_resolution, sparse, store_full_map, gzip, parallelize;
-
 };
 
 #endif //SCHICTOOLS_CONTACTMAPS_H

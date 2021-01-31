@@ -17,15 +17,15 @@
 using namespace std;
 using namespace Eigen;
 
-pair<set<string>, map<string, int>>
+pair<set<string>, map<string, int> >
 get_chromosome_lengths(const string &ref_str, const string &chromosomes,
                        int res);
 
-pair<set<string>, map<string, int>>
+pair<set<string>, map<string, int> >
 get_chromosome_lengths(map<string, int> ref_map, string chromosomes,
                        int res);
 
-pair<MatrixXd, vector<MatrixXd>> load_HiC(string file, map<string,
+pair<MatrixXd, vector<MatrixXd> > load_HiC(string file, map<string,
         int> genome_length,
                                           string
                                           format = "",

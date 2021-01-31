@@ -13,19 +13,20 @@
 #include "omp.h"
 #include <Eigen/Core>
 #include <thread>
+#include <cctype>
+#include <algorithm>
 
-#define EIGEN_USE_MKL_ALL
 using namespace std;
 using namespace Eigen;
+using namespace std::chrono;
 
 double
 pairwise_distance(vector<MatrixXd> all_strata, string similarity_method, bool
 print_time, double sigma, unsigned window_size
 ) {
-    Eigen::initParallel();
+    setNbThreads(16);
     transform(similarity_method.begin(), similarity_method.end(),
               similarity_method.begin(), ::tolower);
-
     chrono::high_resolution_clock::time_point t0, t1, t2, t3, t4;
     MatrixXd zscores;
 
@@ -48,7 +49,7 @@ print_time, double sigma, unsigned window_size
                                 icol).sqrt();
                 weighted_std.col(i) = sqrt(n_bins - i) * std;
 #pragma omp critical
-                score_col += icol;
+                { score_col += icol; }
             }
         }
 
@@ -62,15 +63,13 @@ print_time, double sigma, unsigned window_size
                 all_strata[9];
         t2 = high_resolution_clock::now();
         MatrixXd tmp1(n_cells, n_cells), tmp2(n_cells, n_cells);
-        setNbThreads(16);
-
-        //mkl_set_num_threads(16);
         tmp1.noalias() = (scores * scores.transpose());
         tmp2.noalias() = (weighted_std * (weighted_std.transpose()));
+        t3 = high_resolution_clock::now();
         int j;
 #pragma omp parallel
         {
-            #pragma omp for
+#pragma omp for
             for (int i = 0; i < n_cells; i++)
                 for (int j = 0; j < n_cells; j++) {
                     if (tmp2(i, j) == 0) {
@@ -83,27 +82,26 @@ print_time, double sigma, unsigned window_size
                     else distance_mat(i, j) = sqrt(2 - 2.0 * tmpdiv);
                 }
         }
+        t4 = high_resolution_clock::now();
 
-
-        t3 = high_resolution_clock::now();
 
     } else {
         throw "Method {0} not supported. Only \"inner_product\", \"HiCRep\", \"old_hicrep\" and \"Selfish\".";
     }
-
+// #TODO: DEBUG
 
     std::chrono::duration<double, std::milli> duration1 = (t1 - t0);
     std::chrono::duration<double, std::milli> duration2 = (t2 - t1);
     std::chrono::duration<double, std::milli> duration3 = (t3 - t2);
-//    std::chrono::duration<double, std::milli> duration4 = (t4 - t3);
-    std::chrono::duration<double, std::milli> duration_total = (t3 - t0);
+    std::chrono::duration<double, std::milli> duration4 = (t4 - t3);
+    std::chrono::duration<double, std::milli> duration_total = (t4 - t0);
     double tout = duration_total.count();
-    cout << "Time 1:" << duration1.count()<< endl
-         << "Time 2:" << duration2.count()<< endl
-         << "Time 3:" << duration3.count()<< endl
-         //         << "Time 4:" << duration4.count() << endl
-         << "total: " << tout <<endl;
-    cout<<distance_mat<<endl;
+    cout << "Time 1:" << duration1.count() << endl
+         << "Time 2:" << duration2.count() << endl
+         << "Time 3:" << duration3.count() << endl
+         << "Time 4:" << duration4.count() << endl
+         << "total: " << tout << endl;
+    //cout<<distance_mat<<endl;
     return tout;
 }
 

@@ -143,33 +143,6 @@ scHiCtest/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/scHiCtest.dir/build.make CMakeFiles/scHiCtest.dir/build
 .PHONY : scHiCtest/fast
 
-embedding/embedding.o: embedding/embedding.cpp.o
-
-.PHONY : embedding/embedding.o
-
-# target to build an object file
-embedding/embedding.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/scHiCtest.dir/build.make CMakeFiles/scHiCtest.dir/embedding/embedding.cpp.o
-.PHONY : embedding/embedding.cpp.o
-
-embedding/embedding.i: embedding/embedding.cpp.i
-
-.PHONY : embedding/embedding.i
-
-# target to preprocess a source file
-embedding/embedding.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/scHiCtest.dir/build.make CMakeFiles/scHiCtest.dir/embedding/embedding.cpp.i
-.PHONY : embedding/embedding.cpp.i
-
-embedding/embedding.s: embedding/embedding.cpp.s
-
-.PHONY : embedding/embedding.s
-
-# target to generate assembly for a file
-embedding/embedding.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/scHiCtest.dir/build.make CMakeFiles/scHiCtest.dir/embedding/embedding.cpp.s
-.PHONY : embedding/embedding.cpp.s
-
 embedding/reproducibility.o: embedding/reproducibility.cpp.o
 
 .PHONY : embedding/reproducibility.o
@@ -314,9 +287,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... scHiCtest"
-	@echo "... embedding/embedding.o"
-	@echo "... embedding/embedding.i"
-	@echo "... embedding/embedding.s"
 	@echo "... embedding/reproducibility.o"
 	@echo "... embedding/reproducibility.i"
 	@echo "... embedding/reproducibility.s"

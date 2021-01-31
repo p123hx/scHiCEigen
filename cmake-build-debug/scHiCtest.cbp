@@ -5,7 +5,7 @@
 		<Option title="scHiCtest"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\opt\;CMake Files\..\..\opt\anaconda3\;CMake Files\..\..\opt\anaconda3\lib\;CMake Files\..\..\opt\anaconda3\lib\cmake\;CMake Files\..\..\opt\anaconda3\lib\cmake\xtl\;CMake Files\..\..\opt\anaconda3\lib\cmake\xtensor\;CMake Files\..\..\opt\anaconda3\lib\cmake\xtensor-blas\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\TBB\;CMake Files\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\usr\local\share\eigen3\;CMake Files\..\..\..\..\usr\local\share\eigen3\cmake\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\usr\local\share\eigen3\;CMake Files\..\..\..\..\usr\local\share\eigen3\cmake\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug"/>
@@ -45,7 +45,6 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DHAVE_CBLAS=1"/>
-					<Add directory="/Users/bj/opt/anaconda3/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/local/include/eigen3"/>
 				</Compiler>
@@ -64,7 +63,6 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DHAVE_CBLAS=1"/>
-					<Add directory="/Users/bj/opt/anaconda3/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/local/include/eigen3"/>
 				</Compiler>
@@ -76,12 +74,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/bj/CLionProjects/scHiCtestEigen/embedding/embedding.cpp">
-			<Option target="scHiCtest"/>
-		</Unit>
-		<Unit filename="/Users/bj/CLionProjects/scHiCtestEigen/embedding/embedding.h">
-			<Option target="scHiCtest"/>
-		</Unit>
 		<Unit filename="/Users/bj/CLionProjects/scHiCtestEigen/embedding/reproducibility.cpp">
 			<Option target="scHiCtest"/>
 		</Unit>
@@ -111,39 +103,6 @@
 		</Unit>
 		<Unit filename="/Users/bj/CLionProjects/scHiCtestEigen/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
-		</Unit>
-		<Unit filename="/Users/bj/CLionProjects/scHiCtestEigen/../../opt/anaconda3/lib/cmake/xtl/xtlConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\opt\anaconda3\lib\cmake\xtl\"/>
-		</Unit>
-		<Unit filename="/Users/bj/CLionProjects/scHiCtestEigen/../../opt/anaconda3/lib/cmake/xtl/xtlConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\opt\anaconda3\lib\cmake\xtl\"/>
-		</Unit>
-		<Unit filename="/Users/bj/CLionProjects/scHiCtestEigen/../../opt/anaconda3/lib/cmake/xtl/xtlTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\opt\anaconda3\lib\cmake\xtl\"/>
-		</Unit>
-		<Unit filename="/Users/bj/CLionProjects/scHiCtestEigen/../../opt/anaconda3/lib/cmake/xtensor/xtensorConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\opt\anaconda3\lib\cmake\xtensor\"/>
-		</Unit>
-		<Unit filename="/Users/bj/CLionProjects/scHiCtestEigen/../../opt/anaconda3/lib/cmake/xtensor/xtensorConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\opt\anaconda3\lib\cmake\xtensor\"/>
-		</Unit>
-		<Unit filename="/Users/bj/CLionProjects/scHiCtestEigen/../../opt/anaconda3/lib/cmake/xtensor/xtensorTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\opt\anaconda3\lib\cmake\xtensor\"/>
-		</Unit>
-		<Unit filename="/Users/bj/CLionProjects/scHiCtestEigen/../../opt/anaconda3/lib/cmake/xtensor-blas/xtensor-blasConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\opt\anaconda3\lib\cmake\xtensor-blas\"/>
-		</Unit>
-		<Unit filename="/Users/bj/CLionProjects/scHiCtestEigen/../../opt/anaconda3/lib/cmake/xtensor-blas/xtensor-blasConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\opt\anaconda3\lib\cmake\xtensor-blas\"/>
-		</Unit>
-		<Unit filename="/Users/bj/CLionProjects/scHiCtestEigen/../../opt/anaconda3/lib/cmake/xtensor-blas/xtensor-blasTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\opt\anaconda3\lib\cmake\xtensor-blas\"/>
-		</Unit>
-		<Unit filename="/Users/bj/CLionProjects/scHiCtestEigen/../../../../usr/local/lib/cmake/TBB/TBBConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\TBB\"/>
-		</Unit>
-		<Unit filename="/Users/bj/CLionProjects/scHiCtestEigen/../../../../usr/local/lib/cmake/TBB/TBBConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\TBB\"/>
 		</Unit>
 		<Unit filename="/Users/bj/CLionProjects/scHiCtestEigen/../../../../usr/local/share/eigen3/cmake/Eigen3Config.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\share\eigen3\cmake\"/>

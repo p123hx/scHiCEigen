@@ -8,7 +8,6 @@
 #include <utility>
 #include <Eigen/Dense>
 using namespace std;
-using namespace std::chrono;
 using namespace Eigen;
 double pearsoncoeff(MatrixXd x, MatrixXd y, double size);
 

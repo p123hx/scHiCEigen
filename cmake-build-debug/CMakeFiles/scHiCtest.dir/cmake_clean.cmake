@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/scHiCtest.dir/embedding/embedding.cpp.o"
   "CMakeFiles/scHiCtest.dir/embedding/reproducibility.cpp.o"
   "CMakeFiles/scHiCtest.dir/load/ContactMaps.cpp.o"
   "CMakeFiles/scHiCtest.dir/load/load_hic_file.cpp.o"
