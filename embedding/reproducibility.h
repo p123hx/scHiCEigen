@@ -7,11 +7,10 @@
 
 #include <utility>
 #include <Eigen/Dense>
+#include <vector>
 using namespace std;
 using namespace Eigen;
 double pearsoncoeff(MatrixXd x, MatrixXd y, double size);
-
-MatrixXd euc_pdist_square(MatrixXd x);
 
 MatrixXd zscore_prop(MatrixXd a, int axis);
 

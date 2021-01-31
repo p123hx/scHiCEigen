@@ -11,16 +11,50 @@
 #include <chrono>
 #include <ctime>
 #include "omp.h"
-#include <Eigen/Core>
+#include <mkl.h>
 #include <thread>
 #include <cctype>
 #include <algorithm>
 #include <cfloat>
-
+#define EIGEN_USE_MKL_ALL
+#include <Eigen/Core>
 #define MAXD 1e12
 using namespace std;
 using namespace Eigen;
 using namespace std::chrono;
+
+MatrixXd euc_pdist_square(MatrixXd x, int row, int col, double sigma) {
+    vector<double> tmp(row * (row - 1) / 2);
+//#pragma omp parallel for
+    {
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < i; j++) {
+                double dum = 0;
+                for (int k = 0; k < col; k++) {
+                    dum += pow(x(i, k) - x(j, k), 2);
+                }
+                tmp.push_back(sqrt(dum));
+            }
+        }
+    }
+
+    MatrixXd ans = MatrixXd::Zero(row, row);
+#pragma omp parallel for
+    {
+        for (int i = 0; i < row; i++)
+            for (int j = 0; j < i; j++) {
+                int ind;
+                ind =
+                        row * (row - 1) / 2 - (row - i) * (row - i - 1) / 2 + j - i - 1;
+                double tmp_v;
+                tmp_v = tmp[ind];
+                tmp_v = sqrt(2 - 2 * exp(-sigma * tmp_v));
+                ans(j, i) = tmp_v;
+                ans(i, j) = tmp_v;
+            }
+    }
+    return ans;
+}
 
 vector<int> z_pos(MatrixXd s1, MatrixXd s2) {
     vector<int> z;
@@ -50,7 +84,9 @@ pairwise_distance(vector<MatrixXd> all_strata, string similarity_method, bool
 print_time, double sigma, unsigned window_size
 ) {
     //#TODO Change thread
-    setNbThreads(16);
+    mkl_set_num_threads(56);
+    setNbThreads(56);
+
     transform(similarity_method.begin(), similarity_method.end(),
               similarity_method.begin(), ::tolower);
     chrono::high_resolution_clock::time_point t0, t1, t2, t3, t4;
@@ -144,6 +180,35 @@ print_time, double sigma, unsigned window_size
                     else distance_mat(i, j) = sqrt(2 - 2.0 * tmp);
                 }
         }
+        t4 = high_resolution_clock::now();
+    } else if (similarity_method == "selfish") {
+        int n_windows = n_bins / window_size;
+        MatrixXd all_windows = MatrixXd::Zero(n_cells, n_bins);
+#pragma omp parallel for
+        {
+            for (int i = 0; i < n_strata; i++)
+                for (int j = 0; j < n_windows; j++) {
+                    all_windows.col(j) += all_strata[i].block(0, j * window_size,
+                                                              n_cells,
+                                                              window_size - i).rowwise
+                            ().sum();
+                }
+        }
+        t1 = high_resolution_clock::now();
+        int f_col = n_windows * (n_windows - 1) / 2;
+        MatrixXd fingerprints = MatrixXd::Zero(n_cells, f_col);
+#pragma omp parallel for
+        {
+            for (int i = 0; i < n_windows; i++)
+                for (int j = 0; j < n_windows - i - 1; j++) {
+                    int k = (int) ((2 * n_windows - i - 1) * i * 0.5 + j);
+                    for (int z = 0; z < n_cells; z++) {
+                        fingerprints(z, k) = double(
+                                all_windows(z, i) > all_windows(z, j));
+                    }
+                }
+        }
+        distance_mat = euc_pdist_square(fingerprints, n_cells, f_col, sigma);
         t4 = high_resolution_clock::now();
     } else if (similarity_method == "old_hicrep") {
         MatrixXd similarity = MatrixXd::Zero(n_cells, n_cells);
