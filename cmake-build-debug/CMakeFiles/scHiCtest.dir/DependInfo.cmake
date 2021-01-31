@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/bj/CLionProjects/scHiCtestEigen/embedding/reproducibility.cpp" "/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/CMakeFiles/scHiCtest.dir/embedding/reproducibility.cpp.o"
-  "/Users/bj/CLionProjects/scHiCtestEigen/load/ContactMaps.cpp" "/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/CMakeFiles/scHiCtest.dir/load/ContactMaps.cpp.o"
-  "/Users/bj/CLionProjects/scHiCtestEigen/load/load_hic_file.cpp" "/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/CMakeFiles/scHiCtest.dir/load/load_hic_file.cpp.o"
-  "/Users/bj/CLionProjects/scHiCtestEigen/load/processing_utils.cpp" "/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/CMakeFiles/scHiCtest.dir/load/processing_utils.cpp.o"
-  "/Users/bj/CLionProjects/scHiCtestEigen/test/test_reproducibility.cpp" "/Users/bj/CLionProjects/scHiCtestEigen/cmake-build-debug/CMakeFiles/scHiCtest.dir/test/test_reproducibility.cpp.o"
+  "/Users/bj/CLionProjects/eigenScHiC/embedding/reproducibility.cpp" "/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles/scHiCtest.dir/embedding/reproducibility.cpp.o"
+  "/Users/bj/CLionProjects/eigenScHiC/load/ContactMaps.cpp" "/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles/scHiCtest.dir/load/ContactMaps.cpp.o"
+  "/Users/bj/CLionProjects/eigenScHiC/load/load_hic_file.cpp" "/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles/scHiCtest.dir/load/load_hic_file.cpp.o"
+  "/Users/bj/CLionProjects/eigenScHiC/load/processing_utils.cpp" "/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles/scHiCtest.dir/load/processing_utils.cpp.o"
+  "/Users/bj/CLionProjects/eigenScHiC/test/test_reproducibility.cpp" "/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles/scHiCtest.dir/test/test_reproducibility.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

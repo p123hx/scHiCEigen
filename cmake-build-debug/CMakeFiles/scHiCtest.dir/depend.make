@@ -638,7 +638,6 @@ CMakeFiles/scHiCtest.dir/load/load_hic_file.cpp.o: /usr/local/include/omp.h
 
 CMakeFiles/scHiCtest.dir/load/processing_utils.cpp.o: ../load/processing_utils.cpp
 CMakeFiles/scHiCtest.dir/load/processing_utils.cpp.o: ../load/processing_utils.h
-CMakeFiles/scHiCtest.dir/load/processing_utils.cpp.o: /Users/bj/opt/anaconda3/include/omp.h
 CMakeFiles/scHiCtest.dir/load/processing_utils.cpp.o: /usr/local/include/eigen3/Eigen/Cholesky
 CMakeFiles/scHiCtest.dir/load/processing_utils.cpp.o: /usr/local/include/eigen3/Eigen/Core
 CMakeFiles/scHiCtest.dir/load/processing_utils.cpp.o: /usr/local/include/eigen3/Eigen/Dense
@@ -846,6 +845,7 @@ CMakeFiles/scHiCtest.dir/load/processing_utils.cpp.o: /usr/local/include/eigen3/
 CMakeFiles/scHiCtest.dir/load/processing_utils.cpp.o: /usr/local/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h
 CMakeFiles/scHiCtest.dir/load/processing_utils.cpp.o: /usr/local/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
 CMakeFiles/scHiCtest.dir/load/processing_utils.cpp.o: /usr/local/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
+CMakeFiles/scHiCtest.dir/load/processing_utils.cpp.o: /usr/local/include/omp.h
 
 CMakeFiles/scHiCtest.dir/test/test_reproducibility.cpp.o: ../embedding/reproducibility.h
 CMakeFiles/scHiCtest.dir/test/test_reproducibility.cpp.o: ../load/ContactMaps.h

@@ -12,59 +12,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="364857e1-62bc-4fd6-a1e8-6a826123fe46" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/test/test_all.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/test/test_all.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.3/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.3/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.3/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.3/CompilerIdC/CMakeCCompilerId.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.3/CompilerIdCXX/CMakeCXXCompilerId.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/embedding/reproducibility.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/embedding/reproducibility.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/load/ContactMaps.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/load/ContactMaps.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/load/load_hic_file.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/load/load_hic_file.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/load/processing_utils.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/load/processing_utils.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/test/test_reproducibility.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scHiCtest.dir/test/test_reproducibility.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/scHiCtest" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/scHiCtest" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/scHiCtest.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/scHiCtest.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/scHiCtools" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/embedding/embedding.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/embedding/embedding.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/embedding/reproducibility.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/reproducibility.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/embedding/reproducibility.h" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/reproducibility.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/load/ContactMaps.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/load/ContactMaps.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/load/ContactMaps.h" beforeDir="false" afterPath="$PROJECT_DIR$/load/ContactMaps.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/load/load_hic_file.h" beforeDir="false" afterPath="$PROJECT_DIR$/load/load_hic_file.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/cmake-build-debug/CMakeFiles/scHiCtools.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/cmake-build-debug/CMakeFiles/scHiCtools.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/cmake-build-debug/CMakeFiles/scHiCtools.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/cmake-build-debug/CMakeFiles/scHiCtools.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/cmake-build-debug/CMakeFiles/scHiCtools.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/cmake-build-debug/CMakeFiles/scHiCtools.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/cmake-build-debug/CMakeFiles/scHiCtools.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/cmake-build-debug/CMakeFiles/scHiCtools.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/cmake-build-debug/CMakeFiles/scHiCtools.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/cmake-build-debug/CMakeFiles/scHiCtools.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/cmake-build-debug/scHiCtools.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/cmake-build-debug/scHiCtools.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/cmake-build-debug/CMakeFiles/scHiCtools.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/cmake-build-debug/CMakeFiles/scHiCtools.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/cmake-build-debug/CMakeFiles/scHiCtools.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/cmake-build-debug/CMakeFiles/scHiCtools.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/cmake-build-debug/CMakeFiles/scHiCtools.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/cmake-build-debug/CMakeFiles/scHiCtools.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/cmake-build-debug/CMakeFiles/scHiCtools.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/cmake-build-debug/CMakeFiles/scHiCtools.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/cmake-build-debug/CMakeFiles/scHiCtools.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/cmake-build-debug/CMakeFiles/scHiCtools.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/cmake-build-debug/scHiCtools.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/cmake-build-debug/scHiCtools.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/test/test_reproducibility.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/hongxi@172.17.8.111/scHiCtools/test/test_reproducibility.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools/test/test_reproducibility.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scHiCtools/scHiCtools/test/test_reproducibility.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scHiCtools/scHiCtools" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test_reproducibility.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_reproducibility.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,6 +89,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="debugger.dataViews" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../scHiCtoolsEigen/test/test_reproducibility.cpp" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -115,19 +99,14 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.scHiCtest">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="scHiCtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="scHiCtest" TARGET_NAME="scHiCtest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="scHiCtest" RUN_TARGET_NAME="scHiCtest">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="default_target" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
@@ -268,7 +247,13 @@
       <workItem from="1612019845763" duration="5192000" />
       <workItem from="1612027888247" duration="609000" />
       <workItem from="1612035918676" duration="907000" />
-      <workItem from="1612039796144" duration="4529000" />
+      <workItem from="1612039796144" duration="8764000" />
+      <workItem from="1612100826948" duration="496000" />
+      <workItem from="1612101734288" duration="767000" />
+      <workItem from="1612102552008" duration="1148000" />
+      <workItem from="1612104436552" duration="7000" />
+      <workItem from="1612104475001" duration="1000" />
+      <workItem from="1612104478674" duration="6193000" />
     </task>
     <servers />
   </component>
