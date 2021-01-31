@@ -40,7 +40,7 @@ MatrixXd euc_pdist_square(MatrixXd x, int row, int col, double sigma) {
 
     MatrixXd ans = MatrixXd::Zero(row, row);
 #pragma omp parallel for
-    {
+    
         for (int i = 0; i < row; i++)
             for (int j = 0; j < i; j++) {
                 int ind;
@@ -52,18 +52,16 @@ MatrixXd euc_pdist_square(MatrixXd x, int row, int col, double sigma) {
                 ans(j, i) = tmp_v;
                 ans(i, j) = tmp_v;
             }
-    }
+    
     return ans;
 }
 
 vector<int> z_pos(MatrixXd s1, MatrixXd s2) {
     vector<int> z;
 #pragma omp parallel for
-    {
         for (int i = 0; i < s1.size(); i++) {
             if (!(s1(i) == 0 && s2(i) == 0)) z.push_back(i);
         }
-    }
     sort(z.begin(), z.end());
     return z;
 }
@@ -71,11 +69,9 @@ vector<int> z_pos(MatrixXd s1, MatrixXd s2) {
 MatrixXd zero_delete(MatrixXd s, vector<int> z) {
     VectorXd ans(z.size());
 #pragma omp parallel for
-    {
         for (int i = 0; i < z.size(); i++) {
             ans(i) = s(z[i]);
         }
-    }
     return ans;
 }
 
@@ -125,7 +121,6 @@ print_time, double sigma, unsigned window_size
         t3 = high_resolution_clock::now();
         int j;
 #pragma omp parallel for
-        {
             for (int i = 0; i < n_cells; i++)
                 for (int j = 0; j < n_cells; j++) {
                     if (tmp2(i, j) == 0) {
@@ -137,7 +132,6 @@ print_time, double sigma, unsigned window_size
                     else if (tmpdiv <= -1) distance_mat(i, j) = 2;
                     else distance_mat(i, j) = sqrt(2 - 2.0 * tmpdiv);
                 }
-        }
         t4 = high_resolution_clock::now();
 
 
@@ -171,7 +165,6 @@ print_time, double sigma, unsigned window_size
         MatrixXd inner = (scores * scores.transpose()) / score_col;
 
 #pragma omp parallel for
-        {
             for (int i = 0; i < n_cells; i++)
                 for (int j = 0; j < n_cells; j++) {
                     double tmp = inner(i, j);
@@ -179,13 +172,11 @@ print_time, double sigma, unsigned window_size
                     else if (tmp <= -1) distance_mat(i, j) = 2.0;
                     else distance_mat(i, j) = sqrt(2 - 2.0 * tmp);
                 }
-        }
         t4 = high_resolution_clock::now();
     } else if (similarity_method == "selfish") {
         int n_windows = n_bins / window_size;
         MatrixXd all_windows = MatrixXd::Zero(n_cells, n_bins);
 #pragma omp parallel for
-        {
             for (int i = 0; i < n_strata; i++)
                 for (int j = 0; j < n_windows; j++) {
                     all_windows.col(j) += all_strata[i].block(0, j * window_size,
@@ -193,12 +184,10 @@ print_time, double sigma, unsigned window_size
                                                               window_size - i).rowwise
                             ().sum();
                 }
-        }
         t1 = high_resolution_clock::now();
         int f_col = n_windows * (n_windows - 1) / 2;
         MatrixXd fingerprints = MatrixXd::Zero(n_cells, f_col);
 #pragma omp parallel for
-        {
             for (int i = 0; i < n_windows; i++)
                 for (int j = 0; j < n_windows - i - 1; j++) {
                     int k = (int) ((2 * n_windows - i - 1) * i * 0.5 + j);
@@ -207,7 +196,6 @@ print_time, double sigma, unsigned window_size
                                 all_windows(z, i) > all_windows(z, j));
                     }
                 }
-        }
         distance_mat = euc_pdist_square(fingerprints, n_cells, f_col, sigma);
         t4 = high_resolution_clock::now();
     } else if (similarity_method == "old_hicrep") {

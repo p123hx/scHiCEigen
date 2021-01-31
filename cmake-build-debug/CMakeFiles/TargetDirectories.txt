@@ -1,3 +1,3 @@
-/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles/scHiCtest.dir
+/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/scHiCEigen.dir

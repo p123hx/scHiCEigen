@@ -352,3 +352,866 @@ Linking C executable cmTC_8fe45
 
 
 
+The system is: Linux - 3.10.0-1160.11.1.el7.x86_64 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /home/hongxi/anaconda3/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/3.19.3/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /opt/gcc/8.4/modbin/g++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/3.19.3/CompilerIdCXX/a.out"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_8048b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8048b.dir/build.make CMakeFiles/cmTC_8048b.dir/build
+gmake[1]: Entering directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8048b.dir/CMakeCCompilerABI.c.o
+/home/hongxi/anaconda3/bin/cc   -v -o CMakeFiles/cmTC_8048b.dir/CMakeCCompilerABI.c.o -c /opt/cmake/3.19.3/share/cmake-3.19/Modules/CMakeCCompilerABI.c
+Reading specs from /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/specs
+COLLECT_GCC=/home/hongxi/anaconda3/bin/cc
+Target: x86_64-pc-linux-gnu
+Configured with: ./configure --prefix=/home/jenkins/.conda/envs/_build/gcc --with-gxx-include-dir=/home/jenkins/.conda/envs/_build/gcc/include/c++ --bindir=/home/jenkins/.conda/envs/_build/gcc/../bin --datarootdir=/home/jenkins/.conda/envs/_build/gcc/../share --libdir=/home/jenkins/.conda/envs/_build/gcc/../lib --with-gmp=/home/jenkins/.conda/envs/_build --with-mpfr=/home/jenkins/.conda/envs/_build --with-mpc=/home/jenkins/.conda/envs/_build --with-isl=/home/jenkins/.conda/envs/_build --with-cloog=/home/jenkins/.conda/envs/_build --enable-checking=release --with-tune=generic --disable-multilib
+Thread model: posix
+gcc version 6.1.0 (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8048b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ /home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/cc1 -quiet -v -iprefix /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/ -isystem /usr/include/x86_64-linux-gnu -isystem /usr/include/i686-linux-gnu -isystem /usr/include/i386-linux-gnu /opt/cmake/3.19.3/share/cmake-3.19/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_8048b.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccOJ7tH7.s
+GNU C11 (GCC) version 6.1.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 6.1.0, GMP version 6.1.1, MPFR version 3.1.4, MPC version 1.0.3, isl version 0.15
+warning: GMP header version 6.1.1 differs from library version 6.1.2.
+warning: MPFR header version 3.1.4 differs from library version 3.1.1.
+warning: MPC header version 1.0.3 differs from library version 1.1.0.
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/usr/include/i686-linux-gnu"
+ignoring nonexistent directory "/usr/include/i386-linux-gnu"
+ignoring nonexistent directory "/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../../../../x86_64-pc-linux-gnu/include"
+ignoring duplicate directory "/home/hongxi/anaconda3/lib/gcc/../../gcc/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/include"
+ignoring duplicate directory "/home/hongxi/anaconda3/lib/gcc/../../gcc/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/include-fixed"
+ignoring nonexistent directory "/home/hongxi/anaconda3/lib/gcc/../../gcc/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../../../../x86_64-pc-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/include
+ /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/include-fixed
+ /usr/local/include
+ /home/hongxi/anaconda3/lib/gcc/../../gcc/include
+ /usr/include
+End of search list.
+GNU C11 (GCC) version 6.1.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 6.1.0, GMP version 6.1.1, MPFR version 3.1.4, MPC version 1.0.3, isl version 0.15
+warning: GMP header version 6.1.1 differs from library version 6.1.2.
+warning: MPFR header version 3.1.4 differs from library version 3.1.1.
+warning: MPC header version 1.0.3 differs from library version 1.1.0.
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 1de0630f5d321576998db5f05bc69076
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8048b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_8048b.dir/CMakeCCompilerABI.c.o /tmp/ccOJ7tH7.s
+GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7
+COMPILER_PATH=/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/:/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/
+LIBRARY_PATH=/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/:/home/hongxi/anaconda3/bin/../lib/gcc/:/lib/../lib64/:/usr/lib/../lib64/:/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8048b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+Linking C executable cmTC_8048b
+/opt/cmake/3.19.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8048b.dir/link.txt --verbose=1
+/home/hongxi/anaconda3/bin/cc  -v CMakeFiles/cmTC_8048b.dir/CMakeCCompilerABI.c.o -o cmTC_8048b 
+Reading specs from /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/specs
+COLLECT_GCC=/home/hongxi/anaconda3/bin/cc
+COLLECT_LTO_WRAPPER=/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: ./configure --prefix=/home/jenkins/.conda/envs/_build/gcc --with-gxx-include-dir=/home/jenkins/.conda/envs/_build/gcc/include/c++ --bindir=/home/jenkins/.conda/envs/_build/gcc/../bin --datarootdir=/home/jenkins/.conda/envs/_build/gcc/../share --libdir=/home/jenkins/.conda/envs/_build/gcc/../lib --with-gmp=/home/jenkins/.conda/envs/_build --with-mpfr=/home/jenkins/.conda/envs/_build --with-mpc=/home/jenkins/.conda/envs/_build --with-isl=/home/jenkins/.conda/envs/_build --with-cloog=/home/jenkins/.conda/envs/_build --enable-checking=release --with-tune=generic --disable-multilib
+Thread model: posix
+gcc version 6.1.0 (GCC) 
+COMPILER_PATH=/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/:/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/
+LIBRARY_PATH=/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/:/home/hongxi/anaconda3/bin/../lib/gcc/:/lib/../lib64/:/usr/lib/../lib64/:/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8048b' '-mtune=generic' '-march=x86-64'
+ /home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/collect2 -plugin /home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/liblto_plugin.so -plugin-opt=/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cchdNPO6.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_8048b /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crt1.o /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crti.o /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crtbegin.o -L/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0 -L/home/hongxi/anaconda3/bin/../lib/gcc -L/lib/../lib64 -L/usr/lib/../lib64 -L/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../.. -L/usr/x86_64-redhat-linux/lib64 -L/usr/lib64 -L/usr/local/lib64 -L/lib64 -L/usr/x86_64-redhat-linux/lib -L/usr/local/lib -L/lib -L/usr/lib CMakeFiles/cmTC_8048b.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crtend.o /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8048b' '-mtune=generic' '-march=x86-64'
+gmake[1]: Leaving directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/include]
+    add: [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/include-fixed]
+    add: [/usr/local/include]
+    add: [/home/hongxi/anaconda3/lib/gcc/../../gcc/include]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/include] ==> [/home/hongxi/anaconda3/lib/gcc/x86_64-pc-linux-gnu/6.1.0/include]
+  collapse include dir [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/include-fixed] ==> [/home/hongxi/anaconda3/lib/gcc/x86_64-pc-linux-gnu/6.1.0/include-fixed]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/home/hongxi/anaconda3/lib/gcc/../../gcc/include] ==> [/home/hongxi/anaconda3/gcc/include]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/home/hongxi/anaconda3/lib/gcc/x86_64-pc-linux-gnu/6.1.0/include;/home/hongxi/anaconda3/lib/gcc/x86_64-pc-linux-gnu/6.1.0/include-fixed;/usr/local/include;/home/hongxi/anaconda3/gcc/include;/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_8048b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8048b.dir/build.make CMakeFiles/cmTC_8048b.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_8048b.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/home/hongxi/anaconda3/bin/cc   -v -o CMakeFiles/cmTC_8048b.dir/CMakeCCompilerABI.c.o -c /opt/cmake/3.19.3/share/cmake-3.19/Modules/CMakeCCompilerABI.c]
+  ignore line: [Reading specs from /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/specs]
+  ignore line: [COLLECT_GCC=/home/hongxi/anaconda3/bin/cc]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ./configure --prefix=/home/jenkins/.conda/envs/_build/gcc --with-gxx-include-dir=/home/jenkins/.conda/envs/_build/gcc/include/c++ --bindir=/home/jenkins/.conda/envs/_build/gcc/../bin --datarootdir=/home/jenkins/.conda/envs/_build/gcc/../share --libdir=/home/jenkins/.conda/envs/_build/gcc/../lib --with-gmp=/home/jenkins/.conda/envs/_build --with-mpfr=/home/jenkins/.conda/envs/_build --with-mpc=/home/jenkins/.conda/envs/_build --with-isl=/home/jenkins/.conda/envs/_build --with-cloog=/home/jenkins/.conda/envs/_build --enable-checking=release --with-tune=generic --disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 6.1.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8048b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/cc1 -quiet -v -iprefix /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/ -isystem /usr/include/x86_64-linux-gnu -isystem /usr/include/i686-linux-gnu -isystem /usr/include/i386-linux-gnu /opt/cmake/3.19.3/share/cmake-3.19/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_8048b.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccOJ7tH7.s]
+  ignore line: [GNU C11 (GCC) version 6.1.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 6.1.0  GMP version 6.1.1  MPFR version 3.1.4  MPC version 1.0.3  isl version 0.15]
+  ignore line: [warning: GMP header version 6.1.1 differs from library version 6.1.2.]
+  ignore line: [warning: MPFR header version 3.1.4 differs from library version 3.1.1.]
+  ignore line: [warning: MPC header version 1.0.3 differs from library version 1.1.0.]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/include/x86_64-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/usr/include/i686-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/usr/include/i386-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [ignoring duplicate directory "/home/hongxi/anaconda3/lib/gcc/../../gcc/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/include"]
+  ignore line: [ignoring duplicate directory "/home/hongxi/anaconda3/lib/gcc/../../gcc/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/home/hongxi/anaconda3/lib/gcc/../../gcc/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/include]
+  ignore line: [ /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/include-fixed]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /home/hongxi/anaconda3/lib/gcc/../../gcc/include]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C11 (GCC) version 6.1.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 6.1.0  GMP version 6.1.1  MPFR version 3.1.4  MPC version 1.0.3  isl version 0.15]
+  ignore line: [warning: GMP header version 6.1.1 differs from library version 6.1.2.]
+  ignore line: [warning: MPFR header version 3.1.4 differs from library version 3.1.1.]
+  ignore line: [warning: MPC header version 1.0.3 differs from library version 1.1.0.]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 1de0630f5d321576998db5f05bc69076]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8048b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_8048b.dir/CMakeCCompilerABI.c.o /tmp/ccOJ7tH7.s]
+  ignore line: [GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7]
+  ignore line: [COMPILER_PATH=/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/:/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/]
+  ignore line: [LIBRARY_PATH=/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/:/home/hongxi/anaconda3/bin/../lib/gcc/:/lib/../lib64/:/usr/lib/../lib64/:/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8048b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking C executable cmTC_8048b]
+  ignore line: [/opt/cmake/3.19.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8048b.dir/link.txt --verbose=1]
+  ignore line: [/home/hongxi/anaconda3/bin/cc  -v CMakeFiles/cmTC_8048b.dir/CMakeCCompilerABI.c.o -o cmTC_8048b ]
+  ignore line: [Reading specs from /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/specs]
+  ignore line: [COLLECT_GCC=/home/hongxi/anaconda3/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ./configure --prefix=/home/jenkins/.conda/envs/_build/gcc --with-gxx-include-dir=/home/jenkins/.conda/envs/_build/gcc/include/c++ --bindir=/home/jenkins/.conda/envs/_build/gcc/../bin --datarootdir=/home/jenkins/.conda/envs/_build/gcc/../share --libdir=/home/jenkins/.conda/envs/_build/gcc/../lib --with-gmp=/home/jenkins/.conda/envs/_build --with-mpfr=/home/jenkins/.conda/envs/_build --with-mpc=/home/jenkins/.conda/envs/_build --with-isl=/home/jenkins/.conda/envs/_build --with-cloog=/home/jenkins/.conda/envs/_build --enable-checking=release --with-tune=generic --disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 6.1.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/:/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/]
+  ignore line: [LIBRARY_PATH=/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/:/home/hongxi/anaconda3/bin/../lib/gcc/:/lib/../lib64/:/usr/lib/../lib64/:/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8048b' '-mtune=generic' '-march=x86-64']
+  link line: [ /home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/collect2 -plugin /home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/liblto_plugin.so -plugin-opt=/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cchdNPO6.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_8048b /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crt1.o /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crti.o /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crtbegin.o -L/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0 -L/home/hongxi/anaconda3/bin/../lib/gcc -L/lib/../lib64 -L/usr/lib/../lib64 -L/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../.. -L/usr/x86_64-redhat-linux/lib64 -L/usr/lib64 -L/usr/local/lib64 -L/lib64 -L/usr/x86_64-redhat-linux/lib -L/usr/local/lib -L/lib -L/usr/lib CMakeFiles/cmTC_8048b.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crtend.o /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crtn.o]
+    arg [/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cchdNPO6.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_8048b] ==> ignore
+    arg [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crt1.o] ==> ignore
+    arg [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crti.o] ==> ignore
+    arg [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crtbegin.o] ==> ignore
+    arg [-L/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0] ==> dir [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0]
+    arg [-L/home/hongxi/anaconda3/bin/../lib/gcc] ==> dir [/home/hongxi/anaconda3/bin/../lib/gcc]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../..] ==> dir [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../..]
+    arg [-L/usr/x86_64-redhat-linux/lib64] ==> dir [/usr/x86_64-redhat-linux/lib64]
+    arg [-L/usr/lib64] ==> dir [/usr/lib64]
+    arg [-L/usr/local/lib64] ==> dir [/usr/local/lib64]
+    arg [-L/lib64] ==> dir [/lib64]
+    arg [-L/usr/x86_64-redhat-linux/lib] ==> dir [/usr/x86_64-redhat-linux/lib]
+    arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
+    arg [-L/lib] ==> dir [/lib]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [CMakeFiles/cmTC_8048b.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crtend.o] ==> ignore
+    arg [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crtn.o] ==> ignore
+  collapse library dir [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0] ==> [/home/hongxi/anaconda3/lib/gcc/x86_64-pc-linux-gnu/6.1.0]
+  collapse library dir [/home/hongxi/anaconda3/bin/../lib/gcc] ==> [/home/hongxi/anaconda3/lib/gcc]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../..] ==> [/home/hongxi/anaconda3/lib]
+  collapse library dir [/usr/x86_64-redhat-linux/lib64] ==> [/usr/x86_64-redhat-linux/lib64]
+  collapse library dir [/usr/lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/local/lib64] ==> [/usr/local/lib64]
+  collapse library dir [/lib64] ==> [/lib64]
+  collapse library dir [/usr/x86_64-redhat-linux/lib] ==> [/usr/x86_64-redhat-linux/lib]
+  collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+  collapse library dir [/lib] ==> [/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit dirs: [/home/hongxi/anaconda3/lib/gcc/x86_64-pc-linux-gnu/6.1.0;/home/hongxi/anaconda3/lib/gcc;/lib64;/usr/lib64;/home/hongxi/anaconda3/lib;/usr/x86_64-redhat-linux/lib64;/usr/local/lib64;/usr/x86_64-redhat-linux/lib;/usr/local/lib;/lib;/usr/lib]
+  implicit fwks: []
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_2e9e8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2e9e8.dir/build.make CMakeFiles/cmTC_2e9e8.dir/build
+gmake[1]: Entering directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2e9e8.dir/CMakeCXXCompilerABI.cpp.o
+/opt/gcc/8.4/modbin/g++   -v -o CMakeFiles/cmTC_2e9e8.dir/CMakeCXXCompilerABI.cpp.o -c /opt/cmake/3.19.3/share/cmake-3.19/Modules/CMakeCXXCompilerABI.cpp
+Using built-in specs.
+COLLECT_GCC=/opt/gcc/8.4/modbin/../bin/g++
+Target: x86_64-pc-linux-gnu
+Configured with: ./configure --prefix=/opt/gcc/8.4 --with-gmp=/opt/gcc/8.4 --with-mpfr=/opt/gcc/8.4 --with-mpc=/opt/gcc/8.4 --with-isl=/opt/gcc/8.4 --enable-multilib --with-system-zlib
+Thread model: posix
+gcc version 8.4.0 (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2e9e8.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/cc1plus -quiet -v -D_GNU_SOURCE /opt/cmake/3.19.3/share/cmake-3.19/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_2e9e8.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccMt9gmc.s
+GNU C++14 (GCC) version 8.4.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 8.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../x86_64-pc-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../include/c++/8.4.0
+ /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../include/c++/8.4.0/x86_64-pc-linux-gnu
+ /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../include/c++/8.4.0/backward
+ /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include
+ /usr/local/include
+ /opt/gcc/8.4/include
+ /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include-fixed
+ /usr/include
+End of search list.
+GNU C++14 (GCC) version 8.4.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 8.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: b0bc57be34150a8cd7f861f55c767bed
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2e9e8.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_2e9e8.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccMt9gmc.s
+GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7
+COMPILER_PATH=/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2e9e8.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+Linking CXX executable cmTC_2e9e8
+/opt/cmake/3.19.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2e9e8.dir/link.txt --verbose=1
+/opt/gcc/8.4/modbin/g++  -v CMakeFiles/cmTC_2e9e8.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_2e9e8 
+Using built-in specs.
+COLLECT_GCC=/opt/gcc/8.4/modbin/../bin/g++
+COLLECT_LTO_WRAPPER=/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: ./configure --prefix=/opt/gcc/8.4 --with-gmp=/opt/gcc/8.4 --with-mpfr=/opt/gcc/8.4 --with-mpc=/opt/gcc/8.4 --with-isl=/opt/gcc/8.4 --enable-multilib --with-system-zlib
+Thread model: posix
+gcc version 8.4.0 (GCC) 
+COMPILER_PATH=/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2e9e8' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/collect2 -plugin /opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/liblto_plugin.so -plugin-opt=/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cco1JAxf.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_2e9e8 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/crtbegin.o -L/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0 -L/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../.. CMakeFiles/cmTC_2e9e8.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/crtend.o /lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2e9e8' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+gmake[1]: Leaving directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../include/c++/8.4.0]
+    add: [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../include/c++/8.4.0/x86_64-pc-linux-gnu]
+    add: [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../include/c++/8.4.0/backward]
+    add: [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include]
+    add: [/usr/local/include]
+    add: [/opt/gcc/8.4/include]
+    add: [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include-fixed]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../include/c++/8.4.0] ==> [/opt/gcc/8.4/include/c++/8.4.0]
+  collapse include dir [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../include/c++/8.4.0/x86_64-pc-linux-gnu] ==> [/opt/gcc/8.4/include/c++/8.4.0/x86_64-pc-linux-gnu]
+  collapse include dir [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../include/c++/8.4.0/backward] ==> [/opt/gcc/8.4/include/c++/8.4.0/backward]
+  collapse include dir [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include] ==> [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/opt/gcc/8.4/include] ==> [/opt/gcc/8.4/include]
+  collapse include dir [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include-fixed] ==> [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include-fixed]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/opt/gcc/8.4/include/c++/8.4.0;/opt/gcc/8.4/include/c++/8.4.0/x86_64-pc-linux-gnu;/opt/gcc/8.4/include/c++/8.4.0/backward;/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include;/usr/local/include;/opt/gcc/8.4/include;/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include-fixed;/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_2e9e8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2e9e8.dir/build.make CMakeFiles/cmTC_2e9e8.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_2e9e8.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/opt/gcc/8.4/modbin/g++   -v -o CMakeFiles/cmTC_2e9e8.dir/CMakeCXXCompilerABI.cpp.o -c /opt/cmake/3.19.3/share/cmake-3.19/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/gcc/8.4/modbin/../bin/g++]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ./configure --prefix=/opt/gcc/8.4 --with-gmp=/opt/gcc/8.4 --with-mpfr=/opt/gcc/8.4 --with-mpc=/opt/gcc/8.4 --with-isl=/opt/gcc/8.4 --enable-multilib --with-system-zlib]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.4.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2e9e8.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/cc1plus -quiet -v -D_GNU_SOURCE /opt/cmake/3.19.3/share/cmake-3.19/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_2e9e8.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccMt9gmc.s]
+  ignore line: [GNU C++14 (GCC) version 8.4.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 8.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../include/c++/8.4.0]
+  ignore line: [ /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../include/c++/8.4.0/x86_64-pc-linux-gnu]
+  ignore line: [ /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../include/c++/8.4.0/backward]
+  ignore line: [ /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /opt/gcc/8.4/include]
+  ignore line: [ /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include-fixed]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++14 (GCC) version 8.4.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 8.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: b0bc57be34150a8cd7f861f55c767bed]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2e9e8.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_2e9e8.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccMt9gmc.s]
+  ignore line: [GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7]
+  ignore line: [COMPILER_PATH=/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2e9e8.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking CXX executable cmTC_2e9e8]
+  ignore line: [/opt/cmake/3.19.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2e9e8.dir/link.txt --verbose=1]
+  ignore line: [/opt/gcc/8.4/modbin/g++  -v CMakeFiles/cmTC_2e9e8.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_2e9e8 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/gcc/8.4/modbin/../bin/g++]
+  ignore line: [COLLECT_LTO_WRAPPER=/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ./configure --prefix=/opt/gcc/8.4 --with-gmp=/opt/gcc/8.4 --with-mpfr=/opt/gcc/8.4 --with-mpc=/opt/gcc/8.4 --with-isl=/opt/gcc/8.4 --enable-multilib --with-system-zlib]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.4.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2e9e8' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/collect2 -plugin /opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/liblto_plugin.so -plugin-opt=/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cco1JAxf.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_2e9e8 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/crtbegin.o -L/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0 -L/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../.. CMakeFiles/cmTC_2e9e8.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/crtend.o /lib/../lib64/crtn.o]
+    arg [/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cco1JAxf.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_2e9e8] ==> ignore
+    arg [/lib/../lib64/crt1.o] ==> ignore
+    arg [/lib/../lib64/crti.o] ==> ignore
+    arg [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/crtbegin.o] ==> ignore
+    arg [-L/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0] ==> dir [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0]
+    arg [-L/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../lib64] ==> dir [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../..] ==> dir [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../..]
+    arg [CMakeFiles/cmTC_2e9e8.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/crtend.o] ==> ignore
+    arg [/lib/../lib64/crtn.o] ==> ignore
+  collapse library dir [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0] ==> [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0]
+  collapse library dir [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../lib64] ==> [/opt/gcc/8.4/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../..] ==> [/opt/gcc/8.4/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit dirs: [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0;/opt/gcc/8.4/lib64;/lib64;/usr/lib64;/opt/gcc/8.4/lib]
+  implicit fwks: []
+
+
+Detecting C OpenMP compiler ABI info compiled with the following output:
+Change Dir: /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_620a9/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_620a9.dir/build.make CMakeFiles/cmTC_620a9.dir/build
+gmake[1]: Entering directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_620a9.dir/OpenMPTryFlag.c.o
+/home/hongxi/anaconda3/bin/cc   -fopenmp -v -o CMakeFiles/cmTC_620a9.dir/OpenMPTryFlag.c.o -c /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Reading specs from /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/specs
+COLLECT_GCC=/home/hongxi/anaconda3/bin/cc
+Target: x86_64-pc-linux-gnu
+Configured with: ./configure --prefix=/home/jenkins/.conda/envs/_build/gcc --with-gxx-include-dir=/home/jenkins/.conda/envs/_build/gcc/include/c++ --bindir=/home/jenkins/.conda/envs/_build/gcc/../bin --datarootdir=/home/jenkins/.conda/envs/_build/gcc/../share --libdir=/home/jenkins/.conda/envs/_build/gcc/../lib --with-gmp=/home/jenkins/.conda/envs/_build --with-mpfr=/home/jenkins/.conda/envs/_build --with-mpc=/home/jenkins/.conda/envs/_build --with-isl=/home/jenkins/.conda/envs/_build --with-cloog=/home/jenkins/.conda/envs/_build --enable-checking=release --with-tune=generic --disable-multilib
+Thread model: posix
+gcc version 6.1.0 (GCC) 
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_620a9.dir/OpenMPTryFlag.c.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread'
+ /home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/cc1 -quiet -v -iprefix /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/ -D_REENTRANT -isystem /usr/include/x86_64-linux-gnu -isystem /usr/include/i686-linux-gnu -isystem /usr/include/i386-linux-gnu /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/FindOpenMP/OpenMPTryFlag.c -quiet -dumpbase OpenMPTryFlag.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_620a9.dir/OpenMPTryFlag.c.o -version -fopenmp -o /tmp/cc4r2lhg.s
+GNU C11 (GCC) version 6.1.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 6.1.0, GMP version 6.1.1, MPFR version 3.1.4, MPC version 1.0.3, isl version 0.15
+warning: GMP header version 6.1.1 differs from library version 6.1.2.
+warning: MPFR header version 3.1.4 differs from library version 3.1.1.
+warning: MPC header version 1.0.3 differs from library version 1.1.0.
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/usr/include/i686-linux-gnu"
+ignoring nonexistent directory "/usr/include/i386-linux-gnu"
+ignoring nonexistent directory "/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../../../../x86_64-pc-linux-gnu/include"
+ignoring duplicate directory "/home/hongxi/anaconda3/lib/gcc/../../gcc/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/include"
+ignoring duplicate directory "/home/hongxi/anaconda3/lib/gcc/../../gcc/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/include-fixed"
+ignoring nonexistent directory "/home/hongxi/anaconda3/lib/gcc/../../gcc/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../../../../x86_64-pc-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/include
+ /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/include-fixed
+ /usr/local/include
+ /home/hongxi/anaconda3/lib/gcc/../../gcc/include
+ /usr/include
+End of search list.
+GNU C11 (GCC) version 6.1.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 6.1.0, GMP version 6.1.1, MPFR version 3.1.4, MPC version 1.0.3, isl version 0.15
+warning: GMP header version 6.1.1 differs from library version 6.1.2.
+warning: MPFR header version 3.1.4 differs from library version 3.1.1.
+warning: MPC header version 1.0.3 differs from library version 1.1.0.
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 1de0630f5d321576998db5f05bc69076
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_620a9.dir/OpenMPTryFlag.c.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread'
+ as -v --64 -o CMakeFiles/cmTC_620a9.dir/OpenMPTryFlag.c.o /tmp/cc4r2lhg.s
+GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7
+COMPILER_PATH=/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/:/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/
+LIBRARY_PATH=/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/:/home/hongxi/anaconda3/bin/../lib/gcc/:/lib/../lib64/:/usr/lib/../lib64/:/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_620a9.dir/OpenMPTryFlag.c.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread'
+Linking C executable cmTC_620a9
+/opt/cmake/3.19.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_620a9.dir/link.txt --verbose=1
+/home/hongxi/anaconda3/bin/cc  -fopenmp -v CMakeFiles/cmTC_620a9.dir/OpenMPTryFlag.c.o -o cmTC_620a9  -v 
+Reading specs from /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/specs
+COLLECT_GCC=/home/hongxi/anaconda3/bin/cc
+COLLECT_LTO_WRAPPER=/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: ./configure --prefix=/home/jenkins/.conda/envs/_build/gcc --with-gxx-include-dir=/home/jenkins/.conda/envs/_build/gcc/include/c++ --bindir=/home/jenkins/.conda/envs/_build/gcc/../bin --datarootdir=/home/jenkins/.conda/envs/_build/gcc/../share --libdir=/home/jenkins/.conda/envs/_build/gcc/../lib --with-gmp=/home/jenkins/.conda/envs/_build --with-mpfr=/home/jenkins/.conda/envs/_build --with-mpc=/home/jenkins/.conda/envs/_build --with-isl=/home/jenkins/.conda/envs/_build --with-cloog=/home/jenkins/.conda/envs/_build --enable-checking=release --with-tune=generic --disable-multilib
+Thread model: posix
+gcc version 6.1.0 (GCC) 
+COMPILER_PATH=/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/:/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/
+LIBRARY_PATH=/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/:/home/hongxi/anaconda3/bin/../lib/gcc/:/lib/../lib64/:/usr/lib/../lib64/:/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../../:/lib/:/usr/lib/
+Reading specs from /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../../libgomp.spec
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_620a9' '-v' '-mtune=generic' '-march=x86-64' '-pthread'
+ /home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/collect2 -plugin /home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/liblto_plugin.so -plugin-opt=/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccZjKjYi.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_620a9 /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crt1.o /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crti.o /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crtbegin.o -L/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0 -L/home/hongxi/anaconda3/bin/../lib/gcc -L/lib/../lib64 -L/usr/lib/../lib64 -L/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../.. -L/usr/x86_64-redhat-linux/lib64 -L/usr/lib64 -L/usr/local/lib64 -L/lib64 -L/usr/x86_64-redhat-linux/lib -L/usr/local/lib -L/lib -L/usr/lib CMakeFiles/cmTC_620a9.dir/OpenMPTryFlag.c.o -lgomp -lgcc --as-needed -lgcc_s --no-as-needed -lpthread -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crtend.o /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crtn.o
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_620a9' '-v' '-mtune=generic' '-march=x86-64' '-pthread'
+gmake[1]: Leaving directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C OpenMP implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_620a9/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_620a9.dir/build.make CMakeFiles/cmTC_620a9.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_620a9.dir/OpenMPTryFlag.c.o]
+  ignore line: [/home/hongxi/anaconda3/bin/cc   -fopenmp -v -o CMakeFiles/cmTC_620a9.dir/OpenMPTryFlag.c.o -c /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/FindOpenMP/OpenMPTryFlag.c]
+  ignore line: [Reading specs from /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/specs]
+  ignore line: [COLLECT_GCC=/home/hongxi/anaconda3/bin/cc]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ./configure --prefix=/home/jenkins/.conda/envs/_build/gcc --with-gxx-include-dir=/home/jenkins/.conda/envs/_build/gcc/include/c++ --bindir=/home/jenkins/.conda/envs/_build/gcc/../bin --datarootdir=/home/jenkins/.conda/envs/_build/gcc/../share --libdir=/home/jenkins/.conda/envs/_build/gcc/../lib --with-gmp=/home/jenkins/.conda/envs/_build --with-mpfr=/home/jenkins/.conda/envs/_build --with-mpc=/home/jenkins/.conda/envs/_build --with-isl=/home/jenkins/.conda/envs/_build --with-cloog=/home/jenkins/.conda/envs/_build --enable-checking=release --with-tune=generic --disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 6.1.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_620a9.dir/OpenMPTryFlag.c.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread']
+  ignore line: [ /home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/cc1 -quiet -v -iprefix /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/ -D_REENTRANT -isystem /usr/include/x86_64-linux-gnu -isystem /usr/include/i686-linux-gnu -isystem /usr/include/i386-linux-gnu /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/FindOpenMP/OpenMPTryFlag.c -quiet -dumpbase OpenMPTryFlag.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_620a9.dir/OpenMPTryFlag.c.o -version -fopenmp -o /tmp/cc4r2lhg.s]
+  ignore line: [GNU C11 (GCC) version 6.1.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 6.1.0  GMP version 6.1.1  MPFR version 3.1.4  MPC version 1.0.3  isl version 0.15]
+  ignore line: [warning: GMP header version 6.1.1 differs from library version 6.1.2.]
+  ignore line: [warning: MPFR header version 3.1.4 differs from library version 3.1.1.]
+  ignore line: [warning: MPC header version 1.0.3 differs from library version 1.1.0.]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/include/x86_64-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/usr/include/i686-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/usr/include/i386-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [ignoring duplicate directory "/home/hongxi/anaconda3/lib/gcc/../../gcc/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/include"]
+  ignore line: [ignoring duplicate directory "/home/hongxi/anaconda3/lib/gcc/../../gcc/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/home/hongxi/anaconda3/lib/gcc/../../gcc/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/include]
+  ignore line: [ /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/include-fixed]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /home/hongxi/anaconda3/lib/gcc/../../gcc/include]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C11 (GCC) version 6.1.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 6.1.0  GMP version 6.1.1  MPFR version 3.1.4  MPC version 1.0.3  isl version 0.15]
+  ignore line: [warning: GMP header version 6.1.1 differs from library version 6.1.2.]
+  ignore line: [warning: MPFR header version 3.1.4 differs from library version 3.1.1.]
+  ignore line: [warning: MPC header version 1.0.3 differs from library version 1.1.0.]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 1de0630f5d321576998db5f05bc69076]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_620a9.dir/OpenMPTryFlag.c.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_620a9.dir/OpenMPTryFlag.c.o /tmp/cc4r2lhg.s]
+  ignore line: [GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7]
+  ignore line: [COMPILER_PATH=/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/:/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/]
+  ignore line: [LIBRARY_PATH=/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/:/home/hongxi/anaconda3/bin/../lib/gcc/:/lib/../lib64/:/usr/lib/../lib64/:/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_620a9.dir/OpenMPTryFlag.c.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread']
+  ignore line: [Linking C executable cmTC_620a9]
+  ignore line: [/opt/cmake/3.19.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_620a9.dir/link.txt --verbose=1]
+  ignore line: [/home/hongxi/anaconda3/bin/cc  -fopenmp -v CMakeFiles/cmTC_620a9.dir/OpenMPTryFlag.c.o -o cmTC_620a9  -v ]
+  ignore line: [Reading specs from /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/specs]
+  ignore line: [COLLECT_GCC=/home/hongxi/anaconda3/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ./configure --prefix=/home/jenkins/.conda/envs/_build/gcc --with-gxx-include-dir=/home/jenkins/.conda/envs/_build/gcc/include/c++ --bindir=/home/jenkins/.conda/envs/_build/gcc/../bin --datarootdir=/home/jenkins/.conda/envs/_build/gcc/../share --libdir=/home/jenkins/.conda/envs/_build/gcc/../lib --with-gmp=/home/jenkins/.conda/envs/_build --with-mpfr=/home/jenkins/.conda/envs/_build --with-mpc=/home/jenkins/.conda/envs/_build --with-isl=/home/jenkins/.conda/envs/_build --with-cloog=/home/jenkins/.conda/envs/_build --enable-checking=release --with-tune=generic --disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 6.1.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/:/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/]
+  ignore line: [LIBRARY_PATH=/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/:/home/hongxi/anaconda3/bin/../lib/gcc/:/lib/../lib64/:/usr/lib/../lib64/:/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../../:/lib/:/usr/lib/]
+  ignore line: [Reading specs from /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../../libgomp.spec]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_620a9' '-v' '-mtune=generic' '-march=x86-64' '-pthread']
+  link line: [ /home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/collect2 -plugin /home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/liblto_plugin.so -plugin-opt=/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccZjKjYi.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_620a9 /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crt1.o /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crti.o /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crtbegin.o -L/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0 -L/home/hongxi/anaconda3/bin/../lib/gcc -L/lib/../lib64 -L/usr/lib/../lib64 -L/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../.. -L/usr/x86_64-redhat-linux/lib64 -L/usr/lib64 -L/usr/local/lib64 -L/lib64 -L/usr/x86_64-redhat-linux/lib -L/usr/local/lib -L/lib -L/usr/lib CMakeFiles/cmTC_620a9.dir/OpenMPTryFlag.c.o -lgomp -lgcc --as-needed -lgcc_s --no-as-needed -lpthread -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crtend.o /home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crtn.o]
+    arg [/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/hongxi/anaconda3/bin/../gcc/libexec/gcc/x86_64-pc-linux-gnu/6.1.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccZjKjYi.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_620a9] ==> ignore
+    arg [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crt1.o] ==> ignore
+    arg [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crti.o] ==> ignore
+    arg [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crtbegin.o] ==> ignore
+    arg [-L/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0] ==> dir [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0]
+    arg [-L/home/hongxi/anaconda3/bin/../lib/gcc] ==> dir [/home/hongxi/anaconda3/bin/../lib/gcc]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../..] ==> dir [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../..]
+    arg [-L/usr/x86_64-redhat-linux/lib64] ==> dir [/usr/x86_64-redhat-linux/lib64]
+    arg [-L/usr/lib64] ==> dir [/usr/lib64]
+    arg [-L/usr/local/lib64] ==> dir [/usr/local/lib64]
+    arg [-L/lib64] ==> dir [/lib64]
+    arg [-L/usr/x86_64-redhat-linux/lib] ==> dir [/usr/x86_64-redhat-linux/lib]
+    arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
+    arg [-L/lib] ==> dir [/lib]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [CMakeFiles/cmTC_620a9.dir/OpenMPTryFlag.c.o] ==> ignore
+    arg [-lgomp] ==> lib [gomp]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lpthread] ==> lib [pthread]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crtend.o] ==> ignore
+    arg [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/crtn.o] ==> ignore
+  collapse library dir [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0] ==> [/home/hongxi/anaconda3/lib/gcc/x86_64-pc-linux-gnu/6.1.0]
+  collapse library dir [/home/hongxi/anaconda3/bin/../lib/gcc] ==> [/home/hongxi/anaconda3/lib/gcc]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/home/hongxi/anaconda3/bin/../lib/gcc/x86_64-pc-linux-gnu/6.1.0/../../..] ==> [/home/hongxi/anaconda3/lib]
+  collapse library dir [/usr/x86_64-redhat-linux/lib64] ==> [/usr/x86_64-redhat-linux/lib64]
+  collapse library dir [/usr/lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/local/lib64] ==> [/usr/local/lib64]
+  collapse library dir [/lib64] ==> [/lib64]
+  collapse library dir [/usr/x86_64-redhat-linux/lib] ==> [/usr/x86_64-redhat-linux/lib]
+  collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+  collapse library dir [/lib] ==> [/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  implicit libs: [gomp;gcc;gcc_s;pthread;c;gcc;gcc_s]
+  implicit dirs: [/home/hongxi/anaconda3/lib/gcc/x86_64-pc-linux-gnu/6.1.0;/home/hongxi/anaconda3/lib/gcc;/lib64;/usr/lib64;/home/hongxi/anaconda3/lib;/usr/x86_64-redhat-linux/lib64;/usr/local/lib64;/usr/x86_64-redhat-linux/lib;/usr/local/lib;/lib;/usr/lib]
+  implicit fwks: []
+
+
+Detecting CXX OpenMP compiler ABI info compiled with the following output:
+Change Dir: /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_465f1/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_465f1.dir/build.make CMakeFiles/cmTC_465f1.dir/build
+gmake[1]: Entering directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_465f1.dir/OpenMPTryFlag.cpp.o
+/opt/gcc/8.4/modbin/g++   -fopenmp -v -o CMakeFiles/cmTC_465f1.dir/OpenMPTryFlag.cpp.o -c /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Using built-in specs.
+COLLECT_GCC=/opt/gcc/8.4/modbin/../bin/g++
+Target: x86_64-pc-linux-gnu
+Configured with: ./configure --prefix=/opt/gcc/8.4 --with-gmp=/opt/gcc/8.4 --with-mpfr=/opt/gcc/8.4 --with-mpc=/opt/gcc/8.4 --with-isl=/opt/gcc/8.4 --enable-multilib --with-system-zlib
+Thread model: posix
+gcc version 8.4.0 (GCC) 
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_465f1.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread'
+ /opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/cc1plus -quiet -v -D_GNU_SOURCE -D_REENTRANT /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp -quiet -dumpbase OpenMPTryFlag.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_465f1.dir/OpenMPTryFlag.cpp.o -version -fopenmp -o /tmp/ccaMgvgl.s
+GNU C++14 (GCC) version 8.4.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 8.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../x86_64-pc-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../include/c++/8.4.0
+ /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../include/c++/8.4.0/x86_64-pc-linux-gnu
+ /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../include/c++/8.4.0/backward
+ /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include
+ /usr/local/include
+ /opt/gcc/8.4/include
+ /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include-fixed
+ /usr/include
+End of search list.
+GNU C++14 (GCC) version 8.4.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 8.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: b0bc57be34150a8cd7f861f55c767bed
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_465f1.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread'
+ as -v --64 -o CMakeFiles/cmTC_465f1.dir/OpenMPTryFlag.cpp.o /tmp/ccaMgvgl.s
+GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7
+COMPILER_PATH=/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_465f1.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread'
+Linking CXX executable cmTC_465f1
+/opt/cmake/3.19.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_465f1.dir/link.txt --verbose=1
+/opt/gcc/8.4/modbin/g++  -fopenmp -v CMakeFiles/cmTC_465f1.dir/OpenMPTryFlag.cpp.o -o cmTC_465f1  -v 
+Using built-in specs.
+COLLECT_GCC=/opt/gcc/8.4/modbin/../bin/g++
+COLLECT_LTO_WRAPPER=/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: ./configure --prefix=/opt/gcc/8.4 --with-gmp=/opt/gcc/8.4 --with-mpfr=/opt/gcc/8.4 --with-mpc=/opt/gcc/8.4 --with-isl=/opt/gcc/8.4 --enable-multilib --with-system-zlib
+Thread model: posix
+gcc version 8.4.0 (GCC) 
+COMPILER_PATH=/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../:/lib/:/usr/lib/
+Reading specs from /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../lib64/libgomp.spec
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_465f1' '-v' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread'
+ /opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/collect2 -plugin /opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/liblto_plugin.so -plugin-opt=/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc00qsoo.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_465f1 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/crtbegin.o -L/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0 -L/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../.. CMakeFiles/cmTC_465f1.dir/OpenMPTryFlag.cpp.o -lstdc++ -lm -lgomp -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/crtend.o /lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_465f1' '-v' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread'
+gmake[1]: Leaving directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CXX OpenMP implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_465f1/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_465f1.dir/build.make CMakeFiles/cmTC_465f1.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_465f1.dir/OpenMPTryFlag.cpp.o]
+  ignore line: [/opt/gcc/8.4/modbin/g++   -fopenmp -v -o CMakeFiles/cmTC_465f1.dir/OpenMPTryFlag.cpp.o -c /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/gcc/8.4/modbin/../bin/g++]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ./configure --prefix=/opt/gcc/8.4 --with-gmp=/opt/gcc/8.4 --with-mpfr=/opt/gcc/8.4 --with-mpc=/opt/gcc/8.4 --with-isl=/opt/gcc/8.4 --enable-multilib --with-system-zlib]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.4.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_465f1.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread']
+  ignore line: [ /opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/cc1plus -quiet -v -D_GNU_SOURCE -D_REENTRANT /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp -quiet -dumpbase OpenMPTryFlag.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_465f1.dir/OpenMPTryFlag.cpp.o -version -fopenmp -o /tmp/ccaMgvgl.s]
+  ignore line: [GNU C++14 (GCC) version 8.4.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 8.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../include/c++/8.4.0]
+  ignore line: [ /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../include/c++/8.4.0/x86_64-pc-linux-gnu]
+  ignore line: [ /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../include/c++/8.4.0/backward]
+  ignore line: [ /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /opt/gcc/8.4/include]
+  ignore line: [ /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include-fixed]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++14 (GCC) version 8.4.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 8.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: b0bc57be34150a8cd7f861f55c767bed]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_465f1.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_465f1.dir/OpenMPTryFlag.cpp.o /tmp/ccaMgvgl.s]
+  ignore line: [GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7]
+  ignore line: [COMPILER_PATH=/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_465f1.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread']
+  ignore line: [Linking CXX executable cmTC_465f1]
+  ignore line: [/opt/cmake/3.19.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_465f1.dir/link.txt --verbose=1]
+  ignore line: [/opt/gcc/8.4/modbin/g++  -fopenmp -v CMakeFiles/cmTC_465f1.dir/OpenMPTryFlag.cpp.o -o cmTC_465f1  -v ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/gcc/8.4/modbin/../bin/g++]
+  ignore line: [COLLECT_LTO_WRAPPER=/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ./configure --prefix=/opt/gcc/8.4 --with-gmp=/opt/gcc/8.4 --with-mpfr=/opt/gcc/8.4 --with-mpc=/opt/gcc/8.4 --with-isl=/opt/gcc/8.4 --enable-multilib --with-system-zlib]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.4.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../:/lib/:/usr/lib/]
+  ignore line: [Reading specs from /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../lib64/libgomp.spec]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_465f1' '-v' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread']
+  link line: [ /opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/collect2 -plugin /opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/liblto_plugin.so -plugin-opt=/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc00qsoo.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_465f1 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/crtbegin.o -L/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0 -L/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../.. CMakeFiles/cmTC_465f1.dir/OpenMPTryFlag.cpp.o -lstdc++ -lm -lgomp -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/crtend.o /lib/../lib64/crtn.o]
+    arg [/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/opt/gcc/8.4/libexec/gcc/x86_64-pc-linux-gnu/8.4.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc00qsoo.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_465f1] ==> ignore
+    arg [/lib/../lib64/crt1.o] ==> ignore
+    arg [/lib/../lib64/crti.o] ==> ignore
+    arg [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/crtbegin.o] ==> ignore
+    arg [-L/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0] ==> dir [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0]
+    arg [-L/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../lib64] ==> dir [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../..] ==> dir [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../..]
+    arg [CMakeFiles/cmTC_465f1.dir/OpenMPTryFlag.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgomp] ==> lib [gomp]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/crtend.o] ==> ignore
+    arg [/lib/../lib64/crtn.o] ==> ignore
+  collapse library dir [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0] ==> [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0]
+  collapse library dir [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../../../lib64] ==> [/opt/gcc/8.4/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0/../../..] ==> [/opt/gcc/8.4/lib]
+  implicit libs: [stdc++;m;gomp;gcc_s;gcc;pthread;c;gcc_s;gcc]
+  implicit dirs: [/opt/gcc/8.4/lib/gcc/x86_64-pc-linux-gnu/8.4.0;/opt/gcc/8.4/lib64;/lib64;/usr/lib64;/opt/gcc/8.4/lib]
+  implicit fwks: []
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_b21d4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b21d4.dir/build.make CMakeFiles/cmTC_b21d4.dir/build
+gmake[1]: Entering directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b21d4.dir/CheckIncludeFile.c.o
+/home/hongxi/anaconda3/bin/cc    -o CMakeFiles/cmTC_b21d4.dir/CheckIncludeFile.c.o -c /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_b21d4
+/opt/cmake/3.19.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b21d4.dir/link.txt --verbose=1
+/home/hongxi/anaconda3/bin/cc CMakeFiles/cmTC_b21d4.dir/CheckIncludeFile.c.o -o cmTC_b21d4 
+gmake[1]: Leaving directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_edd89/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_edd89.dir/build.make CMakeFiles/cmTC_edd89.dir/build
+gmake[1]: Entering directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_edd89.dir/CheckFunctionExists.c.o
+/home/hongxi/anaconda3/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_edd89.dir/CheckFunctionExists.c.o -c /opt/cmake/3.19.3/share/cmake-3.19/Modules/CheckFunctionExists.c
+Linking C executable cmTC_edd89
+/opt/cmake/3.19.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_edd89.dir/link.txt --verbose=1
+/home/hongxi/anaconda3/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_edd89.dir/CheckFunctionExists.c.o -o cmTC_edd89  -lpthread 
+gmake[1]: Leaving directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function sgemm_ exists passed with the following output:
+Change Dir: /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_c2b15/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c2b15.dir/build.make CMakeFiles/cmTC_c2b15.dir/build
+gmake[1]: Entering directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c2b15.dir/CheckFunctionExists.c.o
+/home/hongxi/anaconda3/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_ -o CMakeFiles/cmTC_c2b15.dir/CheckFunctionExists.c.o -c /opt/cmake/3.19.3/share/cmake-3.19/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c2b15
+/opt/cmake/3.19.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c2b15.dir/link.txt --verbose=1
+/home/hongxi/anaconda3/bin/cc  -DCHECK_FUNCTION_EXISTS=sgemm_ CMakeFiles/cmTC_c2b15.dir/CheckFunctionExists.c.o -o cmTC_c2b15  -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core /home/hongxi/anaconda3/lib/libiomp5.so -lpthread -lm -ldl 
+gmake[1]: Leaving directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function cheev_ exists passed with the following output:
+Change Dir: /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_6d53c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6d53c.dir/build.make CMakeFiles/cmTC_6d53c.dir/build
+gmake[1]: Entering directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6d53c.dir/CheckFunctionExists.c.o
+/home/hongxi/anaconda3/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_ -o CMakeFiles/cmTC_6d53c.dir/CheckFunctionExists.c.o -c /opt/cmake/3.19.3/share/cmake-3.19/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6d53c
+/opt/cmake/3.19.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d53c.dir/link.txt --verbose=1
+/home/hongxi/anaconda3/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_ CMakeFiles/cmTC_6d53c.dir/CheckFunctionExists.c.o -o cmTC_6d53c  -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core /home/hongxi/anaconda3/lib/libiomp5.so -lpthread -lm -ldl -lpthread -lm -ldl 
+gmake[1]: Leaving directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+
+Determining size of int passed with the following output:
+Change Dir: /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_55014/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_55014.dir/build.make CMakeFiles/cmTC_55014.dir/build
+gmake[1]: Entering directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_55014.dir/INT_SIZE.c.o
+/home/hongxi/anaconda3/bin/cc    -o CMakeFiles/cmTC_55014.dir/INT_SIZE.c.o -c /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CheckTypeSize/INT_SIZE.c
+Linking C executable cmTC_55014
+/opt/cmake/3.19.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55014.dir/link.txt --verbose=1
+/home/hongxi/anaconda3/bin/cc CMakeFiles/cmTC_55014.dir/INT_SIZE.c.o -o cmTC_55014 
+gmake[1]: Leaving directory `/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+
