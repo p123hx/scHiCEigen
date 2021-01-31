@@ -17,6 +17,7 @@
 #include <algorithm>
 #include <cfloat>
 
+#define MAXD 1e12
 using namespace std;
 using namespace Eigen;
 using namespace std::chrono;
@@ -44,7 +45,7 @@ MatrixXd zero_delete(MatrixXd s, vector<int> z) {
     return ans;
 }
 
-double
+vector<double>
 pairwise_distance(vector<MatrixXd> all_strata, string similarity_method, bool
 print_time, double sigma, unsigned window_size
 ) {
@@ -53,7 +54,6 @@ print_time, double sigma, unsigned window_size
     transform(similarity_method.begin(), similarity_method.end(),
               similarity_method.begin(), ::tolower);
     chrono::high_resolution_clock::time_point t0, t1, t2, t3, t4;
-    MatrixXd zscores;
 
     int n_cells = all_strata[0].rows(), n_bins = all_strata[0].cols();
     MatrixXd distance_mat(n_cells, n_cells);
@@ -107,8 +107,44 @@ print_time, double sigma, unsigned window_size
 
     } else if (similarity_method == "inner_product" or
                similarity_method == "innerproduct") {
-        MatrixXd similarity = MatrixXd::Ones(n_cells, n_cells);
+        int score_col = 0;
+#pragma omp parallel for reduction(+:score_col)
+        for (int i = 0; i < n_strata; i++) {
+            int icol = all_strata[i].cols();
+            auto mean = all_strata[i].rowwise().mean();
+            all_strata[i].colwise() -= mean;
+            MatrixXd std = (all_strata[i].array().square().rowwise().sum() /
+                            icol).sqrt();
+//            for (int j = 0; j < all_strata[i].rows(); j++) {
+//                all_strata[i].row(j).array() /= std(j);
+//            }
 
+            for (int j = 0; j < all_strata[i].rows(); j++)
+                for (int k = 0; k < all_strata[i].cols(); k++) {
+                    all_strata[i](j, k) /= std(j);
+                    if (isnan(all_strata[i](j, k))) all_strata[i](j, k) = 0.0;
+                }
+            score_col += icol;
+        }
+        MatrixXd scores(n_cells, score_col);
+        scores << all_strata[0], all_strata[1], all_strata[2],
+                all_strata[3], all_strata[4], all_strata[5],
+                all_strata[6], all_strata[7], all_strata[8],
+                all_strata[9];
+        t1 = high_resolution_clock::now();
+        MatrixXd inner = (scores * scores.transpose()) / score_col;
+
+#pragma omp parallel for
+        {
+            for (int i = 0; i < n_cells; i++)
+                for (int j = 0; j < n_cells; j++) {
+                    double tmp = inner(i, j);
+                    if (tmp >= 1)distance_mat(i, j) = 0.0;
+                    else if (tmp <= -1) distance_mat(i, j) = 2.0;
+                    else distance_mat(i, j) = sqrt(2 - 2.0 * tmp);
+                }
+        }
+        t4 = high_resolution_clock::now();
     } else if (similarity_method == "old_hicrep") {
         MatrixXd similarity = MatrixXd::Zero(n_cells, n_cells);
         for (int i = 0; i < n_cells; i++)
@@ -133,21 +169,24 @@ print_time, double sigma, unsigned window_size
                         double std2_n = sqrt(
                                 (s2.array() - s2.mean()).square().sum() / s2.size());
                         weights(k) = s1.size() * std1_n * std2_n;
-                        double tmp_nume= (s1 * s2.transpose())(0), tmp_d =(s1.size() *std1_n *
-                                                                           std2_n);
-                        if(tmp_d==0 && tmp_nume==0) corrs(k)=1.0;
-                        else if(tmp_d==0 &&tmp_nume!=0) corrs(k)=1e12;
-                        else  corrs(k)=tmp_nume/tmp_d;
+                        double tmp_nume = (s1 * s2.transpose())(0), tmp_d = (s1.size() *
+                                                                             std1_n *
+                                                                             std2_n);
+                        if (tmp_d == 0 && tmp_nume == 0) corrs(k) = 1.0;
+                        else if (tmp_d == 0 && tmp_nume != 0) corrs(k) = MAXD;
+                        else corrs(k) = tmp_nume / tmp_d;
 
                     }
                 }
 //                cout << "corrs: \n" << corrs << endl;
 //                cout<<"weights: \n"<<weights<<endl;
-                cout<<(corrs * weights.transpose())(0)<<" / "<<weights.sum() <<endl;
-                double tmp_v, tmp_n = (corrs * weights.transpose())(0),tmp_d=weights.sum();
-                if(tmp_n ==0 && tmp_d==0) tmp_v=1.0;
-                else if(tmp_n!=0 && tmp_d==0) tmp_v = 1e12;
-                else tmp_v=tmp_n/tmp_d;
+                cout << (corrs * weights.transpose())(0) << " / " << weights.sum()
+                     << endl;
+                double tmp_v, tmp_n = (corrs * weights.transpose())(
+                        0), tmp_d = weights.sum();
+                if (tmp_n == 0 && tmp_d == 0) tmp_v = 1.0;
+                else if (tmp_n != 0 && tmp_d == 0) tmp_v = MAXD;
+                else tmp_v = tmp_n / tmp_d;
                 double s = sqrt(2 - 2 * tmp_v);
                 similarity(i, j) = s;
                 similarity(j, i) = s;
@@ -158,19 +197,21 @@ print_time, double sigma, unsigned window_size
         throw "Method {0} not supported. Only \"inner_product\", \"HiCRep\", \"old_hicrep\" and \"Selfish\".";
     }
 
-//    std::chrono::duration<double, std::milli> duration1 = (t1 - t0);
+    std::chrono::duration<double, std::milli> duration1 = (t1 - t0);
+    std::chrono::duration<double, std::milli> duration2 = (t4 - t1);
 //    std::chrono::duration<double, std::milli> duration2 = (t2 - t1);
 //    std::chrono::duration<double, std::milli> duration3 = (t3 - t2);
 //    std::chrono::duration<double, std::milli> duration4 = (t4 - t3);
     std::chrono::duration<double, std::milli> duration_total = (t4 - t0);
-    double tout = duration_total.count();
+    double tout = duration_total.count(), tout1 = duration1.count(), tout2 = duration2.count();
 //    cout << "Time 1:" << duration1.count() << endl
 //         << "Time 2:" << duration2.count() << endl
 //         << "Time 3:" << duration3.count() << endl
 //         << "Time 4:" << duration4.count() << endl
     cout << "total: " << tout << endl;
     cout << distance_mat << endl;
-    return tout;
+    vector<double> tv = {(double) tout, (double) tout1, (double) tout2};
+    return tv;
 }
 
 

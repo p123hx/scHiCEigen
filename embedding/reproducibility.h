@@ -15,7 +15,7 @@ MatrixXd euc_pdist_square(MatrixXd x);
 
 MatrixXd zscore_prop(MatrixXd a, int axis);
 
-double
+vector<double>
 pairwise_distance(vector<MatrixXd> all_strata, string similarity_method,
                   bool print_time = false, double sigma = .5,
                   unsigned window_size = 10);

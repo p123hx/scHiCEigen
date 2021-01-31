@@ -4,41 +4,46 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+
 using namespace std;using namespace Eigen;
 
 double fastHicP(vector<MatrixXd> all_strata) {
 
-    double times
+    vector<double> times
             =
             pairwise_distance(all_strata, "hicrep");
 
-    return times;
+    return times[0];
 }
-double innerP(vector<MatrixXd> all_strata) {
 
-    double times
+vector<double> innerP(vector<MatrixXd> all_strata) {
+
+    vector<double> times
             =
             pairwise_distance(all_strata, "inner_product");
 
     return times;
 }
+
 double oldHicP(vector<MatrixXd> all_strata) {
 
-    double times
+    vector<double> times
             =
             pairwise_distance(all_strata, "old_hicrep");
 
-    return times;
+    return times[0];
 }
+
 double selfishP(vector<MatrixXd> all_strata) {
 
-    double times
+    vector<double> times
             =
             pairwise_distance(all_strata, "selfish");
 
-    return times;
+    return times[0];
 }
-vector<string> f1000(){
+
+vector<string> f1000() {
     return vector<string>{"../../Nagano/1CDX_cells/1CDX1.1/new_adj",
                           "../../Nagano/1CDX_cells/1CDX1.185/new_adj",
                           "../../Nagano/1CDX_cells/1CDX1.281/new_adj",
@@ -1211,8 +1216,10 @@ vector<string> f1000(){
                           "../../Nagano/1CDX_cells/1CDX4.391/new_adj",
                           "../../Nagano/1CDX_cells/1CDX4.467/new_adj"};
 }
-void test(){
-    vector<string> fileLst{"../test/data/cell_03","../test/data/cell_01","../test/data/cell_02"};
+
+void test() {
+    vector<string> fileLst{"../test/data/cell_03", "../test/data/cell_01",
+                           "../test/data/cell_02"};
 
     string operation = "convolution";
     scHiCs y = scHiCs(fileLst, "mm9", 500000, 3, 4000000, true, "except Y",
@@ -1222,21 +1229,34 @@ void test(){
     vector<string> chrs{"chr1", "chr2", "chrX", "chr3", "chr4", "chr5", "chr6", "chr7",
                         "chr8", "chr9", "chr10", "chr11", "chr12", "chr13", "chr14",
                         "chr15", "chr16", "chr17", "chr18", "chr19"}; //since "except Y"
-    double tsum = 0.0;
-    for(int i=100;i>0;i--){
+    double innerT = 0.0, selfishT = 0.0, innerTt1 = 0.0, innerTt2 = 0.0,
+            fastT = 0.0, oldT = 0.0;
+    for (int i = 100; i > 0; i--) {
         for (string s:chrs) {
             cout << "\n" << s << ":\n";
             vector<MatrixXd> chr = y.get_strata()[s];
-            tsum += (oldHicP(chr));
+            fastT += (fastHicP(chr) / 10);
+            vector<double> tmpD = innerP(chr);
+            innerT += (tmpD[0] / 10);
+            innerTt1 += (tmpD[1] / 10);
+            innerTt2 += (tmpD[2] / 10);
+//            selfishT += (selfishP(chr) / 10);
+            oldT += (oldHicP(chr) / 10);
         }
     }
 
-    cout << "Total average fastHiCrep test " << tsum/100 << " in milliseconds\n";
+    cout << "inner:\n t1: " << innerTt1 << " t2: " << innerTt2
+         << " total: " << innerT << " in milliseconds\n"
+         << "selfish total: " << selfishT << " in "
+                                             "milliseconds\n"
+         << "fast total:" << fastT << endl
+         << "old totoal: " << oldT << endl;
 }
+
 //#TODO:
-void toolN(int n){
+void toolN(int n) {
     vector<string> fileLst1000 = f1000();
-    vector<string>fileLstN (fileLst1000.begin(),fileLst1000.begin()+n);
+    vector<string> fileLstN(fileLst1000.begin(), fileLst1000.begin() + n);
     string operation = "convolution";
     scHiCs y = scHiCs(fileLstN, "mm9", 500000, 3, 4000000, true, "except Y",
                       "shortest_score",
@@ -1245,24 +1265,39 @@ void toolN(int n){
     vector<string> chrs{"chr1", "chr2", "chrX", "chr3", "chr4", "chr5", "chr6", "chr7",
                         "chr8", "chr9", "chr10", "chr11", "chr12", "chr13", "chr14",
                         "chr15", "chr16", "chr17", "chr18", "chr19"}; //since "except Y"
-    double tsum = 0.0;
-
-    for(int i=10;i>0;i--){
+    double innerT = 0.0, selfishT = 0.0, innerTt1 = 0.0, innerTt2 = 0.0,
+            fastT = 0.0, oldT = 0.0;
+    for (int i = 10; i > 0; i--) {
         for (string s:chrs) {
             cout << "\n" << s << ":\n";
             vector<MatrixXd> chr = y.get_strata()[s];
-            tsum += (fastHicP(chr));
+            fastT += (fastHicP(chr) / 10);
+            vector<double> tmpD = innerP(chr);
+            innerT += (tmpD[0] / 10);
+            innerTt1 += (tmpD[1] / 10);
+            innerTt2 += (tmpD[2] / 10);
+            selfishT += (selfishP(chr) / 10);
+            oldT += (oldHicP(chr) / 10);
         }
     }
 
-    cout << "Total average out of 10 fastHiCrep 100cells " <<  n << " cells:"<<  tsum/10 << " in "
-                                                                                            "milliseconds\n";
-    string outF = to_string(n)+"out.txt";
+    cout << "inner:\n t1: " << innerTt1 << " t2: " << innerTt2
+         << " total: " << innerT << " in milliseconds\n"
+         << "selfish total: " << selfishT << " in "
+                                             "milliseconds\n"
+         << "fast total:" << fastT << endl
+         << "old totoal: " << oldT << endl;
+    string outF = to_string(n) + "out.txt";
     ofstream fout(outF);
-    fout<< "Total average out of 10 fastHiCrep " << n << " cells: "<< tsum/10 << " in "
-                                                                                 "milliseconds\n";
+    fout << "inner:\n t1: " << innerTt1 << " t2: " << innerTt2
+         << " total: " << innerT << " in milliseconds\n"
+         << "selfish total: " << selfishT << " in "
+                                             "milliseconds\n"
+         << "fast total:" << fastT << endl
+         << "old totoal: " << oldT << endl;
     fout.close();
 }
-int main(){
+
+int main() {
     test();
 }
