@@ -16,6 +16,7 @@
 #include <cctype>
 #include <algorithm>
 #include <cfloat>
+#include <cmath>
 #define EIGEN_USE_MKL_ALL
 #include <Eigen/Core>
 #define MAXD 1e12
@@ -49,10 +50,10 @@ MatrixXd euc_pdist_square(MatrixXd x, int row, int col, double sigma) {
 
 vector<int> z_pos(MatrixXd s1, MatrixXd s2) {
     vector<int> z;
-#pragma omp parallel for
-        for (int i = 0; i < s1.size(); i++) {
-            if (!(s1(i) == 0 && s2(i) == 0)) z.push_back(i);
-        }
+//#pragma omp parallel for
+    for (int i = 0; i < s1.size(); i++) {
+        if (!(s1(i) == 0 && s2(i) == 0)) z.push_back(i);
+    }
     sort(z.begin(), z.end());
     return z;
 }
