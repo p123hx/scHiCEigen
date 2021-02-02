@@ -1325,5 +1325,5 @@ void toolN(int n) {
 }
 
 int main() {
-    toolN(100);
+    toolN(3);
 }

@@ -226,8 +226,8 @@ print_time, double sigma, unsigned window_size
                         else corrs(k) = tmp_nume / tmp_d;
                     }
                 }
-                cout << "corrs: \n" << corrs << endl;
-                cout<<"weights: \n"<<weights<<endl;
+//                cout << "corrs: \n" << corrs << endl;
+//                cout<<"weights: \n"<<weights<<endl;
                 double tmp_v, tmp_n = corrs.dot(weights), tmp_d = weights.sum();
                 if (tmp_n == 0 && tmp_d == 0) tmp_v = 1.0;
                 else if (tmp_n != 0 && tmp_d == 0) tmp_v = MAXD;
@@ -254,7 +254,7 @@ print_time, double sigma, unsigned window_size
 //         << "Time 3:" << duration3.count() << endl
 //         << "Time 4:" << duration4.count() << endl
     cout << "total: " << tout << endl;
-    cout << distance_mat << endl;
+//    cout << distance_mat << endl;
     vector<double> tv = {(double) tout, (double) tout1, (double) tout2};
     return tv;
 }
