@@ -1269,7 +1269,7 @@ void toolN(int n) {
             fastT = 0.0, innerTM = 0.0,  innerTt1M = 0.0,
             innerTt2M = 0.0,
             fastTM = 0.0;
-    for (int i = 10; i > 0; i--) {
+    for (int i = 6; i > 0; i--) {
         double tinnerT = 0.0,  tinnerTt1 = 0.0, tinnerTt2 = 0.0,
                 tfastT = 0.0;
         cout<<"Set: "<<i<<endl;
@@ -1298,10 +1298,10 @@ void toolN(int n) {
     innerTt2 -= innerTt2M;
     fastT -= fastTM;
 
-    innerT /= 9.0;
-    innerTt1 /=9.0;
-    innerTt2 /= 9.0;
-    fastT /= 9.0;
+    innerT /= 5.0;
+    innerTt1 /=5.0;
+    innerTt2 /= 5.0;
+    fastT /= 5.0;
 
     cout << "inner:\n t1: " << innerTt1 << " t2: " << innerTt2
          << " total: " << innerT << " in milliseconds\n"
@@ -1329,7 +1329,7 @@ void toolOLD(int n) {
                         "chr15", "chr16", "chr17", "chr18", "chr19"}; //since "except Y"
     double oldT = 0.0;
     double max_o = .0;
-    for (int i = 10; i > 0; i--) {
+    for (int i = 4; i > 0; i--) {
         double tmp_0 = .0;
         for (string s:chrs) {
             vector<MatrixXd> chr = y.get_strata()[s];
@@ -1338,7 +1338,7 @@ void toolOLD(int n) {
         oldT += tmp_0;
         max_o = max(max_o, tmp_0);
     }
-    oldT /= 9;
+    oldT /= 3;
     cout << "old totoal: " << oldT << endl;
     string outF = to_string(n) + "OLD.txt";
     ofstream fout(outF);
@@ -1347,7 +1347,7 @@ void toolOLD(int n) {
 }
 
 int main() {
-    vector<int> v{500, 600, 700, 800, 900, 1000};
+    vector<int> v{400, 500, 600, 700, 800, 900, 1000};
     for (int i: v) {
         toolN(i);
         if (i == 500 || i == 1000) toolOLD(i);
