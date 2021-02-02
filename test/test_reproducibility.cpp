@@ -1216,7 +1216,8 @@ vector<string> f1000() {
                           "../../Nagano/1CDX_cells/1CDX4.391/new_adj",
                           "../../Nagano/1CDX_cells/1CDX4.467/new_adj"};
 }
-void testSelfish(){
+
+void testSelfish() {
     vector<string> fileLst{"../test/data/cell_03", "../test/data/cell_01",
                            "../test/data/cell_02"};
 
@@ -1234,15 +1235,15 @@ void testSelfish(){
         for (string s:chrs) {
 //            cout << "\n" << s << ":\n";
             vector<MatrixXd> chr = y.get_strata()[s];
-           selfishT += (selfishP(chr) / 10);
+            selfishT += (selfishP(chr) / 10);
         }
     }
 
     cout
-         << "selfish total: " << selfishT << " in "
-                                             "milliseconds\n"
-;
+            << "selfish total: " << selfishT << " in "
+                                                "milliseconds\n";
 }
+
 void test() {
     vector<string> fileLst{"../test/data/cell_03", "../test/data/cell_01",
                            "../test/data/cell_02"};
@@ -1306,10 +1307,6 @@ void toolN(int n) {
 
         }
     }
-    for(string s:chrs){
-        vector<MatrixXd> chr = y.get_strata()[s];
-        oldT += (oldHicP(chr));
-    }
 
     cout << "inner:\n t1: " << innerTt1 << " t2: " << innerTt2
          << " total: " << innerT << " in milliseconds\n"
@@ -1328,6 +1325,37 @@ void toolN(int n) {
     fout.close();
 }
 
+void toolOLD(int n) {
+    vector<string> fileLst1000 = f1000();
+    vector<string> fileLstN(fileLst1000.begin(), fileLst1000.begin() + n);
+    string operation = "convolution";
+    scHiCs y = scHiCs(fileLstN, "mm9", 500000, 3, 4000000, true, "except Y",
+                      "shortest_score",
+                      10, true,
+                      operation);
+    vector<string> chrs{"chr1", "chr2", "chrX", "chr3", "chr4", "chr5", "chr6", "chr7",
+                        "chr8", "chr9", "chr10", "chr11", "chr12", "chr13", "chr14",
+                        "chr15", "chr16", "chr17", "chr18", "chr19"}; //since "except Y"
+    double innerT = 0.0, selfishT = 0.0, innerTt1 = 0.0, innerTt2 = 0.0,
+            fastT = 0.0, oldT = 0.0;
+    for (string s:chrs) {
+        vector<MatrixXd> chr = y.get_strata()[s];
+        oldT += (oldHicP(chr));
+    }
+
+    cout<< "old totoal: " << oldT << endl;
+    string outF = to_string(n) + "OLD.txt";
+    ofstream fout(outF);
+    fout << "old totoal: " << oldT << endl;
+    fout.close();
+}
+
 int main() {
-    test();
+    vector<int> v{200, 300, 400, 500, 600, 700, 800, 900, 1000};
+    for (int i: v) {
+        toolN(i);
+    }
+    for (int i:v) {
+        toolOLD(i);
+    }
 }
