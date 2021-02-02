@@ -1297,7 +1297,7 @@ void toolN(int n) {
             fastT = 0.0, innerTM = 0.0, selfishTM = 0.0, innerTt1M = 0.0,
             innerTt2M = 0.0,
             fastTM = 0.0;
-    for (int i = 100; i > 0; i--) {
+    for (int i = 10; i > 0; i--) {
         double tinnerT = 0.0, tselfishT = 0.0, tinnerTt1 = 0.0, tinnerTt2 = 0.0,
                 tfastT = 0.0;
         for (string s:chrs) {
@@ -1329,11 +1329,11 @@ void toolN(int n) {
     selfishT -= selfishTM;
 
 
-    innerT /= 99.0;
-    innerTt1 /= 99.0;
-    innerTt2 /= 99.0;
-    fastT /= 99.0;
-    selfishT /= 99.0;
+    innerT /= 9.0;
+    innerTt1 /=9.0;
+    innerTt2 /= 9.0;
+    fastT /= 9.0;
+    selfishT /= 9.0;
 
 
     cout << "inner:\n t1: " << innerTt1 << " t2: " << innerTt2

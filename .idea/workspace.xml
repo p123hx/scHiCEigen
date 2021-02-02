@@ -13,7 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="364857e1-62bc-4fd6-a1e8-6a826123fe46" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_reproducibility.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_reproducibility.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +54,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="debugger.dataViews" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../eigenTest/embedding/reproducibility.cpp" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../scHiCtools/load/ContactMaps.cpp" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -224,7 +224,10 @@
       <workItem from="1612231779378" duration="1367000" />
       <workItem from="1612236718842" duration="6096000" />
       <workItem from="1612273299972" duration="815000" />
-      <workItem from="1612283610638" duration="1199000" />
+      <workItem from="1612283610638" duration="1237000" />
+      <workItem from="1612289852875" duration="270000" />
+      <workItem from="1612290220070" duration="152000" />
+      <workItem from="1612293169418" duration="302000" />
     </task>
     <servers />
   </component>
