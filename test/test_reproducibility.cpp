@@ -12,7 +12,7 @@ double fastHicP(vector<MatrixXd> all_strata) {
     vector<double> times
             =
             pairwise_distance(all_strata, "hicrep");
-
+    cout << "fast total: " << times[0] << endl;
     return times[0];
 }
 
@@ -21,7 +21,7 @@ vector<double> innerP(vector<MatrixXd> all_strata) {
     vector<double> times
             =
             pairwise_distance(all_strata, "inner_product");
-
+    cout << "inner total: " << times[0] << endl;
     return times;
 }
 
@@ -30,7 +30,7 @@ double oldHicP(vector<MatrixXd> all_strata) {
     vector<double> times
             =
             pairwise_distance(all_strata, "old_hicrep");
-
+    cout << "old total: " << times[0] << endl;
     return times[0];
 }
 
@@ -643,7 +643,7 @@ vector<string> f1000() {
                           "../../Nagano/1CDX_cells/1CDX4.272/new_adj",
                           "../../Nagano/1CDX_cells/1CDX4.35/new_adj",
                           "../../Nagano/1CDX_cells/1CDX4.431/new_adj",
-                          "../../Nagano/1CDX_cells/1CDX4.67/new_adj",
+                          "../../Nagano/1CDX_cells/1CDX4.67/new_adj",//600
                           "../../Nagano/1CDX_cells/1CDX1.141/new_adj",
                           "../../Nagano/1CDX_cells/1CDX1.233/new_adj",
                           "../../Nagano/1CDX_cells/1CDX1.333/new_adj",
@@ -1216,34 +1216,6 @@ vector<string> f1000() {
                           "../../Nagano/1CDX_cells/1CDX4.391/new_adj",
                           "../../Nagano/1CDX_cells/1CDX4.467/new_adj"};
 }
-
-void testSelfish() {
-    vector<string> fileLst{"../test/data/cell_03", "../test/data/cell_01",
-                           "../test/data/cell_02"};
-
-    string operation = "convolution";
-    scHiCs y = scHiCs(fileLst, "mm9", 500000, 3, 4000000, true, "except Y",
-                      "shortest_score",
-                      10, true,
-                      operation);
-    vector<string> chrs{"chr1", "chr2", "chrX", "chr3", "chr4", "chr5", "chr6", "chr7",
-                        "chr8", "chr9", "chr10", "chr11", "chr12", "chr13", "chr14",
-                        "chr15", "chr16", "chr17", "chr18", "chr19"}; //since "except Y"
-    double innerT = 0.0, selfishT = 0.0, innerTt1 = 0.0, innerTt2 = 0.0,
-            fastT = 0.0, oldT = 0.0;
-    for (int i = 100; i > 0; i--) {
-        for (string s:chrs) {
-//            cout << "\n" << s << ":\n";
-            vector<MatrixXd> chr = y.get_strata()[s];
-            selfishT += (selfishP(chr) / 10);
-        }
-    }
-
-    cout
-            << "selfish total: " << selfishT << " in "
-                                                "milliseconds\n";
-}
-
 void test() {
     vector<string> fileLst{"../test/data/cell_03", "../test/data/cell_01",
                            "../test/data/cell_02"};
@@ -1293,13 +1265,14 @@ void toolN(int n) {
     vector<string> chrs{"chr1", "chr2", "chrX", "chr3", "chr4", "chr5", "chr6", "chr7",
                         "chr8", "chr9", "chr10", "chr11", "chr12", "chr13", "chr14",
                         "chr15", "chr16", "chr17", "chr18", "chr19"}; //since "except Y"
-    double innerT = 0.0, selfishT = 0.0, innerTt1 = 0.0, innerTt2 = 0.0,
-            fastT = 0.0, innerTM = 0.0, selfishTM = 0.0, innerTt1M = 0.0,
+    double innerT = 0.0,  innerTt1 = 0.0, innerTt2 = 0.0,
+            fastT = 0.0, innerTM = 0.0,  innerTt1M = 0.0,
             innerTt2M = 0.0,
             fastTM = 0.0;
     for (int i = 10; i > 0; i--) {
-        double tinnerT = 0.0, tselfishT = 0.0, tinnerTt1 = 0.0, tinnerTt2 = 0.0,
+        double tinnerT = 0.0,  tinnerTt1 = 0.0, tinnerTt2 = 0.0,
                 tfastT = 0.0;
+        cout<<"Set: "<<i<<endl;
         for (string s:chrs) {
 //            cout << "\n" << s << ":\n";
             vector<MatrixXd> chr = y.get_strata()[s];
@@ -1308,46 +1281,36 @@ void toolN(int n) {
             tinnerT += (tmpD[0]);
             tinnerTt1 += (tmpD[1]);
             tinnerTt2 += (tmpD[2]);
-            tselfishT += (selfishP(chr));
+//            tselfishT += (selfishP(chr));
         }
         innerTM = max(innerTM, tinnerT);
         innerTt1M = max(innerTt1M, tinnerTt1);
         innerTt2M = max(innerTt2M, tinnerTt2);
         fastTM = max(fastTM, tfastT);
-        selfishTM = max(selfishTM, tselfishT);
 
         innerT += tinnerT;
         innerTt1 += tinnerTt1;
         innerTt2 += tinnerTt2;
         fastT += tfastT;
-        selfishT += tselfishT;
     }
     innerT -= innerTM;
     innerTt1 -= innerTt1M;
     innerTt2 -= innerTt2M;
     fastT -= fastTM;
-    selfishT -= selfishTM;
-
 
     innerT /= 9.0;
     innerTt1 /=9.0;
     innerTt2 /= 9.0;
     fastT /= 9.0;
-    selfishT /= 9.0;
-
 
     cout << "inner:\n t1: " << innerTt1 << " t2: " << innerTt2
          << " total: " << innerT << " in milliseconds\n"
-         << "selfish total: " << selfishT << " in "
-                                             "milliseconds\n"
          << "fast total:" << fastT << endl;
 
     string outF = to_string(n) + "out.txt";
     ofstream fout(outF);
     fout << "inner:\n t1: " << innerTt1 << " t2: " << innerTt2
          << " total: " << innerT << " in milliseconds\n"
-         << "selfish total: " << selfishT << " in "
-                                             "milliseconds\n"
          << "fast total:" << fastT << endl;
 
     fout.close();
