@@ -1274,7 +1274,7 @@ void toolN(int n) {
                 tfastT = 0.0;
         cout<<"Set: "<<i<<endl;
         for (string s:chrs) {
-//            cout << "\n" << s << ":\n";
+            cout << "\n" << s << ":\n";
             vector<MatrixXd> chr = y.get_strata()[s];
             tfastT += (fastHicP(chr));
             vector<double> tmpD = innerP(chr);
