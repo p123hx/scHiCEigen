@@ -1293,18 +1293,22 @@ void toolN(int n) {
                         "chr15", "chr16", "chr17", "chr18", "chr19"}; //since "except Y"
     double innerT = 0.0, selfishT = 0.0, innerTt1 = 0.0, innerTt2 = 0.0,
             fastT = 0.0, oldT = 0.0;
-    for (int i = 10; i > 0; i--) {
+    for (int i = 100; i > 0; i--) {
         for (string s:chrs) {
 //            cout << "\n" << s << ":\n";
             vector<MatrixXd> chr = y.get_strata()[s];
-            fastT += (fastHicP(chr) / 10);
+            fastT += (fastHicP(chr) / 100);
             vector<double> tmpD = innerP(chr);
-            innerT += (tmpD[0] / 10);
-            innerTt1 += (tmpD[1] / 10);
-            innerTt2 += (tmpD[2] / 10);
-            selfishT += (selfishP(chr) / 10);
-            oldT += (oldHicP(chr) / 10);
+            innerT += (tmpD[0] / 100);
+            innerTt1 += (tmpD[1] / 100);
+            innerTt2 += (tmpD[2] / 100);
+            selfishT += (selfishP(chr) / 100);
+
         }
+    }
+    for(string s:chrs){
+        vector<MatrixXd> chr = y.get_strata()[s];
+        oldT += (oldHicP(chr));
     }
 
     cout << "inner:\n t1: " << innerTt1 << " t2: " << innerTt2
