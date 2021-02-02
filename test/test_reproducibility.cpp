@@ -1232,7 +1232,7 @@ void testSelfish(){
             fastT = 0.0, oldT = 0.0;
     for (int i = 100; i > 0; i--) {
         for (string s:chrs) {
-            cout << "\n" << s << ":\n";
+//            cout << "\n" << s << ":\n";
             vector<MatrixXd> chr = y.get_strata()[s];
            selfishT += (selfishP(chr) / 10);
         }
@@ -1259,7 +1259,7 @@ void test() {
             fastT = 0.0, oldT = 0.0;
     for (int i = 10; i > 0; i--) {
         for (string s:chrs) {
-            cout << "\n" << s << ":\n";
+//            cout << "\n" << s << ":\n";
             vector<MatrixXd> chr = y.get_strata()[s];
             fastT += (fastHicP(chr) / 10);
             vector<double> tmpD = innerP(chr);
@@ -1295,7 +1295,7 @@ void toolN(int n) {
             fastT = 0.0, oldT = 0.0;
     for (int i = 10; i > 0; i--) {
         for (string s:chrs) {
-            cout << "\n" << s << ":\n";
+//            cout << "\n" << s << ":\n";
             vector<MatrixXd> chr = y.get_strata()[s];
             fastT += (fastHicP(chr) / 10);
             vector<double> tmpD = innerP(chr);
