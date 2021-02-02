@@ -86,7 +86,7 @@ print_time, double sigma, unsigned window_size
     if (similarity_method == "hicrep") {
         int score_col = 0;
         MatrixXd weighted_std = MatrixXd::Zero(n_cells, n_bins);
-#pragma omp parallel for reduction(+:score_col)
+//#pragma omp parallel for reduction(+:score_col)
 
         for (int i = 0; i < n_strata; i++) {
             int icol = all_strata[i].cols();
@@ -259,4 +259,5 @@ print_time, double sigma, unsigned window_size
     vector<double> tv = {(double) tout, (double) tout1, (double) tout2};
     return tv;
 }
+
 

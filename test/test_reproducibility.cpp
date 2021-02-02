@@ -1257,7 +1257,7 @@ void test() {
                         "chr15", "chr16", "chr17", "chr18", "chr19"}; //since "except Y"
     double innerT = 0.0, selfishT = 0.0, innerTt1 = 0.0, innerTt2 = 0.0,
             fastT = 0.0, oldT = 0.0;
-    for (int i = 100; i > 0; i--) {
+    for (int i = 10; i > 0; i--) {
         for (string s:chrs) {
             cout << "\n" << s << ":\n";
             vector<MatrixXd> chr = y.get_strata()[s];
@@ -1325,5 +1325,5 @@ void toolN(int n) {
 }
 
 int main() {
-    toolN(100);
+    test();
 }
