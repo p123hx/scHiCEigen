@@ -1303,37 +1303,37 @@ void toolN(int n) {
         for (string s:chrs) {
 //            cout << "\n" << s << ":\n";
             vector<MatrixXd> chr = y.get_strata()[s];
-            tfastT += (fastHicP(chr) );
+            tfastT += (fastHicP(chr));
             vector<double> tmpD = innerP(chr);
-            tinnerT += (tmpD[0] );
-            tinnerTt1 += (tmpD[1] );
-            tinnerTt2 += (tmpD[2] );
-            tselfishT += (selfishP(chr) );
+            tinnerT += (tmpD[0]);
+            tinnerTt1 += (tmpD[1]);
+            tinnerTt2 += (tmpD[2]);
+            tselfishT += (selfishP(chr));
         }
-        innerTM = max(innerTM,tinnerT);
-        innerTt1M = max(innerTt1M,tinnerTt1);
-        innerTt2M = max(innerTt2M,tinnerTt2);
-        fastTM = max(fastTM,tfastT);
-        selfishTM = max(selfishTM,tselfishT);
+        innerTM = max(innerTM, tinnerT);
+        innerTt1M = max(innerTt1M, tinnerTt1);
+        innerTt2M = max(innerTt2M, tinnerTt2);
+        fastTM = max(fastTM, tfastT);
+        selfishTM = max(selfishTM, tselfishT);
 
-        innerT+= tinnerT;
+        innerT += tinnerT;
         innerTt1 += tinnerTt1;
         innerTt2 += tinnerTt2;
         fastT += tfastT;
         selfishT += tselfishT;
     }
-    innerT -=innerTM;
-    innerTt1 -=innerTt1M;
-    innerTt2 -=innerTt2M;
+    innerT -= innerTM;
+    innerTt1 -= innerTt1M;
+    innerTt2 -= innerTt2M;
     fastT -= fastTM;
-    selfishT -=selfishTM;
+    selfishT -= selfishTM;
 
 
-    innerT /=99.0;
-    innerTt1 /=99.0;
-    innerTt2 /=99.0;
-    fastT /=99.0;
-    selfishT /=99.0;
+    innerT /= 99.0;
+    innerTt1 /= 99.0;
+    innerTt2 /= 99.0;
+    fastT /= 99.0;
+    selfishT /= 99.0;
 
 
     cout << "inner:\n t1: " << innerTt1 << " t2: " << innerTt2
@@ -1364,14 +1364,19 @@ void toolOLD(int n) {
     vector<string> chrs{"chr1", "chr2", "chrX", "chr3", "chr4", "chr5", "chr6", "chr7",
                         "chr8", "chr9", "chr10", "chr11", "chr12", "chr13", "chr14",
                         "chr15", "chr16", "chr17", "chr18", "chr19"}; //since "except Y"
-    double innerT = 0.0, selfishT = 0.0, innerTt1 = 0.0, innerTt2 = 0.0,
-            fastT = 0.0, oldT = 0.0;
-    for (string s:chrs) {
-        vector<MatrixXd> chr = y.get_strata()[s];
-        oldT += (oldHicP(chr));
+    double oldT = 0.0;
+    double max_o = .0;
+    for (int i = 10; i > 0; i--) {
+        double tmp_0 = .0;
+        for (string s:chrs) {
+            vector<MatrixXd> chr = y.get_strata()[s];
+            tmp_0 += oldHicP(chr);
+        }
+        oldT += tmp_0;
+        max_o = max(max_o, tmp_0);
     }
-
-    cout<< "old totoal: " << oldT << endl;
+    oldT /= 9;
+    cout << "old totoal: " << oldT << endl;
     string outF = to_string(n) + "OLD.txt";
     ofstream fout(outF);
     fout << "old totoal: " << oldT << endl;
@@ -1379,11 +1384,9 @@ void toolOLD(int n) {
 }
 
 int main() {
-    vector<int> v{200, 300, 400, 500, 600, 700, 800, 900, 1000};
+    vector<int> v{500, 600, 700, 800, 900, 1000};
     for (int i: v) {
         toolN(i);
-    }
-    for (int i:v) {
-        toolOLD(i);
+        if (i == 500 || i == 1000) toolOLD(i);
     }
 }
