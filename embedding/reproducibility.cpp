@@ -24,35 +24,26 @@ using namespace Eigen;
 using namespace std::chrono;
 
 MatrixXd euc_pdist_square(MatrixXd x, int row, int col, double sigma) {
-    vector<double> tmp(row * (row - 1) / 2);
-//#pragma omp parallel for
+    vector<double> tmp;
+//NOt include #pragma omp parallel for
     {
         for (int i = 0; i < row; i++) {
-            for (int j = 0; j < i; j++) {
-                double dum = 0;
-                for (int k = 0; k < col; k++) {
-                    dum += pow(x(i, k) - x(j, k), 2);
-                }
-                tmp.push_back(sqrt(dum));
+            for (int j = i + 1; j < row; j++) {
+                tmp.push_back((x.row(i) - x.row(j)).norm());
             }
         }
     }
-
     MatrixXd ans = MatrixXd::Zero(row, row);
 #pragma omp parallel for
-    
-        for (int i = 0; i < row; i++)
-            for (int j = 0; j < i; j++) {
-                int ind;
-                ind =
-                        row * (row - 1) / 2 - (row - i) * (row - i - 1) / 2 + j - i - 1;
-                double tmp_v;
-                tmp_v = tmp[ind];
-                tmp_v = sqrt(2 - 2 * exp(-sigma * tmp_v));
-                ans(j, i) = tmp_v;
-                ans(i, j) = tmp_v;
-            }
-    
+
+    for (int i = 0; i < row; i++)
+        for (int j = i+1; j < row; j++) {
+            int ij=0.5*(2*row-1-i)*i+j-i-1;
+            double tmpv = sqrt(2.0-2.0*exp(-sigma*tmp[ij]));
+            ans(j, i) = tmpv;
+            ans(i, j) = tmpv;
+        }
+//    cout << "\n ans: \n" << ans << endl;
     return ans;
 }
 
@@ -162,7 +153,7 @@ print_time, double sigma, unsigned window_size
                 all_strata[6], all_strata[7], all_strata[8],
                 all_strata[9];
         t1 = high_resolution_clock::now();
-        MatrixXd inner = (scores * scores.transpose()) / score_col;
+        MatrixXd inner; inner.noalias() = (scores * scores.transpose()) / score_col;
 
 #pragma omp parallel for
             for (int i = 0; i < n_cells; i++)
@@ -175,7 +166,7 @@ print_time, double sigma, unsigned window_size
         t4 = high_resolution_clock::now();
     } else if (similarity_method == "selfish") {
         int n_windows = n_bins / window_size;
-        MatrixXd all_windows = MatrixXd::Zero(n_cells, n_bins);
+        MatrixXd all_windows = MatrixXd::Zero(n_cells, n_windows);
 #pragma omp parallel for
             for (int i = 0; i < n_strata; i++)
                 for (int j = 0; j < n_windows; j++) {
@@ -198,11 +189,12 @@ print_time, double sigma, unsigned window_size
                 }
         distance_mat = euc_pdist_square(fingerprints, n_cells, f_col, sigma);
         t4 = high_resolution_clock::now();
-    } else if (similarity_method == "old_hicrep") {
+    }
+    else if (similarity_method == "old_hicrep") {
         MatrixXd similarity = MatrixXd::Zero(n_cells, n_cells);
         for (int i = 0; i < n_cells; i++)
             for (int j = i + 1; j < n_cells; j++) {
-                VectorXd corrs(n_strata), weights(n_strata);
+                RowVectorXd corrs(n_strata), weights(n_strata);
                 for (int k = 0; k < n_strata; k++) {
                     MatrixXd stratum = all_strata[k];
                     MatrixXd s1 = stratum.row(i), s2 = stratum.row(j);
@@ -217,26 +209,26 @@ print_time, double sigma, unsigned window_size
                         vector<int> zP = z_pos(s1, s2);
                         s1 = zero_delete(s1, zP);
                         s2 = zero_delete(s2, zP);
+
+                        s1.array() -= s1.mean();
+                        s2.array() -=s2.mean();
                         double std1_n = sqrt(
-                                (s1.array() - s1.mean()).square().sum() / s1.size());
+                                s1.array().square().sum() / s1.size());
                         double std2_n = sqrt(
-                                (s2.array() - s2.mean()).square().sum() / s2.size());
+                                s2.array().square().sum() / s2.size());
                         weights(k) = s1.size() * std1_n * std2_n;
-                        double tmp_nume = (s1 * s2.transpose())(0), tmp_d = (s1.size() *
+                        //cout<<"weight: "<<weights(k)<<endl;
+                        double tmp_nume = (s2.adjoint()*s1).value(), tmp_d = (s1.size() *
                                                                              std1_n *
                                                                              std2_n);
                         if (tmp_d == 0 && tmp_nume == 0) corrs(k) = 1.0;
                         else if (tmp_d == 0 && tmp_nume != 0) corrs(k) = MAXD;
                         else corrs(k) = tmp_nume / tmp_d;
-
                     }
                 }
-//                cout << "corrs: \n" << corrs << endl;
-//                cout<<"weights: \n"<<weights<<endl;
-                cout << (corrs * weights.transpose())(0) << " / " << weights.sum()
-                     << endl;
-                double tmp_v, tmp_n = (corrs * weights.transpose())(
-                        0), tmp_d = weights.sum();
+                cout << "corrs: \n" << corrs << endl;
+                cout<<"weights: \n"<<weights<<endl;
+                double tmp_v, tmp_n = corrs.dot(weights), tmp_d = weights.sum();
                 if (tmp_n == 0 && tmp_d == 0) tmp_v = 1.0;
                 else if (tmp_n != 0 && tmp_d == 0) tmp_v = MAXD;
                 else tmp_v = tmp_n / tmp_d;

@@ -1266,7 +1266,7 @@ void test() {
             innerT += (tmpD[0] / 10);
             innerTt1 += (tmpD[1] / 10);
             innerTt2 += (tmpD[2] / 10);
-//            selfishT += (selfishP(chr) / 10);
+            selfishT += (selfishP(chr) / 10);
             oldT += (oldHicP(chr) / 10);
         }
     }
@@ -1302,8 +1302,8 @@ void toolN(int n) {
             innerT += (tmpD[0] / 10);
             innerTt1 += (tmpD[1] / 10);
             innerTt2 += (tmpD[2] / 10);
-          //  selfishT += (selfishP(chr) / 10);
-//            oldT += (oldHicP(chr) / 10);
+            selfishT += (selfishP(chr) / 10);
+            oldT += (oldHicP(chr) / 10);
         }
     }
 
@@ -1325,5 +1325,5 @@ void toolN(int n) {
 }
 
 int main() {
-    toolN(5);
+    toolN(100);
 }
