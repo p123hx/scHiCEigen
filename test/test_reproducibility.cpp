@@ -1347,9 +1347,9 @@ void toolOLD(int n) {
 }
 
 int main() {
-    vector<int> v{400, 500, 600, 700, 800, 900, 1000};
+    vector<int> v{400,  600, 700, 800, 900};
     for (int i: v) {
         toolN(i);
-        if (i == 500 || i == 1000) toolOLD(i);
+        //if (i == 500 || i == 1000) toolOLD(i);
     }
 }
