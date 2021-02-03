@@ -1369,13 +1369,13 @@ void toolOLD(int n) {
 }
 
 int main() {
-    toolOLD(2);
-    vector<int> v{500,1000};
+//    toolOLD(2);
+    vector<int> v{100,200,300,400,500,600,700,800,900,1000};
     for (int i: v) {
         toolN(i);//if (i == 500 || i == 1000) toolOLD(i);
     }
-    vector<int> ov{200,300,400,600,700,800,900};
-    for(int j:v){
-        toolOLD(j);
-    }
+//    vector<int> ov{200,300,400,600,700,800,900};
+//    for(int j:v){
+//        toolOLD(j);
+//    }
 }

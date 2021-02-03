@@ -7,12 +7,22 @@ mainly to compare the running time of reproducibility process.
 ### Installation
 **Required C++ Package**
 - C++11
-- xtensor
-- xtensor-blas
+- Eigen
+- MKL
+- OpenMP
 
 ## Usage
-Compile and run files in the test folder
+To reproduce the table of Magano 1000 cells:
+Linux cmd: 
+Go to cmake loaction: cd scHiCTest/cmake-build-debug/
+Source mkl location to configure if needed: for example
+source /opt/intel/mkl/2021.1/setvars.sh
 
+cmake -D CMAKE_CXX_COMPILER=/opt/gcc/8.4/modbin/g++ CMAKE_BUILD_TYPE=Release ..
+make
+./scHiCEigen
+
+Output will be in scHiCTest/cmake-build-debug/ files named $#ofcell$out.txt as well as print out
 
 
 ### Citation

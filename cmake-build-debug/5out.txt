@@ -1,5 +1,0 @@
-inner:
- t1: 24.2449 t2: 22.5017 total: 46.7465 in milliseconds
-selfish total: 0 in milliseconds
-fast total:42.8482
-old totoal: 0
