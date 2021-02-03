@@ -1293,6 +1293,23 @@ void toolN(int n) {
         innerTt2 += tinnerTt2;
         fastT += tfastT;
     }
+
+
+
+    double oldT = 0.0;
+    double max_o = .0;
+    for (int i = 4; i > 0; i--) {
+        double tmp_0 = .0;
+        for (string s:chrs) {
+            vector<MatrixXd> chr = y.get_strata()[s];
+            tmp_0 += oldHicP(chr);
+        }
+        oldT += tmp_0;
+        max_o = max(max_o, tmp_0);
+    }
+    oldT -= max_o;
+
+
     innerT -= innerTM;
     innerTt1 -= innerTt1M;
     innerTt2 -= innerTt2M;
@@ -1302,16 +1319,17 @@ void toolN(int n) {
     innerTt1 /=5.0;
     innerTt2 /= 5.0;
     fastT /= 5.0;
-
+    oldT /= 3;
     cout << "inner:\n t1: " << innerTt1 << " t2: " << innerTt2
          << " total: " << innerT << " in milliseconds\n"
          << "fast total:" << fastT << endl;
+    cout << "old totoal: " << oldT << endl;
 
     string outF = to_string(n) + "out.txt";
     ofstream fout(outF);
     fout << "inner:\n t1: " << innerTt1 << " t2: " << innerTt2
          << " total: " << innerT << " in milliseconds\n"
-         << "fast total:" << fastT << endl;
+         << "fast total:" << fastT <<    "old totoal: " << oldT << endl;
 
     fout.close();
 }
@@ -1338,6 +1356,7 @@ void toolOLD(int n) {
         oldT += tmp_0;
         max_o = max(max_o, tmp_0);
     }
+    oldT -= max_o;
     oldT /= 3;
     cout << "old totoal: " << oldT << endl;
     string outF = to_string(n) + "OLD.txt";
@@ -1347,9 +1366,12 @@ void toolOLD(int n) {
 }
 
 int main() {
-    vector<int> v{400,  600, 700, 800, 900};
+    vector<int> v{500,1000};
     for (int i: v) {
-        toolN(i);
-        //if (i == 500 || i == 1000) toolOLD(i);
+        toolN(i);//if (i == 500 || i == 1000) toolOLD(i);
+    }
+    vector<int> ov{200,300,400,600,700,800,900};
+    for(int j:v){
+        toolOLD(j);
     }
 }
