@@ -1293,8 +1293,25 @@ void toolN(int n) {
         innerTt2 += tinnerTt2;
         fastT += tfastT;
     }
+    innerT -= innerTM;
+    innerTt1 -= innerTt1M;
+    innerTt2 -= innerTt2M;
+    fastT -= fastTM;
 
+    innerT /= 10.0;
+    innerTt1 /=10.0;
+    innerTt2 /= 10.0;
+    fastT /= 10.0;
 
+    cout << "inner:\n t1: " << innerTt1 << " t2: " << innerTt2
+         << " total: " << innerT << " in milliseconds\n"
+         << "fast total:" << fastT << endl;
+
+    string outF = to_string(n) + "out.txt";
+    ofstream fout(outF);
+    fout << "inner:\n t1: " << innerTt1 << " t2: " << innerTt2
+         << " total: " << innerT << " in milliseconds\n"
+         << "fast total:" << fastT <<endl;
 
     double oldT = 0.0;
     double max_o = .0;
@@ -1310,26 +1327,12 @@ void toolN(int n) {
     oldT -= max_o;
 
 
-    innerT -= innerTM;
-    innerTt1 -= innerTt1M;
-    innerTt2 -= innerTt2M;
-    fastT -= fastTM;
 
-    innerT /= 10.0;
-    innerTt1 /=10.0;
-    innerTt2 /= 10.0;
-    fastT /= 10.0;
     oldT /= 10;
-    cout << "inner:\n t1: " << innerTt1 << " t2: " << innerTt2
-         << " total: " << innerT << " in milliseconds\n"
-         << "fast total:" << fastT << endl;
+
     cout << "old totoal: " << oldT << endl;
 
-    string outF = to_string(n) + "out.txt";
-    ofstream fout(outF);
-    fout << "inner:\n t1: " << innerTt1 << " t2: " << innerTt2
-         << " total: " << innerT << " in milliseconds\n"
-         << "fast total:" << fastT <<    "old totoal: " << oldT << endl;
+    fout<<    "old totoal: " << oldT <<endl;
 
     fout.close();
 }
@@ -1366,6 +1369,7 @@ void toolOLD(int n) {
 }
 
 int main() {
+    toolOLD(2);
     vector<int> v{500,1000};
     for (int i: v) {
         toolN(i);//if (i == 500 || i == 1000) toolOLD(i);
