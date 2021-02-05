@@ -12,7 +12,7 @@ double fastHicP(vector<MatrixXd> all_strata) {
     vector<double> times
             =
             pairwise_distance(all_strata, "hicrep");
-    cout << "fast total: " << times[0] << endl;
+    //cout << "fast total: " << times[0] << endl;
     return times[0];
 }
 
@@ -21,7 +21,7 @@ vector<double> innerP(vector<MatrixXd> all_strata) {
     vector<double> times
             =
             pairwise_distance(all_strata, "inner_product");
-    cout << "inner total: " << times[0] << endl;
+    //cout << "inner total: " << times[0] << endl;
     return times;
 }
 
@@ -30,7 +30,7 @@ double oldHicP(vector<MatrixXd> all_strata) {
     vector<double> times
             =
             pairwise_distance(all_strata, "old_hicrep");
-    cout << "old total: " << times[0] << endl;
+    //cout << "old total: " << times[0] << endl;
     return times[0];
 }
 
@@ -1232,6 +1232,7 @@ void test() {
     double innerT = 0.0, selfishT = 0.0, innerTt1 = 0.0, innerTt2 = 0.0,
             fastT = 0.0, oldT = 0.0;
     for (int i = 10; i > 0; i--) {
+
         for (string s:chrs) {
 //            cout << "\n" << s << ":\n";
             vector<MatrixXd> chr = y.get_strata()[s];
@@ -1243,14 +1244,15 @@ void test() {
             selfishT += (selfishP(chr) / 10);
             oldT += (oldHicP(chr) / 10);
         }
+
     }
 
-//    cout << "inner:\n t1: " << innerTt1 << " t2: " << innerTt2
-//         << " total: " << innerT << " in milliseconds\n"
-//         << "selfish total: " << selfishT << " in "
-//                                             "milliseconds\n"
-//         << "fast total:" << fastT << endl
-//         << "old totoal: " << oldT << endl;
+    cout << "inner:\n t1: " << innerTt1 << " t2: " << innerTt2
+         << " total: " << innerT << " in milliseconds\n"
+         << "selfish total: " << selfishT << " in "
+                                             "milliseconds\n"
+         << "fast total:" << fastT << endl
+         << "old totoal: " << oldT << endl;
 }
 
 //#TODO:
@@ -1269,6 +1271,8 @@ void toolN(int n) {
             fastT = 0.0, innerTM = 0.0,  innerTt1M = 0.0,
             innerTt2M = 0.0,
             fastTM = 0.0;
+    string outF = to_string(n) + "out.txt";
+    ofstream fout(outF);
     for (int i = 11; i > 0; i--) {
         double tinnerT = 0.0,  tinnerTt1 = 0.0, tinnerTt2 = 0.0,
                 tfastT = 0.0;
@@ -1287,11 +1291,19 @@ void toolN(int n) {
         innerTt1M = max(innerTt1M, tinnerTt1);
         innerTt2M = max(innerTt2M, tinnerTt2);
         fastTM = max(fastTM, tfastT);
-
         innerT += tinnerT;
         innerTt1 += tinnerTt1;
         innerTt2 += tinnerTt2;
         fastT += tfastT;
+
+        cout << "inner_set:\n t1: " << tinnerTt1 << " t2: " << tinnerTt2
+             << " set_total: " << tinnerT << " in milliseconds\n"
+             << "fast set:" << tfastT << endl;
+
+
+        fout << "inner_set:\n t1: " << tinnerTt1 << " t2: " << tinnerTt2
+             << " set_total: " << tinnerT << " in milliseconds\n"
+             << "fast set_total:" << tfastT <<endl;
     }
     innerT -= innerTM;
     innerTt1 -= innerTt1M;
@@ -1307,8 +1319,7 @@ void toolN(int n) {
          << " total: " << innerT << " in milliseconds\n"
          << "fast total:" << fastT << endl;
 
-    string outF = to_string(n) + "out.txt";
-    ofstream fout(outF);
+
     fout << "inner:\n t1: " << innerTt1 << " t2: " << innerTt2
          << " total: " << innerT << " in milliseconds\n"
          << "fast total:" << fastT <<endl;
@@ -1323,6 +1334,10 @@ void toolN(int n) {
         }
         oldT += tmp_0;
         max_o = max(max_o, tmp_0);
+        cout<<"set "<<i<<endl;
+        cout << "old set totoal: "<<i<<" " << tmp_0 << endl;
+
+        fout<<    "old set totoal: " <<i<<" "<< tmp_0 <<endl;
     }
     oldT -= max_o;
 
