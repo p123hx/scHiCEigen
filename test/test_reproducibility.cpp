@@ -1278,13 +1278,12 @@ void toolN(int n) {
                 tfastT = 0.0;
         cout<<"Set: "<<i<<endl;
         for (string s:chrs) {
-            cout << "\n" << s << ":\n";
             vector<MatrixXd> chr = y.get_strata()[s];
-            tfastT += (fastHicP(chr));
+            tfastT += (fastHicP(chr))/1000.0;
             vector<double> tmpD = innerP(chr);
-            tinnerT += (tmpD[0]);
-            tinnerTt1 += (tmpD[1]);
-            tinnerTt2 += (tmpD[2]);
+            tinnerT += (tmpD[0])/1000.0;
+            tinnerTt1 += (tmpD[1])/1000.0;
+            tinnerTt2 += (tmpD[2])/1000.0;
 //            tselfishT += (selfishP(chr));
         }
         innerTM = max(innerTM, tinnerT);
@@ -1296,14 +1295,10 @@ void toolN(int n) {
         innerTt2 += tinnerTt2;
         fastT += tfastT;
 
-        cout << "inner_set:\n t1: " << tinnerTt1 << " t2: " << tinnerTt2
-             << " set_total: " << tinnerT << " in milliseconds\n"
-             << "fast set:" << tfastT << endl;
-
-
-        fout << "inner_set:\n t1: " << tinnerTt1 << " t2: " << tinnerTt2
-             << " set_total: " << tinnerT << " in milliseconds\n"
-             << "fast set_total:" << tfastT <<endl;
+        cout <<n<<": fast set: "<<tfastT <<"; t1: "<<tinnerTt1 << " t2: " << tinnerTt2
+                                                   << " set_total: " << tinnerT <<endl;
+        fout <<n<<": fast set: "<<tfastT <<"; t1: "<<tinnerTt1 << " t2: " << tinnerTt2
+             << " set_total: " << tinnerT <<endl;
     }
     innerT -= innerTM;
     innerTt1 -= innerTt1M;
@@ -1315,18 +1310,16 @@ void toolN(int n) {
     innerTt2 /= 10.0;
     fastT /= 10.0;
 
-    cout << "inner:\n t1: " << innerTt1 << " t2: " << innerTt2
-         << " total: " << innerT << " in milliseconds\n"
-         << "fast total:" << fastT << endl;
+    cout << "fast total:" << fastT<< "; t1: " << innerTt1 << " t2: " << innerTt2
+         << " total: " << innerT<< endl;
 
 
-    fout << "inner:\n t1: " << innerTt1 << " t2: " << innerTt2
-         << " total: " << innerT << " in milliseconds\n"
-         << "fast total:" << fastT <<endl;
+    fout << "fast total:" << fastT<< "; t1: " << innerTt1 << " t2: " << innerTt2
+         << " total: " << innerT<< endl;
 
-//    double oldT = 0.0;
+    double oldT = 0.0;
 //    double max_o = .0;
-//    for (int i = 5; i > 0; i--) {
+//    for (int i = 1; i > 0; i--) {
 //        double tmp_0 = .0;
 //        for (string s:chrs) {
 //            vector<MatrixXd> chr = y.get_strata()[s];
@@ -1343,13 +1336,19 @@ void toolN(int n) {
 //
 //
 //
-//    oldT /= 4;
-//
-//    cout << "old totoal: " << oldT << endl;
-//
-//    fout<<    "old totoal: " << oldT <<endl;
-//
-//    fout.close();
+//    oldT /= ;
+
+    for (string s:chrs) {
+        vector<MatrixXd> chr = y.get_strata()[s];
+        oldT = oldHicP(chr) / 1000.0;
+    }
+
+
+    cout << "old totoal: " << oldT << endl;
+
+    fout<<  "old totoal: " << oldT <<endl;
+
+    fout.close();
 }
 
 void toolOLD(int n) {
@@ -1384,7 +1383,7 @@ void toolOLD(int n) {
 }
 
 int main() {
-    vector<int> v{100,200,300,400,500,600,700,800,900,1000};
+    vector<int> v{3,100,400,500,600,700,800,900,1000,200,300};
     for (int i: v) {
         toolN(i);
     }
