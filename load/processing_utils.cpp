@@ -7,7 +7,7 @@
 using namespace std;
 using namespace Eigen;
 
-MatrixXd matrix_operation(MatrixXd mat, string operation) {
+MatrixXd matrix_operation(MatrixXd &mat, string operation) {
     MatrixXd tmp;
 
     transform(operation.begin(), operation.end(), operation.begin(), ::tolower);
@@ -21,7 +21,7 @@ MatrixXd matrix_operation(MatrixXd mat, string operation) {
     return tmp;
 }
 
-MatrixXd convolution(MatrixXd mat, int kernel_shape) {
+MatrixXd convolution(MatrixXd &mat, int kernel_shape) {
 //credit: https://github.com/chaowang15/fast-image-convolution-cpp/blob/master/src/convolution.cpp
 
     MatrixXd conv = MatrixXd::Ones(kernel_shape, kernel_shape) / pow

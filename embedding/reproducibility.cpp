@@ -24,11 +24,12 @@ using namespace std;
 using namespace Eigen;
 using namespace std::chrono;
 
-MatrixXd euc_pdist_square(MatrixXd x, int row, int col, double sigma) {
+MatrixXd euc_pdist_square(MatrixXd &x, int row, int col, double sigma) {
     vector<double> tmp;
+    tmp.reserve(0.5*row*(row-1));
 //NOt include #pragma omp parallel for
     {
-        for (int i = 0; i < row; i++) {
+        for (int i = 0; i < row-1; i++) {
             for (int j = i + 1; j < row; j++) {
                 tmp.push_back((x.row(i) - x.row(j)).norm());
             }
@@ -48,7 +49,7 @@ MatrixXd euc_pdist_square(MatrixXd x, int row, int col, double sigma) {
     return ans;
 }
 
-vector<int> z_pos(MatrixXd s1, MatrixXd s2) {
+vector<int> z_pos(MatrixXd & s1, MatrixXd & s2) {
     vector<int> z;
 //#pragma omp parallel for
     for (int i = 0; i < s1.size(); i++) {
@@ -58,7 +59,7 @@ vector<int> z_pos(MatrixXd s1, MatrixXd s2) {
     return z;
 }
 
-MatrixXd zero_delete(MatrixXd s, vector<int> z) {
+MatrixXd zero_delete(MatrixXd& s, vector<int>& z) {
     VectorXd ans(z.size());
 #pragma omp parallel for
         for (int i = 0; i < z.size(); i++) {
@@ -68,7 +69,7 @@ MatrixXd zero_delete(MatrixXd s, vector<int> z) {
 }
 
 vector<double>
-pairwise_distance(vector<MatrixXd> all_strata, string similarity_method, bool
+pairwise_distance(vector<MatrixXd> &all_strata, string similarity_method, bool
 print_time, double sigma, unsigned window_size
 ) {
     //#TODO Change thread

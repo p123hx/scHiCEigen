@@ -15,7 +15,7 @@ double pearsoncoeff(MatrixXd x, MatrixXd y, double size);
 MatrixXd zscore_prop(MatrixXd a, int axis);
 
 vector<double>
-pairwise_distance(vector<MatrixXd> all_strata, string similarity_method,
+pairwise_distance(vector<MatrixXd> &all_strata, string similarity_method,
                   bool print_time = false, double sigma = .5,
                   unsigned window_size = 10);
 

@@ -15,7 +15,7 @@ using namespace std;
 using namespace Eigen;
 class scHiCs {
 public:
-    scHiCs(vector<string> list_of_files, string reference_genome, int resolution, int
+    scHiCs(vector<string> &list_of_files, string reference_genome, int resolution, int
     kernel_shape,int max_distance, bool
            adjust_resolution = true,  string chromosomes = "all", string
            format = "customized", int keep_n_strata = 10, bool store_full_map = false,

@@ -14,6 +14,6 @@
 #include <Eigen/Dense>
 using namespace std;
 using namespace Eigen;
-MatrixXd matrix_operation(MatrixXd mat,string operation);
-MatrixXd convolution(MatrixXd mat,int kernel_shape =3);
+MatrixXd matrix_operation(MatrixXd &mat,string operation);
+MatrixXd convolution(MatrixXd &mat,int kernel_shape =3);
 #endif //SCHICTOOLS_PROCESSING_UTILS_H

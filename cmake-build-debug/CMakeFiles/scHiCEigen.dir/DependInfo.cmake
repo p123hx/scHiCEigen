@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/hongxi/scHiCTest/embedding/reproducibility.cpp" "/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/scHiCEigen.dir/embedding/reproducibility.cpp.o"
-  "/home/hongxi/scHiCTest/load/ContactMaps.cpp" "/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/scHiCEigen.dir/load/ContactMaps.cpp.o"
-  "/home/hongxi/scHiCTest/load/load_hic_file.cpp" "/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/scHiCEigen.dir/load/load_hic_file.cpp.o"
-  "/home/hongxi/scHiCTest/load/processing_utils.cpp" "/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/scHiCEigen.dir/load/processing_utils.cpp.o"
-  "/home/hongxi/scHiCTest/test/test_reproducibility.cpp" "/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/scHiCEigen.dir/test/test_reproducibility.cpp.o"
+  "/Users/bj/CLionProjects/eigenScHiC/embedding/reproducibility.cpp" "/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles/scHiCEigen.dir/embedding/reproducibility.cpp.o"
+  "/Users/bj/CLionProjects/eigenScHiC/load/ContactMaps.cpp" "/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles/scHiCEigen.dir/load/ContactMaps.cpp.o"
+  "/Users/bj/CLionProjects/eigenScHiC/load/load_hic_file.cpp" "/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles/scHiCEigen.dir/load/load_hic_file.cpp.o"
+  "/Users/bj/CLionProjects/eigenScHiC/load/processing_utils.cpp" "/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles/scHiCEigen.dir/load/processing_utils.cpp.o"
+  "/Users/bj/CLionProjects/eigenScHiC/test/test_reproducibility.cpp" "/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles/scHiCEigen.dir/test/test_reproducibility.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
@@ -19,7 +19,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/hongxi/eigen-3.3.9"
+  "/usr/local/include"
+  "/usr/local/include/eigen3"
   )
 
 # Targets to which this target links.

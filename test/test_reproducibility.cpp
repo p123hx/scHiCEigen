@@ -7,7 +7,7 @@
 
 using namespace std;using namespace Eigen;
 
-double fastHicP(vector<MatrixXd> all_strata) {
+double fastHicP(vector<MatrixXd> &all_strata) {
 
     vector<double> times
             =
@@ -16,7 +16,7 @@ double fastHicP(vector<MatrixXd> all_strata) {
     return times[0];
 }
 
-vector<double> innerP(vector<MatrixXd> all_strata) {
+vector<double> innerP(vector<MatrixXd> &all_strata) {
 
     vector<double> times
             =
@@ -25,7 +25,7 @@ vector<double> innerP(vector<MatrixXd> all_strata) {
     return times;
 }
 
-double oldHicP(vector<MatrixXd> all_strata) {
+double oldHicP(vector<MatrixXd> &all_strata) {
 
     vector<double> times
             =
@@ -34,7 +34,7 @@ double oldHicP(vector<MatrixXd> all_strata) {
     return times[0];
 }
 
-double selfishP(vector<MatrixXd> all_strata) {
+double selfishP(vector<MatrixXd> &all_strata) {
 
     vector<double> times
             =
@@ -1384,13 +1384,10 @@ void toolOLD(int n) {
 }
 
 int main() {
-toolN(2);
-    vector<int> v{1000,100,200,300,400,500,600,700,800,900};
-    for (int i: v) {
-        toolN(i);//if (i == 500 || i == 1000) toolOLD(i);
-    }
-//    vector<int> ov{200,300,400,600,700,800,900};
-//    for(int j:v){
-//        toolOLD(j);
+test();
+//    vector<int> v{1000,100,200,300,400,500,600,700,800,900};
+//    for (int i: v) {
+//        toolN(i);//if (i == 500 || i == 1000) toolOLD(i);
 //    }
+
 }

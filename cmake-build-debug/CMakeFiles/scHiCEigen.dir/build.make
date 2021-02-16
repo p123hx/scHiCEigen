@@ -53,19 +53,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/cmake/3.19.3/bin/cmake
+CMAKE_COMMAND = /usr/local/Cellar/cmake/3.19.3/bin/cmake
 
 # The command to remove a file.
-RM = /opt/cmake/3.19.3/bin/cmake -E rm -f
+RM = /usr/local/Cellar/cmake/3.19.3/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hongxi/scHiCTest
+CMAKE_SOURCE_DIR = /Users/bj/CLionProjects/eigenScHiC
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hongxi/scHiCTest/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/bj/CLionProjects/eigenScHiC/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/scHiCEigen.dir/depend.make
@@ -78,68 +78,68 @@ include CMakeFiles/scHiCEigen.dir/flags.make
 
 CMakeFiles/scHiCEigen.dir/embedding/reproducibility.cpp.o: CMakeFiles/scHiCEigen.dir/flags.make
 CMakeFiles/scHiCEigen.dir/embedding/reproducibility.cpp.o: ../embedding/reproducibility.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/scHiCEigen.dir/embedding/reproducibility.cpp.o"
-	/opt/gcc/8.4/modbin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scHiCEigen.dir/embedding/reproducibility.cpp.o -c /home/hongxi/scHiCTest/embedding/reproducibility.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/scHiCEigen.dir/embedding/reproducibility.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scHiCEigen.dir/embedding/reproducibility.cpp.o -c /Users/bj/CLionProjects/eigenScHiC/embedding/reproducibility.cpp
 
 CMakeFiles/scHiCEigen.dir/embedding/reproducibility.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scHiCEigen.dir/embedding/reproducibility.cpp.i"
-	/opt/gcc/8.4/modbin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hongxi/scHiCTest/embedding/reproducibility.cpp > CMakeFiles/scHiCEigen.dir/embedding/reproducibility.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bj/CLionProjects/eigenScHiC/embedding/reproducibility.cpp > CMakeFiles/scHiCEigen.dir/embedding/reproducibility.cpp.i
 
 CMakeFiles/scHiCEigen.dir/embedding/reproducibility.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scHiCEigen.dir/embedding/reproducibility.cpp.s"
-	/opt/gcc/8.4/modbin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hongxi/scHiCTest/embedding/reproducibility.cpp -o CMakeFiles/scHiCEigen.dir/embedding/reproducibility.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bj/CLionProjects/eigenScHiC/embedding/reproducibility.cpp -o CMakeFiles/scHiCEigen.dir/embedding/reproducibility.cpp.s
 
 CMakeFiles/scHiCEigen.dir/load/ContactMaps.cpp.o: CMakeFiles/scHiCEigen.dir/flags.make
 CMakeFiles/scHiCEigen.dir/load/ContactMaps.cpp.o: ../load/ContactMaps.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/scHiCEigen.dir/load/ContactMaps.cpp.o"
-	/opt/gcc/8.4/modbin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scHiCEigen.dir/load/ContactMaps.cpp.o -c /home/hongxi/scHiCTest/load/ContactMaps.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/scHiCEigen.dir/load/ContactMaps.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scHiCEigen.dir/load/ContactMaps.cpp.o -c /Users/bj/CLionProjects/eigenScHiC/load/ContactMaps.cpp
 
 CMakeFiles/scHiCEigen.dir/load/ContactMaps.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scHiCEigen.dir/load/ContactMaps.cpp.i"
-	/opt/gcc/8.4/modbin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hongxi/scHiCTest/load/ContactMaps.cpp > CMakeFiles/scHiCEigen.dir/load/ContactMaps.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bj/CLionProjects/eigenScHiC/load/ContactMaps.cpp > CMakeFiles/scHiCEigen.dir/load/ContactMaps.cpp.i
 
 CMakeFiles/scHiCEigen.dir/load/ContactMaps.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scHiCEigen.dir/load/ContactMaps.cpp.s"
-	/opt/gcc/8.4/modbin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hongxi/scHiCTest/load/ContactMaps.cpp -o CMakeFiles/scHiCEigen.dir/load/ContactMaps.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bj/CLionProjects/eigenScHiC/load/ContactMaps.cpp -o CMakeFiles/scHiCEigen.dir/load/ContactMaps.cpp.s
 
 CMakeFiles/scHiCEigen.dir/load/load_hic_file.cpp.o: CMakeFiles/scHiCEigen.dir/flags.make
 CMakeFiles/scHiCEigen.dir/load/load_hic_file.cpp.o: ../load/load_hic_file.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/scHiCEigen.dir/load/load_hic_file.cpp.o"
-	/opt/gcc/8.4/modbin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scHiCEigen.dir/load/load_hic_file.cpp.o -c /home/hongxi/scHiCTest/load/load_hic_file.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/scHiCEigen.dir/load/load_hic_file.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scHiCEigen.dir/load/load_hic_file.cpp.o -c /Users/bj/CLionProjects/eigenScHiC/load/load_hic_file.cpp
 
 CMakeFiles/scHiCEigen.dir/load/load_hic_file.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scHiCEigen.dir/load/load_hic_file.cpp.i"
-	/opt/gcc/8.4/modbin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hongxi/scHiCTest/load/load_hic_file.cpp > CMakeFiles/scHiCEigen.dir/load/load_hic_file.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bj/CLionProjects/eigenScHiC/load/load_hic_file.cpp > CMakeFiles/scHiCEigen.dir/load/load_hic_file.cpp.i
 
 CMakeFiles/scHiCEigen.dir/load/load_hic_file.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scHiCEigen.dir/load/load_hic_file.cpp.s"
-	/opt/gcc/8.4/modbin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hongxi/scHiCTest/load/load_hic_file.cpp -o CMakeFiles/scHiCEigen.dir/load/load_hic_file.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bj/CLionProjects/eigenScHiC/load/load_hic_file.cpp -o CMakeFiles/scHiCEigen.dir/load/load_hic_file.cpp.s
 
 CMakeFiles/scHiCEigen.dir/test/test_reproducibility.cpp.o: CMakeFiles/scHiCEigen.dir/flags.make
 CMakeFiles/scHiCEigen.dir/test/test_reproducibility.cpp.o: ../test/test_reproducibility.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/scHiCEigen.dir/test/test_reproducibility.cpp.o"
-	/opt/gcc/8.4/modbin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scHiCEigen.dir/test/test_reproducibility.cpp.o -c /home/hongxi/scHiCTest/test/test_reproducibility.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/scHiCEigen.dir/test/test_reproducibility.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scHiCEigen.dir/test/test_reproducibility.cpp.o -c /Users/bj/CLionProjects/eigenScHiC/test/test_reproducibility.cpp
 
 CMakeFiles/scHiCEigen.dir/test/test_reproducibility.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scHiCEigen.dir/test/test_reproducibility.cpp.i"
-	/opt/gcc/8.4/modbin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hongxi/scHiCTest/test/test_reproducibility.cpp > CMakeFiles/scHiCEigen.dir/test/test_reproducibility.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bj/CLionProjects/eigenScHiC/test/test_reproducibility.cpp > CMakeFiles/scHiCEigen.dir/test/test_reproducibility.cpp.i
 
 CMakeFiles/scHiCEigen.dir/test/test_reproducibility.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scHiCEigen.dir/test/test_reproducibility.cpp.s"
-	/opt/gcc/8.4/modbin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hongxi/scHiCTest/test/test_reproducibility.cpp -o CMakeFiles/scHiCEigen.dir/test/test_reproducibility.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bj/CLionProjects/eigenScHiC/test/test_reproducibility.cpp -o CMakeFiles/scHiCEigen.dir/test/test_reproducibility.cpp.s
 
 CMakeFiles/scHiCEigen.dir/load/processing_utils.cpp.o: CMakeFiles/scHiCEigen.dir/flags.make
 CMakeFiles/scHiCEigen.dir/load/processing_utils.cpp.o: ../load/processing_utils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/scHiCEigen.dir/load/processing_utils.cpp.o"
-	/opt/gcc/8.4/modbin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scHiCEigen.dir/load/processing_utils.cpp.o -c /home/hongxi/scHiCTest/load/processing_utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/scHiCEigen.dir/load/processing_utils.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scHiCEigen.dir/load/processing_utils.cpp.o -c /Users/bj/CLionProjects/eigenScHiC/load/processing_utils.cpp
 
 CMakeFiles/scHiCEigen.dir/load/processing_utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scHiCEigen.dir/load/processing_utils.cpp.i"
-	/opt/gcc/8.4/modbin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hongxi/scHiCTest/load/processing_utils.cpp > CMakeFiles/scHiCEigen.dir/load/processing_utils.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bj/CLionProjects/eigenScHiC/load/processing_utils.cpp > CMakeFiles/scHiCEigen.dir/load/processing_utils.cpp.i
 
 CMakeFiles/scHiCEigen.dir/load/processing_utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scHiCEigen.dir/load/processing_utils.cpp.s"
-	/opt/gcc/8.4/modbin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hongxi/scHiCTest/load/processing_utils.cpp -o CMakeFiles/scHiCEigen.dir/load/processing_utils.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bj/CLionProjects/eigenScHiC/load/processing_utils.cpp -o CMakeFiles/scHiCEigen.dir/load/processing_utils.cpp.s
 
 # Object files for target scHiCEigen
 scHiCEigen_OBJECTS = \
@@ -158,26 +158,9 @@ scHiCEigen: CMakeFiles/scHiCEigen.dir/load/load_hic_file.cpp.o
 scHiCEigen: CMakeFiles/scHiCEigen.dir/test/test_reproducibility.cpp.o
 scHiCEigen: CMakeFiles/scHiCEigen.dir/load/processing_utils.cpp.o
 scHiCEigen: CMakeFiles/scHiCEigen.dir/build.make
-scHiCEigen: /home/hongxi/anaconda3/lib/libmkl_intel_lp64.so
-scHiCEigen: /home/hongxi/anaconda3/lib/libmkl_intel_thread.so
-scHiCEigen: /home/hongxi/anaconda3/lib/libmkl_core.so
-scHiCEigen: /home/hongxi/anaconda3/lib/libiomp5.so
-scHiCEigen: /home/hongxi/anaconda3/lib/libmkl_intel_lp64.so
-scHiCEigen: /home/hongxi/anaconda3/lib/libmkl_intel_thread.so
-scHiCEigen: /home/hongxi/anaconda3/lib/libmkl_core.so
-scHiCEigen: /home/hongxi/anaconda3/lib/libiomp5.so
-scHiCEigen: /home/hongxi/anaconda3/lib/libgomp.so
-scHiCEigen: /lib64/libpthread.so
-scHiCEigen: /home/hongxi/anaconda3/lib/libmkl_intel_lp64.so
-scHiCEigen: /home/hongxi/anaconda3/lib/libmkl_intel_thread.so
-scHiCEigen: /home/hongxi/anaconda3/lib/libmkl_core.so
-scHiCEigen: /home/hongxi/anaconda3/lib/libiomp5.so
-scHiCEigen: /home/hongxi/anaconda3/lib/libmkl_intel_lp64.so
-scHiCEigen: /home/hongxi/anaconda3/lib/libmkl_intel_thread.so
-scHiCEigen: /home/hongxi/anaconda3/lib/libmkl_core.so
-scHiCEigen: /home/hongxi/anaconda3/lib/libiomp5.so
+scHiCEigen: /usr/local/lib/libomp.dylib
 scHiCEigen: CMakeFiles/scHiCEigen.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable scHiCEigen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable scHiCEigen"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scHiCEigen.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -190,6 +173,6 @@ CMakeFiles/scHiCEigen.dir/clean:
 .PHONY : CMakeFiles/scHiCEigen.dir/clean
 
 CMakeFiles/scHiCEigen.dir/depend:
-	cd /home/hongxi/scHiCTest/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hongxi/scHiCTest /home/hongxi/scHiCTest /home/hongxi/scHiCTest/cmake-build-debug /home/hongxi/scHiCTest/cmake-build-debug /home/hongxi/scHiCTest/cmake-build-debug/CMakeFiles/scHiCEigen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/bj/CLionProjects/eigenScHiC/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/bj/CLionProjects/eigenScHiC /Users/bj/CLionProjects/eigenScHiC /Users/bj/CLionProjects/eigenScHiC/cmake-build-debug /Users/bj/CLionProjects/eigenScHiC/cmake-build-debug /Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles/scHiCEigen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/scHiCEigen.dir/depend
 

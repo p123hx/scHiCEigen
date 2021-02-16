@@ -165,7 +165,7 @@ get_chromosome_lengths(const map<string, int>& ref_map, const string& chromosome
     return make_pair(chroms, length2);
 }
 pair<MatrixXd, vector<MatrixXd>> load_HiC(string file, map<string,
-        int> genome_length,
+        int> &genome_length,
                                           string
                                           format ,
                                           int custom_format,
