@@ -1340,7 +1340,7 @@ void toolN(int n) {
 
     for (string s:chrs) {
         vector<MatrixXd> chr = y.get_strata()[s];
-        oldT = oldHicP(chr) / 1000.0;
+        oldT += oldHicP(chr) / 1000.0;
     }
 
 
