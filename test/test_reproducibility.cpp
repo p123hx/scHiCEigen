@@ -1324,32 +1324,32 @@ void toolN(int n) {
          << " total: " << innerT << " in milliseconds\n"
          << "fast total:" << fastT <<endl;
 
-    double oldT = 0.0;
-    double max_o = .0;
-    for (int i = 11; i > 0; i--) {
-        double tmp_0 = .0;
-        for (string s:chrs) {
-            vector<MatrixXd> chr = y.get_strata()[s];
-            tmp_0 += oldHicP(chr);
-        }
-        oldT += tmp_0;
-        max_o = max(max_o, tmp_0);
-        cout<<"set "<<i<<endl;
-        cout << "old set totoal: "<<i<<" " << tmp_0 << endl;
-
-        fout<<    "old set totoal: " <<i<<" "<< tmp_0 <<endl;
-    }
-    oldT -= max_o;
-
-
-
-    oldT /= 10;
-
-    cout << "old totoal: " << oldT << endl;
-
-    fout<<    "old totoal: " << oldT <<endl;
-
-    fout.close();
+//    double oldT = 0.0;
+//    double max_o = .0;
+//    for (int i = 5; i > 0; i--) {
+//        double tmp_0 = .0;
+//        for (string s:chrs) {
+//            vector<MatrixXd> chr = y.get_strata()[s];
+//            tmp_0 += oldHicP(chr);
+//        }
+//        oldT += tmp_0;
+//        max_o = max(max_o, tmp_0);
+//        cout<<"set "<<i<<endl;
+//        cout << "old set totoal: "<<i<<" " << tmp_0 << endl;
+//
+//        fout<<    "old set totoal: " <<i<<" "<< tmp_0 <<endl;
+//    }
+//    oldT -= max_o;
+//
+//
+//
+//    oldT /= 4;
+//
+//    cout << "old totoal: " << oldT << endl;
+//
+//    fout<<    "old totoal: " << oldT <<endl;
+//
+//    fout.close();
 }
 
 void toolOLD(int n) {
@@ -1384,10 +1384,8 @@ void toolOLD(int n) {
 }
 
 int main() {
-test();
-//    vector<int> v{100,200,300,400,500,600,700,800,900,1000};
-//    for (int i: v) {
-//        toolN(i);
-//    }
-
+    vector<int> v{100,200,300,400,500,600,700,800,900,1000};
+    for (int i: v) {
+        toolN(i);
+    }
 }
