@@ -36,7 +36,7 @@ MatrixXd euc_pdist_square(MatrixXd &x, int row, int col, double sigma) {
         }
     }
     MatrixXd ans = MatrixXd::Zero(row, row);
-#pragma omp parallel for
+//#pragma omp parallel for
 
     for (int i = 0; i < row; i++)
         for (int j = i+1; j < row; j++) {
@@ -61,7 +61,7 @@ vector<int> z_pos(MatrixXd & s1, MatrixXd & s2) {
 
 MatrixXd zero_delete(MatrixXd& s, vector<int>& z) {
     VectorXd ans(z.size());
-#pragma omp parallel for
+//#pragma omp parallel for
         for (int i = 0; i < z.size(); i++) {
             ans(i) = s(z[i]);
         }
@@ -73,8 +73,8 @@ pairwise_distance(vector<MatrixXd> &all_strata, string similarity_method, bool
 print_time, double sigma, unsigned window_size
 ) {
     //#TODO Change thread
-    mkl_set_num_threads(56);
-    setNbThreads(56);
+//    mkl_set_num_threads(56);
+//    setNbThreads(56);
 
     transform(similarity_method.begin(), similarity_method.end(),
               similarity_method.begin(), ::tolower);
@@ -87,7 +87,7 @@ print_time, double sigma, unsigned window_size
     if (similarity_method == "hicrep") {
         int score_col = 0;
         MatrixXd weighted_std = MatrixXd::Zero(n_cells, n_bins);
-#pragma omp parallel for reduction(+:score_col)
+//#pragma omp parallel for reduction(+:score_col)
 
         for (int i = 0; i < n_strata; i++) {
             int icol = all_strata[i].cols();
@@ -112,8 +112,7 @@ print_time, double sigma, unsigned window_size
         tmp1.noalias() = (scores * scores.transpose());
         tmp2.noalias() = (weighted_std * (weighted_std.transpose()));
         t3 = high_resolution_clock::now();
-        int j;
-#pragma omp parallel for
+//#pragma omp parallel for schedule(guided) collapse(2)
             for (int i = 0; i < n_cells; i++)
                 for (int j = 0; j < n_cells; j++) {
                     if (tmp2(i, j) == 0) {
@@ -131,7 +130,6 @@ print_time, double sigma, unsigned window_size
     } else if (similarity_method == "inner_product" or
                similarity_method == "innerproduct") {
         int score_col = 0;
-#pragma omp parallel for reduction(+:score_col)
         for (int i = 0; i < n_strata; i++) {
             int icol = all_strata[i].cols();
             auto mean = all_strata[i].rowwise().mean();
@@ -156,8 +154,8 @@ print_time, double sigma, unsigned window_size
                 all_strata[9];
         t1 = high_resolution_clock::now();
         MatrixXd inner; inner.noalias() = (scores * scores.transpose()) / score_col;
-
-#pragma omp parallel for
+        t2 = high_resolution_clock::now();
+//#pragma omp parallel for schedule(guided) collapse(2)
             for (int i = 0; i < n_cells; i++)
                 for (int j = 0; j < n_cells; j++) {
                     double tmp = inner(i, j);
