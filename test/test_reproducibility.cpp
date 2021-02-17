@@ -1523,5 +1523,5 @@ void testNew(){
               operation);
 }
 int main() {
-    toolN(100);
+    toolNew(100);
 }

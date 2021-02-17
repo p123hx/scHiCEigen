@@ -252,6 +252,8 @@
       <workItem from="1613568547160" duration="4641000" />
       <workItem from="1613578735684" duration="3262000" />
       <workItem from="1613589476246" duration="598000" />
+      <workItem from="1613600002528" duration="613000" />
+      <workItem from="1613601889871" duration="30000" />
     </task>
     <servers />
   </component>
@@ -273,11 +275,6 @@
           <url>file://$PROJECT_DIR$/load/ContactMaps.cpp</url>
           <line>18</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/test/test_reproducibility.cpp</url>
-          <line>1523</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
