@@ -11,13 +11,13 @@
 #include <chrono>
 #include <ctime>
 #include "omp.h"
-#include <mkl.h>
+//#include <mkl.h>
 #include <thread>
 #include <cctype>
 #include <algorithm>
 #include <cfloat>
 #include <cmath>
-#define EIGEN_USE_MKL_ALL
+//#define EIGEN_USE_MKL_ALL
 #include <Eigen/Core>
 #define MAXD 1e12
 using namespace std;
