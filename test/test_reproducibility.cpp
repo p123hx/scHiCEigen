@@ -1317,8 +1317,8 @@ void toolN(int n) {
 
     fout << "fast total:" << fastT<< "; t1: " << innerTt1 << " t2: " << innerTt2
          << " total: " << innerT<< endl;
-
-    double oldT = 0.0;
+//
+//    double oldT = 0.0;
 //    double max_o = .0;
 //    for (int i = 1; i > 0; i--) {
 //        double tmp_0 = .0;
@@ -1338,16 +1338,16 @@ void toolN(int n) {
 //
 //
 //    oldT /= ;
-
-    for (string s:chrs) {
-        vector<MatrixXd> chr = y.get_strata()[s];
-        oldT += oldHicP(chr) / 1000.0;
-    }
-
-
-    cout << "old totoal: " << oldT << endl;
-
-    fout<<  "old totoal: " << oldT <<endl;
+//
+//    for (string s:chrs) {
+//        vector<MatrixXd> chr = y.get_strata()[s];
+//        oldT += oldHicP(chr) / 1000.0;
+//    }
+//
+//
+//    cout << "old totoal: " << oldT << endl;
+//
+//    fout<<  "old totoal: " << oldT <<endl;
 
     fout.close();
 }
@@ -1521,8 +1521,7 @@ void testNew(){
               "shortest_score",
               10, true,
               operation);
-
 }
 int main() {
-    toolNew(100);
+    toolN(100);
 }
