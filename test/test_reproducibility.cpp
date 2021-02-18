@@ -1524,7 +1524,8 @@ void testNew(){
 }
 int main() {
     vector<int> v {500,300,200,100,400,600,700,900,800};
-    for(int i:v){
+    vector<int> v2 {800,900,700,600,400,200,300,100,500};
+    for(int i:v2){
         toolN(i);
     }
 }
