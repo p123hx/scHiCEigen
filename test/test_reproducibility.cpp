@@ -1265,6 +1265,11 @@ void toolN(int n) {
                       "shortest_score",
                       10, true,
                       operation);
+    string outN = "y"+to_string(n);
+    ofstream f;
+    f.open(outN,ios::app);
+    f.write((char*)&y,sizeof(y));
+    f.close();
     vector<string> chrs{"chr1", "chr2", "chrX", "chr3", "chr4", "chr5", "chr6", "chr7",
                         "chr8", "chr9", "chr10", "chr11", "chr12", "chr13", "chr14",
                         "chr15", "chr16", "chr17", "chr18", "chr19"}; //since "except Y"
@@ -1533,5 +1538,9 @@ void testNew(){
               operation);
 }
 int main() {
-    toolN(100);
+    vector<int> v {200,100,400,600,700,900,800};
+    vector<int> v2 {800,900,700,600,400,200,300,100,500};
+    for(int i:v){
+        toolN(i);
+    }
 }
