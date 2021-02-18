@@ -1,21 +1,8 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/bj/CLionProjects/eigenScHiC
 -- A library with LAPACK API found.
-CMake Error at CMakeLists.txt:10 (find_package):
-  By not providing "FindMKL.cmake" in CMAKE_MODULE_PATH this project has
-  asked CMake to find a package configuration file provided by "MKL", but
-  CMake did not find one.
-
-  Could not find a package configuration file provided by "MKL" with any of
-  the following names:
-
-    MKLConfig.cmake
-    mkl-config.cmake
-
-  Add the installation prefix of "MKL" to CMAKE_PREFIX_PATH or set "MKL_DIR"
-  to a directory containing one of the above files.  If "MKL" provides a
-  separate development package or SDK, be sure it has been installed.
-
-
--- Configuring incomplete, errors occurred!
-See also "/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles/CMakeOutput.log".
-See also "/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles/CMakeError.log".
+OPENMPFOUND
+-- BLAS VENDOR:    All
+-- BLAS LIBRARIES: /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Accelerate.framework
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/bj/CLionProjects/eigenScHiC/cmake-build-debug

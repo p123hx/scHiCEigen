@@ -7,7 +7,7 @@ find_package(OpenMP REQUIRED)
 find_package(BLAS REQUIRED)
 find_package(LAPACK REQUIRED)
 find_package (Eigen3 3.3 REQUIRED NO_MODULE)
-find_package(MKL REQUIRED)
+#find_package(MKL REQUIRED)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS_RELEASE "Release")
 set(MKL_THREAD_LAYER "TBB")
@@ -21,7 +21,7 @@ add_executable(scHiCEigen embedding/reproducibility.cpp embedding/reproducibilit
 if (MSVC)
     set(CMAKE_EXE_LINKER_FLAGS /MANIFEST:NO)
 endif ()
-target_link_libraries(scHiCEigen ${MKL_LIBRARIES})
+#target_link_libraries(scHiCEigen ${MKL_LIBRARIES})
 target_link_libraries(scHiCEigen OpenMP::OpenMP_CXX  -march=native Eigen3::Eigen -static-libgcc -static-libstdc++)
 
 
