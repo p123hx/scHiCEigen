@@ -1353,12 +1353,17 @@ void toolN(int n) {
 }
 void toolNew(int n) {
     vector<string> fileLst1000 = f1000();
+    random_shuffle(fileLst1000.begin(),fileLst1000.end());
     vector<string> fileLstN(fileLst1000.begin(), fileLst1000.begin() + n);
     string operation = "convolution";
     scHiCs y = scHiCs(fileLstN, "mm9", 500000, 3, 4000000, true, "except Y",
                       "shortest_score",
                       10, true,
                       operation);
+    ofstream f;
+    f.open("y100.txt",ios::app);
+    f.write((char*)&y,sizeof(y));
+    f.close();
     vector<string> chrs{"chr1", "chr2", "chrX", "chr3", "chr4", "chr5", "chr6", "chr7",
                         "chr8", "chr9", "chr10", "chr11", "chr12", "chr13", "chr14",
                         "chr15", "chr16", "chr17", "chr18", "chr19"}; //since "except Y"
@@ -1419,6 +1424,11 @@ void toolNew(int n) {
                   "shortest_score",
                   10, true,
                   operation);
+        outF = "y"+to_string(cellC+n);
+        ofstream f;
+        f.open(outF,ios::app);
+        f.write((char*)&y,sizeof(y));
+        f.close();
         innerT = 0.0,  innerTt1 = 0.0, innerTt2 = 0.0,
         fastT = 0.0, innerTM = 0.0,  innerTt1M = 0.0,
         innerTt2M = 0.0,
@@ -1523,9 +1533,5 @@ void testNew(){
               operation);
 }
 int main() {
-    vector<int> v {500,300,200,100,400,600,700,900,800};
-    vector<int> v2 {800,900,700,600,400,200,300,100,500};
-    for(int i:v2){
-        toolN(i);
-    }
+    toolN(100);
 }

@@ -19,6 +19,7 @@
 #include <cmath>
 //#define EIGEN_USE_MKL_ALL
 #include <Eigen/Core>
+
 #define MAXD 1e12
 using namespace std;
 using namespace Eigen;
@@ -26,10 +27,10 @@ using namespace std::chrono;
 
 MatrixXd euc_pdist_square(MatrixXd &x, int row, int col, double sigma) {
     vector<double> tmp;
-    tmp.reserve(0.5*row*(row-1));
+    tmp.reserve(0.5 * row * (row - 1));
 //NOt include #pragma omp parallel for
     {
-        for (int i = 0; i < row-1; i++) {
+        for (int i = 0; i < row - 1; i++) {
             for (int j = i + 1; j < row; j++) {
                 tmp.push_back((x.row(i) - x.row(j)).norm());
             }
@@ -39,9 +40,9 @@ MatrixXd euc_pdist_square(MatrixXd &x, int row, int col, double sigma) {
 //#pragma omp parallel for
 
     for (int i = 0; i < row; i++)
-        for (int j = i+1; j < row; j++) {
-            int ij=0.5*(2*row-1-i)*i+j-i-1;
-            double tmpv = sqrt(2.0-2.0*exp(-sigma*tmp[ij]));
+        for (int j = i + 1; j < row; j++) {
+            int ij = 0.5 * (2 * row - 1 - i) * i + j - i - 1;
+            double tmpv = sqrt(2.0 - 2.0 * exp(-sigma * tmp[ij]));
             ans(j, i) = tmpv;
             ans(i, j) = tmpv;
         }
@@ -49,7 +50,7 @@ MatrixXd euc_pdist_square(MatrixXd &x, int row, int col, double sigma) {
     return ans;
 }
 
-vector<int> z_pos(MatrixXd & s1, MatrixXd & s2) {
+vector<int> z_pos(MatrixXd &s1, MatrixXd &s2) {
     vector<int> z;
 //#pragma omp parallel for
     for (int i = 0; i < s1.size(); i++) {
@@ -59,12 +60,12 @@ vector<int> z_pos(MatrixXd & s1, MatrixXd & s2) {
     return z;
 }
 
-MatrixXd zero_delete(MatrixXd& s, vector<int>& z) {
+MatrixXd zero_delete(MatrixXd &s, vector<int> &z) {
     VectorXd ans(z.size());
 //#pragma omp parallel for
-        for (int i = 0; i < z.size(); i++) {
-            ans(i) = s(z[i]);
-        }
+    for (int i = 0; i < z.size(); i++) {
+        ans(i) = s(z[i]);
+    }
     return ans;
 }
 
@@ -113,17 +114,17 @@ print_time, double sigma, unsigned window_size
         tmp2.noalias() = (weighted_std * (weighted_std.transpose()));
         t3 = high_resolution_clock::now();
 //#pragma omp parallel for schedule(guided) collapse(2)
-            for (int i = 0; i < n_cells; i++)
-                for (int j = 0; j < n_cells; j++) {
-                    if (tmp2(i, j) == 0) {
-                        distance_mat(i, j) = 0.0;
-                        continue;
-                    }
-                    double tmpdiv = tmp1(i, j) / (tmp2(i, j));
-                    if (tmpdiv >= 1) distance_mat(i, j) = 0.0;
-                    else if (tmpdiv <= -1) distance_mat(i, j) = 2;
-                    else distance_mat(i, j) = sqrt(2 - 2.0 * tmpdiv);
+        for (int i = 0; i < n_cells; i++)
+            for (int j = 0; j < n_cells; j++) {
+                if (tmp2(i, j) == 0) {
+                    distance_mat(i, j) = 0.0;
+                    continue;
                 }
+                double tmpdiv = tmp1(i, j) / (tmp2(i, j));
+                if (tmpdiv >= 1) distance_mat(i, j) = 0.0;
+                else if (tmpdiv <= -1) distance_mat(i, j) = 2;
+                else distance_mat(i, j) = sqrt(2 - 2.0 * tmpdiv);
+            }
         t4 = high_resolution_clock::now();
 
 
@@ -153,44 +154,44 @@ print_time, double sigma, unsigned window_size
                 all_strata[6], all_strata[7], all_strata[8],
                 all_strata[9];
         t1 = high_resolution_clock::now();
-        MatrixXd inner; inner.noalias() = (scores * scores.transpose()) / score_col;
+        MatrixXd inner;
+        inner.noalias() = (scores * scores.transpose()) / score_col;
         t2 = high_resolution_clock::now();
 //#pragma omp parallel for schedule(guided) collapse(2)
-            for (int i = 0; i < n_cells; i++)
-                for (int j = 0; j < n_cells; j++) {
-                    double tmp = inner(i, j);
-                    if (tmp >= 1)distance_mat(i, j) = 0.0;
-                    else if (tmp <= -1) distance_mat(i, j) = 2.0;
-                    else distance_mat(i, j) = sqrt(2 - 2.0 * tmp);
-                }
+        for (int i = 0; i < n_cells; i++)
+            for (int j = 0; j < n_cells; j++) {
+                double tmp = inner(i, j);
+                if (tmp >= 1)distance_mat(i, j) = 0.0;
+                else if (tmp <= -1) distance_mat(i, j) = 2.0;
+                else distance_mat(i, j) = sqrt(2 - 2.0 * tmp);
+            }
         t4 = high_resolution_clock::now();
     } else if (similarity_method == "selfish") {
         int n_windows = n_bins / window_size;
         MatrixXd all_windows = MatrixXd::Zero(n_cells, n_windows);
 #pragma omp parallel for
-            for (int i = 0; i < n_strata; i++)
-                for (int j = 0; j < n_windows; j++) {
-                    all_windows.col(j) += all_strata[i].block(0, j * window_size,
-                                                              n_cells,
-                                                              window_size - i).rowwise
-                            ().sum();
-                }
+        for (int i = 0; i < n_strata; i++)
+            for (int j = 0; j < n_windows; j++) {
+                all_windows.col(j) += all_strata[i].block(0, j * window_size,
+                                                          n_cells,
+                                                          window_size - i).rowwise
+                        ().sum();
+            }
         t1 = high_resolution_clock::now();
         int f_col = n_windows * (n_windows - 1) / 2;
         MatrixXd fingerprints = MatrixXd::Zero(n_cells, f_col);
 #pragma omp parallel for
-            for (int i = 0; i < n_windows; i++)
-                for (int j = 0; j < n_windows - i - 1; j++) {
-                    int k = (int) ((2 * n_windows - i - 1) * i * 0.5 + j);
-                    for (int z = 0; z < n_cells; z++) {
-                        fingerprints(z, k) = double(
-                                all_windows(z, i) > all_windows(z, j));
-                    }
+        for (int i = 0; i < n_windows; i++)
+            for (int j = 0; j < n_windows - i - 1; j++) {
+                int k = (int) ((2 * n_windows - i - 1) * i * 0.5 + j);
+                for (int z = 0; z < n_cells; z++) {
+                    fingerprints(z, k) = double(
+                            all_windows(z, i) > all_windows(z, j));
                 }
+            }
         distance_mat = euc_pdist_square(fingerprints, n_cells, f_col, sigma);
         t4 = high_resolution_clock::now();
-    }
-    else if (similarity_method == "old_hicrep") {
+    } else if (similarity_method == "old_hicrep") {
         MatrixXd similarity = MatrixXd::Zero(n_cells, n_cells);
         for (int i = 0; i < n_cells; i++)
             for (int j = i + 1; j < n_cells; j++) {
@@ -211,16 +212,17 @@ print_time, double sigma, unsigned window_size
                         s2 = zero_delete(s2, zP);
 
                         s1.array() -= s1.mean();
-                        s2.array() -=s2.mean();
+                        s2.array() -= s2.mean();
                         double std1_n = sqrt(
                                 s1.array().square().sum() / s1.size());
                         double std2_n = sqrt(
                                 s2.array().square().sum() / s2.size());
                         weights(k) = s1.size() * std1_n * std2_n;
                         //cout<<"weight: "<<weights(k)<<endl;
-                        double tmp_nume = (s2.adjoint()*s1).value(), tmp_d = (s1.size() *
-                                                                             std1_n *
-                                                                             std2_n);
+                        double tmp_nume = (s2.adjoint() * s1).value(), tmp_d = (
+                                s1.size() *
+                                std1_n *
+                                std2_n);
                         if (tmp_d == 0 && tmp_nume == 0) corrs(k) = 1.0;
                         else if (tmp_d == 0 && tmp_nume != 0) corrs(k) = MAXD;
                         else corrs(k) = tmp_nume / tmp_d;
