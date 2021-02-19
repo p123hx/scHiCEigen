@@ -4,7 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-
+#include <random>
 using namespace std;using namespace Eigen;
 
 double fastHicP(vector<MatrixXd> &all_strata) {
@@ -1358,7 +1358,9 @@ void toolN(int n) {
 }
 void toolNew(int n) {
     vector<string> fileLst1000 = f1000();
-    random_shuffle(fileLst1000.begin(),fileLst1000.end());
+    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+    shuffle(fileLst1000.begin(),fileLst1000.end(), std::default_random_engine(seed));
+
     vector<string> fileLstN(fileLst1000.begin(), fileLst1000.begin() + n);
     string operation = "convolution";
     scHiCs y = scHiCs(fileLstN, "mm9", 500000, 3, 4000000, true, "except Y",
@@ -1538,9 +1540,5 @@ void testNew(){
               operation);
 }
 int main() {
-    vector<int> v {600,700,800,900,1000};
-    vector<int> v2 {800,900,700,600,400,200,300,100,500};
-    for(int i:v){
-        toolN(i);
-    }
+    toolN(100);
 }

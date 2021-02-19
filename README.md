@@ -14,7 +14,7 @@ mainly to compare the running time of reproducibility process.
 ## Usage
 To reproduce the table of Magano 1000 cells:
 Linux cmd: 
-Go to cmake loaction: cd scHiCTest/cmake-build-debug/
+Go to cmake loaction: cd scHiCEigen/cmake-build-debug/
 Source mkl location to configure if needed: for example
 source /opt/intel/mkl/2021.1/setvars.sh
 
