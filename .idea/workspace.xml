@@ -12,6 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="364857e1-62bc-4fd6-a1e8-6a826123fe46" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/embedding/reproducibility.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/embedding/reproducibility.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test_reproducibility.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_reproducibility.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,11 +65,6 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.scHiCEigen">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="scHiCEigen" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="scHiCEigen" TARGET_NAME="scHiCEigen" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="scHiCEigen" RUN_TARGET_NAME="scHiCEigen">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -270,7 +267,8 @@
       <workItem from="1613628482580" duration="736000" />
       <workItem from="1613650696919" duration="691000" />
       <workItem from="1613660685190" duration="1102000" />
-      <workItem from="1613695095276" duration="8096000" />
+      <workItem from="1613695095276" duration="10695000" />
+      <workItem from="1613739084070" duration="2381000" />
     </task>
     <servers />
   </component>

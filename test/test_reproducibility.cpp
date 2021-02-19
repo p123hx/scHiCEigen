@@ -1982,9 +1982,9 @@ void fastNew(int n) {
             fastTt2 += tfastTt2;
             fastTt3 += tfastTt3;
             fastTt4 += tfastTt4;
-            cout << n << ": fast set: " << tfastT << " t1: " << tfastTt1 << " t2: " <<
+            cout << cellC + n << ": fast set: " << tfastT << " t1: " << tfastTt1 << " t2: " <<
                  tfastTt2 << " t3: " << tfastTt3 << " t4: " << tfastTt4 << endl;
-            fout << n << ": fast set: " << tfastT << " t1: " << tfastTt1 << " t2: " <<
+            fout << cellC + n << ": fast set: " << tfastT << " t1: " << tfastTt1 << " t2: " <<
                  tfastTt2 << " t3: " << tfastTt3 << " t4: " << tfastTt4 << endl;
         }
         fastT -= fastTM;
@@ -2055,7 +2055,8 @@ void innerNew(int n) {
         innerTt2 += tinnerTt2;
         innerTt3 += tinnerTt3;
         innerTt4 += tinnerTt4;
-        cout << n << ": inner set: " << tinnerT << " t1: " << tinnerTt1 << " t2: " <<
+        cout << n << ": inner set: " << tinnerT << " t1: " << tinnerTt1 << " t2:"
+                                                                                 " " <<
              tinnerTt2 << " t3: " << tinnerTt3 << " t4: " << tinnerTt4 << endl;
         fout << n << ": inner set: " << tinnerT << " t1: " << tinnerTt1 << " t2: " <<
              tinnerTt2 << " t3: " << tinnerTt3 << " t4: " << tinnerTt4 << endl;
@@ -2119,9 +2120,9 @@ void innerNew(int n) {
             innerTt2 += tinnerTt2;
             innerTt3 += tinnerTt3;
             innerTt4 += tinnerTt4;
-            cout << n << ": inner set: " << tinnerT << " t1: " << tinnerTt1 << " t2: " <<
+            cout << cellC + n << ": inner set: " << tinnerT << " t1: " << tinnerTt1 << " t2: " <<
                  tinnerTt2 << " t3: " << tinnerTt3 << " t4: " << tinnerTt4 << endl;
-            fout << n << ": inner set: " << tinnerT << " t1: " << tinnerTt1 << " t2: " <<
+            fout << cellC + n << ": inner set: " << tinnerT << " t1: " << tinnerTt1 << " t2: " <<
                  tinnerTt2 << " t3: " << tinnerTt3 << " t4: " << tinnerTt4 << endl;
         }
         innerT -= innerTM;
@@ -2145,5 +2146,5 @@ void innerNew(int n) {
     }
 }
 int main() {
-    fastNew(100);
+    fastNew(20);
 }

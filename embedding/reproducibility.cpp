@@ -87,7 +87,7 @@ print_time, double sigma, unsigned window_size
     t0 = high_resolution_clock::now();
     if (similarity_method == "hicrep") {
         int score_col = 0;
-        MatrixXd weighted_std = MatrixXd::Zero(n_cells, n_bins);
+        MatrixXd weighted_std = MatrixXd::Zero(n_cells, n_strata);
 //#pragma omp parallel for reduction(+:score_col)
 
         for (int i = 0; i < n_strata; i++) {
@@ -101,14 +101,14 @@ print_time, double sigma, unsigned window_size
         }
 
 
-        t1 = high_resolution_clock::now();
+
         MatrixXd scores(n_cells, score_col);
         scores << all_strata[0], all_strata[1], all_strata[2],
                 all_strata[3], all_strata[4], all_strata[5],
                 all_strata[6], all_strata[7], all_strata[8],
                 all_strata[9];
 
-
+        t1 = high_resolution_clock::now();
         MatrixXd tmp1(n_cells, n_cells), tmp2(n_cells, n_cells);
         tmp1.noalias() = (scores * scores.transpose());
         tmp2.noalias() = (weighted_std * (weighted_std.transpose()));
