@@ -2145,5 +2145,5 @@ void innerNew(int n) {
     }
 }
 int main() {
-    innerNew(100);
+    fastNew(100);
 }
