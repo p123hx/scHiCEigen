@@ -1683,27 +1683,18 @@ void fastN(int n) {
     string outF = to_string(n) + "out.txt";
     ofstream fout(outF);
     for (int i = 11; i > 0; i--) {
-        double tinnerT = 0.0, tinnerTt1 = 0.0, tinnerTt2 = 0.0,
+        double
                 tfastT = 0.0;
         cout << "Set: " << i << endl;
         for (string s:chrs) {
             vector<MatrixXd> chr = y.get_strata()[s];
             tfastT += (fastHicP(chr)) / 1000.0;
-            vector<double> tmpD = innerP(chr);
-            tinnerT += (tmpD[0]) / 1000.0;
-            tinnerTt1 += (tmpD[1]) / 1000.0;
-            tinnerTt2 += (tmpD[2]) / 1000.0;
-//            tselfishT += (selfishP(chr));
         }
         fastTM = max(fastTM, tfastT);
         fastT += tfastT;
 
-        cout << n << ": fast set: " << tfastT << "; t1: " << tinnerTt1 << " t2: "
-             << tinnerTt2
-             << " set_total: " << tinnerT << endl;
-        fout << n << ": fast set: " << tfastT << "; t1: " << tinnerTt1 << " t2: "
-             << tinnerTt2
-             << " set_total: " << tinnerT << endl;
+        cout << n << ": fast set: " << tfastT << endl;
+        fout << n << ": fast set: " << tfastT<< endl;
     }
 
     fastT -= fastTM;
