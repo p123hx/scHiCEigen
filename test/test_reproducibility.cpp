@@ -1705,7 +1705,11 @@ void fastN(int n) {
     fout << "fast total:" << fastT << endl;
     fout.close();
 }
+
+*/
 void allNew(int n) {
+    ofstream allF("allF.csv");
+    ofstream allI("allI.csv");
     vector<string> fileLst1000 = f1000();
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     shuffle(fileLst1000.begin(), fileLst1000.end(), std::default_random_engine(seed));
@@ -1812,6 +1816,8 @@ void allNew(int n) {
          << innerTt2 << " t3: " << innerTt3 << " t4: " << innerTt4
          << endl;
     fout.close();
+    allF<<100<<","<<fastT<<","<<fastTt1<<","<<fastTt2<<","<<fastTt3<<","<<fastTt4<<"\n";
+    allI<<100<<","<<innerT<<","<<innerTt1<<","<<innerTt2<<","<<innerTt3<<","<<innerTt4<<"\n";
     for (int cellC = n; cellC < 1000; cellC += n) {
         vector<string> fileLst100(fileLst1000.begin() + cellC, fileLst1000.begin() +
                                                                n + cellC);
@@ -1824,64 +1830,100 @@ void allNew(int n) {
         f.open(outF, ios::app);
         f.write((char *) &y, sizeof(y));
         f.close();
-        innerT = 0.0, innerTt1 = 0.0, innerTt2 = 0.0,
-        fastT = 0.0, innerTM = 0.0, innerTt1M = 0.0,
-        innerTt2M = 0.0,
-        fastTM = 0.0;
+        innerT = 0.0, innerTt1 = 0.0, innerTt2 = 0.0, innerTt3 = 0.0, innerTt4 = 0.0,
+                fastT = 0.0, fastTt1 = 0.0, fastTt2 = 0.0, fastTt3 = 0.0, fastTt4 = 0.0,
+                innerTM = 0.0, innerTt1M = 0.0, innerTt2M = 0.0, innerTt3M = 0.0, innerTt4M = 0.0,
+                fastTM = 0.0, fastTt1M = 0.0, fastTt2M = 0.0, fastTt3M = 0.0, fastTt4M = 0.0;
         outF = to_string(cellC + n) + "out.txt";
         ofstream fout(outF);
         for (int i = 11; i > 0; i--) {
-            double tinnerT = 0.0, tinnerTt1 = 0.0, tinnerTt2 = 0.0,
-                    tfastT = 0.0;
+            double tinnerT = 0.0, tinnerTt1 = 0.0, tinnerTt2 = 0.0, tinnerTt3 = 0.0,
+                    tinnerTt4 = 0.0,
+                    tfastT = 0.0, tfastTt1 = 0.0, tfastTt2 = 0.0, tfastTt3 = 0.0,
+                    tfastTt4 = 0.0;
             cout << "Set: " << i << endl;
             for (string s:chrs) {
                 vector<MatrixXd> chr = y.get_strata()[s];
-                tfastT += (fastHicP(chr)) / 1000.0;
                 vector<double> tmpD = innerP(chr);
+                vector<double> tmpI = fastHicP(chr);
                 tinnerT += (tmpD[0]) / 1000.0;
                 tinnerTt1 += (tmpD[1]) / 1000.0;
                 tinnerTt2 += (tmpD[2]) / 1000.0;
-//            tselfishT += (selfishP(chr));
+                tinnerTt3 += (tmpD[3]) / 1000.0;
+                tinnerTt4 += (tmpD[4]) / 1000.0;
+                tfastT += (tmpD[0]) / 1000.0;
+                tfastTt1 += (tmpD[1]) / 1000.0;
+                tfastTt2 += (tmpD[2]) / 1000.0;
+                tfastTt3 += (tmpD[3]) / 1000.0;
+                tfastTt4 += (tmpD[4]) / 1000.0;
             }
             innerTM = max(innerTM, tinnerT);
             innerTt1M = max(innerTt1M, tinnerTt1);
             innerTt2M = max(innerTt2M, tinnerTt2);
+            innerTt3M = max(innerTt3M, tinnerTt3);
+            innerTt4M = max(innerTt4M, tinnerTt4);
             fastTM = max(fastTM, tfastT);
+            fastTt1M = max(fastTt1M, tfastTt1);
+            fastTt2M = max(fastTt2M, tfastTt2);
+            fastTt3M = max(fastTt3M, tfastTt3);
+            fastTt4M = max(fastTt4M, tfastTt4);
             innerT += tinnerT;
             innerTt1 += tinnerTt1;
             innerTt2 += tinnerTt2;
+            innerTt3 += tinnerTt3;
+            innerTt4 += tinnerTt4;
             fastT += tfastT;
-
-            cout << cellC + n << ": fast set: " << tfastT << "; t1: " << tinnerTt1
-                 << " t2: " <<
-                 tinnerTt2
-                 << " set_total: " << tinnerT << endl;
-            fout << cellC + n << ": fast set: " << tfastT << "; t1: " << tinnerTt1
-                 << " t2: " <<
-                 tinnerTt2
-                 << " set_total: " << tinnerT << endl;
+            fastTt1 += tfastTt1;
+            fastTt2 += tfastTt2;
+            fastTt3 += tfastTt3;
+            fastTt4 += tfastTt4;
+            cout << cellC + n << ": fast set: " << tfastT << " t1: " << tfastTt1 << " t2: " <<
+                              tfastTt2 << " t3: " << tfastTt3 << " t4: " << tfastTt4 << endl
+                              << " inner set: " << tinnerT << " t1: " << tinnerTt1 << " t2: " <<
+                              tinnerTt2 << " t3: " << tinnerTt3 << " t4: " << tinnerTt4 << endl;
+            fout << cellC + n << ": fast set: " << tfastT << "; t1: " << tinnerTt1 << " t2: "
+                              << tinnerTt2
+                              << " set_total: " << tinnerT << endl;
         }
         innerT -= innerTM;
         innerTt1 -= innerTt1M;
         innerTt2 -= innerTt2M;
+        innerTt3 -= innerTt3M;
+        innerTt4 -= innerTt4M;
         fastT -= fastTM;
+        fastTt1 -= fastTt1M;
+        fastTt2 -= fastTt2M;
+        fastTt3 -= fastTt3M;
+        fastTt4 -= fastTt4M;
 
         innerT /= 10.0;
         innerTt1 /= 10.0;
         innerTt2 /= 10.0;
+        innerTt3 /= 10.0;
+        innerTt4 /= 10.0;
         fastT /= 10.0;
+        fastTt1 /= 10.0;
+        fastTt2 /= 10.0;
+        fastTt3 /= 10.0;
+        fastTt4 /= 10.0;
+        cout << "fast total:" << fastT << " t1: " << fastTt1 << " t2: "
+             << fastTt2 << " t3: " << fastTt3 << " t4: " << fastTt4 << endl
+             << "inner total: " << innerT << " t1: " << innerTt1 << " t2: "
+             << innerTt2 << " t3: " << innerTt3 << " t4: " << innerTt4
+             << endl;
 
-        cout << "fast total:" << fastT << "; t1: " << innerTt1 << " t2: " << innerTt2
-             << " total: " << innerT << endl;
 
-
-        fout << "fast total:" << fastT << "; t1: " << innerTt1 << " t2: " << innerTt2
-             << " total: " << innerT << endl;
+        fout << "fast total:" << fastT << " t1: " << fastTt1 << " t2: "
+             << fastTt2 << " t3: " << fastTt3 << " t4: " << fastTt4 << endl
+             << "inner total: " << innerT << " t1: " << innerTt1 << " t2: "
+             << innerTt2 << " t3: " << innerTt3 << " t4: " << innerTt4
+             << endl;
         fout.close();
+
+        allF<<cellC + n<<","<<fastT<<","<<fastTt1<<","<<fastTt2<<","<<fastTt3<<","<<fastTt4<<"\n";
+        allI<<cellC + n<<","<<innerT<<","<<innerTt1<<","<<innerTt2<<","<<innerTt3<<","<<innerTt4<<"\n";
     }
 }
-*/
-
 void fastNew(int n) {
     vector<string> fileLst1000 = f1000();
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
@@ -2146,5 +2188,5 @@ void innerNew(int n) {
     }
 }
 int main() {
-    fastNew(20);
+    allNew(20);
 }
