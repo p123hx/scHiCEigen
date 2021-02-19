@@ -2003,8 +2003,8 @@ void fastNew(int n) {
              << fastTt2 << " t3: " << fastTt3 << " t4: " << fastTt4 << endl;
 
 
-        fout << "fast total:" << fastT << " t1: " << fastTt1 << " t2: "
-             << fastTt2 << " t3: " << fastTt3 << " t4: " << fastTt4 << endl;
+        fout << "fast total:" << fastT << "  " << fastTt1 << "  "
+             << fastTt2 << "  " << fastTt3 << "  " << fastTt4 << endl;
         fout.close();
     }
 }
@@ -2139,14 +2139,11 @@ void innerNew(int n) {
              << innerTt2 << " t3: " << innerTt3 << " t4: " << innerTt4 << endl;
 
 
-        fout << "inner total:" << innerT << " t1: " << innerTt1 << " t2: "
-             << innerTt2 << " t3: " << innerTt3 << " t4: " << innerTt4 << endl;
+        fout << "inner total:" << innerT << "  " << innerTt1 << "  "
+             << innerTt2 << " " << innerTt3 << "  " << innerTt4 << endl;
         fout.close();
     }
 }
 int main() {
-    innerNew(3);
-    fastNew(3);
-    fastNew(100);
     innerNew(100);
 }
