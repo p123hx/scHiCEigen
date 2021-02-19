@@ -108,11 +108,11 @@ print_time, double sigma, unsigned window_size
                 all_strata[6], all_strata[7], all_strata[8],
                 all_strata[9];
 
-        t2 = high_resolution_clock::now();
+
         MatrixXd tmp1(n_cells, n_cells), tmp2(n_cells, n_cells);
         tmp1.noalias() = (scores * scores.transpose());
         tmp2.noalias() = (weighted_std * (weighted_std.transpose()));
-        t3 = high_resolution_clock::now();
+        t2 = high_resolution_clock::now();
 //#pragma omp parallel for schedule(guided) collapse(2)
         for (int i = 0; i < n_cells; i++)
             for (int j = 0; j < n_cells; j++) {
@@ -246,18 +246,20 @@ print_time, double sigma, unsigned window_size
 
     std::chrono::duration<double, std::milli> duration1 = (t1 - t0);
     std::chrono::duration<double, std::milli> duration2 = (t4 - t1);
-//    std::chrono::duration<double, std::milli> duration2 = (t2 - t1);
+    std::chrono::duration<double, std::milli> duration3 = (t2 - t1);
 //    std::chrono::duration<double, std::milli> duration3 = (t3 - t2);
-//    std::chrono::duration<double, std::milli> duration4 = (t4 - t3);
+    std::chrono::duration<double, std::milli> duration4 = (t4 - t2);
     std::chrono::duration<double, std::milli> duration_total = (t4 - t0);
-    double tout = duration_total.count(), tout1 = duration1.count(), tout2 = duration2.count();
+    double tout = duration_total.count(), tout1 = duration1.count(), tout2 = duration2
+            .count(), tout3=duration3.count(),tout4=duration4.count();
 //    cout << "Time 1:" << duration1.count() << endl
 //         << "Time 2:" << duration2.count() << endl
 //         << "Time 3:" << duration3.count() << endl
 //         << "Time 4:" << duration4.count() << endl
 //    cout << "total: " << tout << endl;
 //    cout << distance_mat << endl;
-    vector<double> tv = {(double) tout, (double) tout1, (double) tout2};
+    vector<double> tv = {(double) tout, (double) tout1, (double) tout2,(double)tout3,
+                         (double)tout4};
     return tv;
 }
 
