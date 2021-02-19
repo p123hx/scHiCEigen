@@ -166,7 +166,8 @@ print_time, double sigma, unsigned window_size
                 else distance_mat(i, j) = sqrt(2 - 2.0 * tmp);
             }
         t4 = high_resolution_clock::now();
-    } else if (similarity_method == "selfish") {
+    }
+    else if (similarity_method == "selfish") {
         int n_windows = n_bins / window_size;
         MatrixXd all_windows = MatrixXd::Zero(n_cells, n_windows);
 #pragma omp parallel for
@@ -191,7 +192,8 @@ print_time, double sigma, unsigned window_size
             }
         distance_mat = euc_pdist_square(fingerprints, n_cells, f_col, sigma);
         t4 = high_resolution_clock::now();
-    } else if (similarity_method == "old_hicrep") {
+    }
+    else if (similarity_method == "old_hicrep") {
         MatrixXd similarity = MatrixXd::Zero(n_cells, n_cells);
         for (int i = 0; i < n_cells; i++)
             for (int j = i + 1; j < n_cells; j++) {
@@ -240,7 +242,8 @@ print_time, double sigma, unsigned window_size
             }
         distance_mat = similarity;
         t4 = high_resolution_clock::now();
-    } else {
+    }
+    else {
         throw "Method {0} not supported. Only \"inner_product\", \"HiCRep\", \"old_hicrep\" and \"Selfish\".";
     }
 
@@ -257,7 +260,7 @@ print_time, double sigma, unsigned window_size
 //         << "Time 3:" << duration3.count() << endl
 //         << "Time 4:" << duration4.count() << endl
 //    cout << "total: " << tout << endl;
-//    cout << distance_mat << endl;
+    cout << distance_mat << endl;
     vector<double> tv = {(double) tout, (double) tout1, (double) tout2,(double)tout3,
                          (double)tout4};
     return tv;
