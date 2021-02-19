@@ -5,6 +5,7 @@
 #include <fstream>
 #include <vector>
 #include <random>
+
 using namespace std;using namespace Eigen;
 
 double fastHicP(vector<MatrixXd> &all_strata) {
@@ -1216,6 +1217,7 @@ vector<string> f1000() {
                           "../../Nagano/1CDX_cells/1CDX4.391/new_adj",
                           "../../Nagano/1CDX_cells/1CDX4.467/new_adj"};
 }
+
 void test() {
     vector<string> fileLst{"../test/data/cell_03", "../test/data/cell_01",
                            "../test/data/cell_02"};
@@ -1265,31 +1267,31 @@ void toolN(int n) {
                       "shortest_score",
                       10, true,
                       operation);
-    string outN = "y"+to_string(n);
+    string outN = "y" + to_string(n);
     ofstream f;
-    f.open(outN,ios::app);
-    f.write((char*)&y,sizeof(y));
+    f.open(outN, ios::app);
+    f.write((char *) &y, sizeof(y));
     f.close();
     vector<string> chrs{"chr1", "chr2", "chrX", "chr3", "chr4", "chr5", "chr6", "chr7",
                         "chr8", "chr9", "chr10", "chr11", "chr12", "chr13", "chr14",
                         "chr15", "chr16", "chr17", "chr18", "chr19"}; //since "except Y"
-    double innerT = 0.0,  innerTt1 = 0.0, innerTt2 = 0.0,
-            fastT = 0.0, innerTM = 0.0,  innerTt1M = 0.0,
+    double innerT = 0.0, innerTt1 = 0.0, innerTt2 = 0.0,
+            fastT = 0.0, innerTM = 0.0, innerTt1M = 0.0,
             innerTt2M = 0.0,
             fastTM = 0.0;
     string outF = to_string(n) + "out.txt";
     ofstream fout(outF);
     for (int i = 11; i > 0; i--) {
-        double tinnerT = 0.0,  tinnerTt1 = 0.0, tinnerTt2 = 0.0,
+        double tinnerT = 0.0, tinnerTt1 = 0.0, tinnerTt2 = 0.0,
                 tfastT = 0.0;
-        cout<<"Set: "<<i<<endl;
+        cout << "Set: " << i << endl;
         for (string s:chrs) {
             vector<MatrixXd> chr = y.get_strata()[s];
-            tfastT += (fastHicP(chr))/1000.0;
+            tfastT += (fastHicP(chr)) / 1000.0;
             vector<double> tmpD = innerP(chr);
-            tinnerT += (tmpD[0])/1000.0;
-            tinnerTt1 += (tmpD[1])/1000.0;
-            tinnerTt2 += (tmpD[2])/1000.0;
+            tinnerT += (tmpD[0]) / 1000.0;
+            tinnerTt1 += (tmpD[1]) / 1000.0;
+            tinnerTt2 += (tmpD[2]) / 1000.0;
 //            tselfishT += (selfishP(chr));
         }
         innerTM = max(innerTM, tinnerT);
@@ -1301,10 +1303,12 @@ void toolN(int n) {
         innerTt2 += tinnerTt2;
         fastT += tfastT;
 
-        cout <<n<<": fast set: "<<tfastT <<"; t1: "<<tinnerTt1 << " t2: " << tinnerTt2
-                                                   << " set_total: " << tinnerT <<endl;
-        fout <<n<<": fast set: "<<tfastT <<"; t1: "<<tinnerTt1 << " t2: " << tinnerTt2
-             << " set_total: " << tinnerT <<endl;
+        cout << n << ": fast set: " << tfastT << "; t1: " << tinnerTt1 << " t2: "
+             << tinnerTt2
+             << " set_total: " << tinnerT << endl;
+        fout << n << ": fast set: " << tfastT << "; t1: " << tinnerTt1 << " t2: "
+             << tinnerTt2
+             << " set_total: " << tinnerT << endl;
     }
     innerT -= innerTM;
     innerTt1 -= innerTt1M;
@@ -1312,16 +1316,16 @@ void toolN(int n) {
     fastT -= fastTM;
 
     innerT /= 10.0;
-    innerTt1 /=10.0;
+    innerTt1 /= 10.0;
     innerTt2 /= 10.0;
     fastT /= 10.0;
 
-    cout << "fast total:" << fastT<< "; t1: " << innerTt1 << " t2: " << innerTt2
-         << " total: " << innerT<< endl;
+    cout << "fast total:" << fastT << "; t1: " << innerTt1 << " t2: " << innerTt2
+         << " total: " << innerT << endl;
 
 
-    fout << "fast total:" << fastT<< "; t1: " << innerTt1 << " t2: " << innerTt2
-         << " total: " << innerT<< endl;
+    fout << "fast total:" << fastT << "; t1: " << innerTt1 << " t2: " << innerTt2
+         << " total: " << innerT << endl;
 //
 //    double oldT = 0.0;
 //    double max_o = .0;
@@ -1356,10 +1360,11 @@ void toolN(int n) {
 
     fout.close();
 }
+
 void toolNew(int n) {
     vector<string> fileLst1000 = f1000();
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
-    shuffle(fileLst1000.begin(),fileLst1000.end(), std::default_random_engine(seed));
+    shuffle(fileLst1000.begin(), fileLst1000.end(), std::default_random_engine(seed));
 
     vector<string> fileLstN(fileLst1000.begin(), fileLst1000.begin() + n);
     string operation = "convolution";
@@ -1368,29 +1373,29 @@ void toolNew(int n) {
                       10, true,
                       operation);
     ofstream f;
-    f.open("y100.txt",ios::app);
-    f.write((char*)&y,sizeof(y));
+    f.open("y100.txt", ios::app);
+    f.write((char *) &y, sizeof(y));
     f.close();
     vector<string> chrs{"chr1", "chr2", "chrX", "chr3", "chr4", "chr5", "chr6", "chr7",
                         "chr8", "chr9", "chr10", "chr11", "chr12", "chr13", "chr14",
                         "chr15", "chr16", "chr17", "chr18", "chr19"}; //since "except Y"
-    double innerT = 0.0,  innerTt1 = 0.0, innerTt2 = 0.0,
-            fastT = 0.0, innerTM = 0.0,  innerTt1M = 0.0,
+    double innerT = 0.0, innerTt1 = 0.0, innerTt2 = 0.0,
+            fastT = 0.0, innerTM = 0.0, innerTt1M = 0.0,
             innerTt2M = 0.0,
             fastTM = 0.0;
     string outF = to_string(n) + "out.txt";
     ofstream fout(outF);
     for (int i = 11; i > 0; i--) {
-        double tinnerT = 0.0,  tinnerTt1 = 0.0, tinnerTt2 = 0.0,
+        double tinnerT = 0.0, tinnerTt1 = 0.0, tinnerTt2 = 0.0,
                 tfastT = 0.0;
-        cout<<"Set: "<<i<<endl;
+        cout << "Set: " << i << endl;
         for (string s:chrs) {
             vector<MatrixXd> chr = y.get_strata()[s];
-            tfastT += (fastHicP(chr))/1000.0;
+            tfastT += (fastHicP(chr)) / 1000.0;
             vector<double> tmpD = innerP(chr);
-            tinnerT += (tmpD[0])/1000.0;
-            tinnerTt1 += (tmpD[1])/1000.0;
-            tinnerTt2 += (tmpD[2])/1000.0;
+            tinnerT += (tmpD[0]) / 1000.0;
+            tinnerTt1 += (tmpD[1]) / 1000.0;
+            tinnerTt2 += (tmpD[2]) / 1000.0;
 //            tselfishT += (selfishP(chr));
         }
         innerTM = max(innerTM, tinnerT);
@@ -1402,10 +1407,12 @@ void toolNew(int n) {
         innerTt2 += tinnerTt2;
         fastT += tfastT;
 
-        cout <<n<<": fast set: "<<tfastT <<"; t1: "<<tinnerTt1 << " t2: " << tinnerTt2
-             << " set_total: " << tinnerT <<endl;
-        fout <<n<<": fast set: "<<tfastT <<"; t1: "<<tinnerTt1 << " t2: " << tinnerTt2
-             << " set_total: " << tinnerT <<endl;
+        cout << n << ": fast set: " << tfastT << "; t1: " << tinnerTt1 << " t2: "
+             << tinnerTt2
+             << " set_total: " << tinnerT << endl;
+        fout << n << ": fast set: " << tfastT << "; t1: " << tinnerTt1 << " t2: "
+             << tinnerTt2
+             << " set_total: " << tinnerT << endl;
     }
     innerT -= innerTM;
     innerTt1 -= innerTt1M;
@@ -1413,46 +1420,46 @@ void toolNew(int n) {
     fastT -= fastTM;
 
     innerT /= 10.0;
-    innerTt1 /=10.0;
+    innerTt1 /= 10.0;
     innerTt2 /= 10.0;
     fastT /= 10.0;
 
-    cout << "fast total:" << fastT<< "; t1: " << innerTt1 << " t2: " << innerTt2
-         << " total: " << innerT<< endl;
+    cout << "fast total:" << fastT << "; t1: " << innerTt1 << " t2: " << innerTt2
+         << " total: " << innerT << endl;
 
 
-    fout << "fast total:" << fastT<< "; t1: " << innerTt1 << " t2: " << innerTt2
-         << " total: " << innerT<< endl;
+    fout << "fast total:" << fastT << "; t1: " << innerTt1 << " t2: " << innerTt2
+         << " total: " << innerT << endl;
     fout.close();
-    for(int cellC=n;cellC<1000;cellC +=n){
-        vector<string> fileLst100(fileLst1000.begin()+cellC,fileLst1000.begin() +
-        n+cellC);
+    for (int cellC = n; cellC < 1000; cellC += n) {
+        vector<string> fileLst100(fileLst1000.begin() + cellC, fileLst1000.begin() +
+                                                               n + cellC);
         y.load100(fileLst100, "mm9", 500000, 3, 4000000, true, "except Y",
                   "shortest_score",
                   10, true,
                   operation);
-        outF = "y"+to_string(cellC+n);
+        outF = "y" + to_string(cellC + n);
         ofstream f;
-        f.open(outF,ios::app);
-        f.write((char*)&y,sizeof(y));
+        f.open(outF, ios::app);
+        f.write((char *) &y, sizeof(y));
         f.close();
-        innerT = 0.0,  innerTt1 = 0.0, innerTt2 = 0.0,
-        fastT = 0.0, innerTM = 0.0,  innerTt1M = 0.0,
+        innerT = 0.0, innerTt1 = 0.0, innerTt2 = 0.0,
+        fastT = 0.0, innerTM = 0.0, innerTt1M = 0.0,
         innerTt2M = 0.0,
         fastTM = 0.0;
-        outF = to_string(cellC+n) + "out.txt";
+        outF = to_string(cellC + n) + "out.txt";
         ofstream fout(outF);
         for (int i = 11; i > 0; i--) {
-            double tinnerT = 0.0,  tinnerTt1 = 0.0, tinnerTt2 = 0.0,
+            double tinnerT = 0.0, tinnerTt1 = 0.0, tinnerTt2 = 0.0,
                     tfastT = 0.0;
-            cout<<"Set: "<<i<<endl;
+            cout << "Set: " << i << endl;
             for (string s:chrs) {
                 vector<MatrixXd> chr = y.get_strata()[s];
-                tfastT += (fastHicP(chr))/1000.0;
+                tfastT += (fastHicP(chr)) / 1000.0;
                 vector<double> tmpD = innerP(chr);
-                tinnerT += (tmpD[0])/1000.0;
-                tinnerTt1 += (tmpD[1])/1000.0;
-                tinnerTt2 += (tmpD[2])/1000.0;
+                tinnerT += (tmpD[0]) / 1000.0;
+                tinnerTt1 += (tmpD[1]) / 1000.0;
+                tinnerTt2 += (tmpD[2]) / 1000.0;
 //            tselfishT += (selfishP(chr));
             }
             innerTM = max(innerTM, tinnerT);
@@ -1464,12 +1471,14 @@ void toolNew(int n) {
             innerTt2 += tinnerTt2;
             fastT += tfastT;
 
-            cout <<cellC+n<<": fast set: "<<tfastT <<"; t1: "<<tinnerTt1 << " t2: " <<
-            tinnerTt2
-                 << " set_total: " << tinnerT <<endl;
-            fout <<cellC+n<<": fast set: "<<tfastT <<"; t1: "<<tinnerTt1 << " t2: " <<
-            tinnerTt2
-                 << " set_total: " << tinnerT <<endl;
+            cout << cellC + n << ": fast set: " << tfastT << "; t1: " << tinnerTt1
+                 << " t2: " <<
+                 tinnerTt2
+                 << " set_total: " << tinnerT << endl;
+            fout << cellC + n << ": fast set: " << tfastT << "; t1: " << tinnerTt1
+                 << " t2: " <<
+                 tinnerTt2
+                 << " set_total: " << tinnerT << endl;
         }
         innerT -= innerTM;
         innerTt1 -= innerTt1M;
@@ -1477,19 +1486,20 @@ void toolNew(int n) {
         fastT -= fastTM;
 
         innerT /= 10.0;
-        innerTt1 /=10.0;
+        innerTt1 /= 10.0;
         innerTt2 /= 10.0;
         fastT /= 10.0;
 
-        cout << "fast total:" << fastT<< "; t1: " << innerTt1 << " t2: " << innerTt2
-             << " total: " << innerT<< endl;
+        cout << "fast total:" << fastT << "; t1: " << innerTt1 << " t2: " << innerTt2
+             << " total: " << innerT << endl;
 
 
-        fout << "fast total:" << fastT<< "; t1: " << innerTt1 << " t2: " << innerTt2
-             << " total: " << innerT<< endl;
+        fout << "fast total:" << fastT << "; t1: " << innerTt1 << " t2: " << innerTt2
+             << " total: " << innerT << endl;
         fout.close();
     }
 }
+
 void toolOLD(int n) {
     vector<string> fileLst1000 = f1000();
     vector<string> fileLstN(fileLst1000.begin(), fileLst1000.begin() + n);
@@ -1520,7 +1530,8 @@ void toolOLD(int n) {
     fout << "old totoal: " << oldT << endl;
     fout.close();
 }
-void testNew(){
+
+void testNew() {
     vector<string> fileLst{"../test/data/cell_03"};
     string operation = "convolution";
 
@@ -1538,6 +1549,169 @@ void testNew(){
               "shortest_score",
               10, true,
               operation);
+}
+
+void loadFast(int n) {
+    vector<string> fileLstNone = vector<string>();
+    string operation = "convolution";
+    scHiCs y = scHiCs(fileLstNone, "mm9", 500000, 3, 4000000, true, "except Y",
+                      "shortest_score",
+                      10, true,
+                      operation);
+    ifstream fin;
+    string finN = "y" + to_string(n);
+    fin.open(finN, ios::in);
+    fin.read((char *) &y, sizeof(y));
+    fin.close();
+    vector<string> chrs{"chr1", "chr2", "chrX", "chr3", "chr4", "chr5", "chr6", "chr7",
+                        "chr8", "chr9", "chr10", "chr11", "chr12", "chr13", "chr14",
+                        "chr15", "chr16", "chr17", "chr18", "chr19"}; //since "except Y"
+    double fastT = 0.0,fastTM = 0.0;
+    string outF = to_string(n) + "out.txt";
+    ofstream fout(outF);
+    for (int i = 11; i > 0; i--) {
+        double tinnerT = 0.0, tinnerTt1 = 0.0, tinnerTt2 = 0.0,
+                tfastT = 0.0;
+        cout << "Set: " << i << endl;
+        for (string s:chrs) {
+            vector<MatrixXd> chr = y.get_strata()[s];
+            tfastT += (fastHicP(chr)) / 1000.0;
+            vector<double> tmpD = innerP(chr);
+            tinnerT += (tmpD[0]) / 1000.0;
+            tinnerTt1 += (tmpD[1]) / 1000.0;
+            tinnerTt2 += (tmpD[2]) / 1000.0;
+//            tselfishT += (selfishP(chr));
+        }
+        fastTM = max(fastTM, tfastT);
+        fastT += tfastT;
+
+        cout << n << ": fast set: " << tfastT << "; t1: " << tinnerTt1 << " t2: "
+             << tinnerTt2
+             << " set_total: " << tinnerT << endl;
+        fout << n << ": fast set: " << tfastT << "; t1: " << tinnerTt1 << " t2: "
+             << tinnerTt2
+             << " set_total: " << tinnerT << endl;
+    }
+
+    fastT -= fastTM;
+    fastT /= 10.0;
+
+    cout << "fast total:" << fastT << endl;
+    fout << "fast total:" << fastT << endl;
+    fout.close();
+}
+void loadInner(int n){
+    vector<string> fileLstNone = vector<string>();
+    string operation = "convolution";
+    scHiCs y = scHiCs(fileLstNone, "mm9", 500000, 3, 4000000, true, "except Y",
+                      "shortest_score",
+                      10, true,
+                      operation);
+    ifstream fin;
+    string finN = "y" + to_string(n);
+    fin.open(finN, ios::in);
+    fin.read((char *) &y, sizeof(y));
+    fin.close();
+    vector<string> chrs{"chr1", "chr2", "chrX", "chr3", "chr4", "chr5", "chr6", "chr7",
+                        "chr8", "chr9", "chr10", "chr11", "chr12", "chr13", "chr14",
+                        "chr15", "chr16", "chr17", "chr18", "chr19"}; //since "except Y"
+    double innerT = 0.0, innerTt1 = 0.0, innerTt2 = 0.0,
+            innerTM = 0.0, innerTt1M = 0.0,
+            innerTt2M = 0.0;
+    string outF = to_string(n) + "out.txt";
+    ofstream fout(outF);
+    for (int i = 11; i > 0; i--) {
+        double tinnerT = 0.0, tinnerTt1 = 0.0, tinnerTt2 = 0.0,
+                tfastT = 0.0;
+        cout << "Set: " << i << endl;
+        for (string s:chrs) {
+            vector<MatrixXd> chr = y.get_strata()[s];
+            tfastT += (fastHicP(chr)) / 1000.0;
+            vector<double> tmpD = innerP(chr);
+            tinnerT += (tmpD[0]) / 1000.0;
+            tinnerTt1 += (tmpD[1]) / 1000.0;
+            tinnerTt2 += (tmpD[2]) / 1000.0;
+//            tselfishT += (selfishP(chr));
+        }
+        innerTM = max(innerTM, tinnerT);
+        innerTt1M = max(innerTt1M, tinnerTt1);
+        innerTt2M = max(innerTt2M, tinnerTt2);
+        innerT += tinnerT;
+        innerTt1 += tinnerTt1;
+        innerTt2 += tinnerTt2;
+
+        cout << n << ": fast set: " << tfastT << "; t1: " << tinnerTt1 << " t2: "
+             << tinnerTt2
+             << " set_total: " << tinnerT << endl;
+        fout << n << ": fast set: " << tfastT << "; t1: " << tinnerTt1 << " t2: "
+             << tinnerTt2
+             << " set_total: " << tinnerT << endl;
+    }
+    innerT -= innerTM;
+    innerTt1 -= innerTt1M;
+    innerTt2 -= innerTt2M;
+
+    innerT /= 10.0;
+    innerTt1 /= 10.0;
+    innerTt2 /= 10.0;
+
+    cout <<  "t1: " << innerTt1 << " t2: " << innerTt2
+         << " total: " << innerT << endl;
+
+
+    fout <<  "t1: " << innerTt1 << " t2: " << innerTt2
+         << " total: " << innerT << endl;
+    fout.close();
+}
+void fastN(int n) {
+    vector<string> fileLst1000 = f1000();
+    vector<string> fileLstN(fileLst1000.begin(), fileLst1000.begin() + n);
+    string operation = "convolution";
+    scHiCs y = scHiCs(fileLstN, "mm9", 500000, 3, 4000000, true, "except Y",
+                      "shortest_score",
+                      10, true,
+                      operation);
+    string outN = "y" + to_string(n);
+    ofstream f;
+    f.open(outN, ios::app);
+    f.write((char *) &y, sizeof(y));
+    f.close();
+    vector<string> chrs{"chr1", "chr2", "chrX", "chr3", "chr4", "chr5", "chr6", "chr7",
+                        "chr8", "chr9", "chr10", "chr11", "chr12", "chr13", "chr14",
+                        "chr15", "chr16", "chr17", "chr18", "chr19"}; //since "except Y"
+    double fastT = 0.0,fastTM = 0.0;
+    string outF = to_string(n) + "out.txt";
+    ofstream fout(outF);
+    for (int i = 11; i > 0; i--) {
+        double tinnerT = 0.0, tinnerTt1 = 0.0, tinnerTt2 = 0.0,
+                tfastT = 0.0;
+        cout << "Set: " << i << endl;
+        for (string s:chrs) {
+            vector<MatrixXd> chr = y.get_strata()[s];
+            tfastT += (fastHicP(chr)) / 1000.0;
+            vector<double> tmpD = innerP(chr);
+            tinnerT += (tmpD[0]) / 1000.0;
+            tinnerTt1 += (tmpD[1]) / 1000.0;
+            tinnerTt2 += (tmpD[2]) / 1000.0;
+//            tselfishT += (selfishP(chr));
+        }
+        fastTM = max(fastTM, tfastT);
+        fastT += tfastT;
+
+        cout << n << ": fast set: " << tfastT << "; t1: " << tinnerTt1 << " t2: "
+             << tinnerTt2
+             << " set_total: " << tinnerT << endl;
+        fout << n << ": fast set: " << tfastT << "; t1: " << tinnerTt1 << " t2: "
+             << tinnerTt2
+             << " set_total: " << tinnerT << endl;
+    }
+
+    fastT -= fastTM;
+    fastT /= 10.0;
+
+    cout << "fast total:" << fastT << endl;
+    fout << "fast total:" << fastT << endl;
+    fout.close();
 }
 int main() {
     toolN(100);
