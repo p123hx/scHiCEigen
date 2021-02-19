@@ -5,7 +5,7 @@
 #include <fstream>
 #include <vector>
 #include <random>
-
+#include <chrono>
 using namespace std;using namespace Eigen;
 
 vector<double> fastHicP(vector<MatrixXd> &all_strata) {
