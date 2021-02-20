@@ -1,8 +1,0 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/bj/CLionProjects/eigenScHiC
--- A library with LAPACK API found.
-OPENMPFOUND
--- BLAS VENDOR:    All
--- BLAS LIBRARIES: /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Accelerate.framework
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/bj/CLionProjects/eigenScHiC/cmake-build-debug

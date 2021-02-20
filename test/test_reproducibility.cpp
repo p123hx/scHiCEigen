@@ -1720,10 +1720,10 @@ void allNew(int n) {
                       "shortest_score",
                       10, true,
                       operation);
-    ofstream f;
-    f.open("y100.txt", ios::app);
-    f.write((char *) &y, sizeof(y));
-    f.close();
+//    ofstream f;
+//    f.open("y100.txt", ios::app);
+//    f.write((char *) &y, sizeof(y));
+//    f.close();
     vector<string> chrs{"chr1", "chr2", "chrX", "chr3", "chr4", "chr5", "chr6", "chr7",
                         "chr8", "chr9", "chr10", "chr11", "chr12", "chr13", "chr14",
                         "chr15", "chr16", "chr17", "chr18", "chr19"}; //since "except Y"
@@ -2187,6 +2187,40 @@ void innerNew(int n) {
         fout.close();
     }
 }
+void testNew() {
+    vector<string> fileLst{"../NaganoPartial/1CDX1.1/new_adj"};
+    string operation = "convolution";
+
+    scHiCs y = scHiCs(fileLst, "mm9", 500000, 3, 4000000, true, "except Y",
+                      "shortest_score",
+                      10, true,
+                      operation);
+    vector<string> file1{"../NaganoPartial/1CDX1.2/new_adj"};
+    vector<string> file2{"../NaganoPartial/1CDX1.3/new_adj"};
+    y.load100(file1, "mm9", 500000, 3, 4000000, true, "except Y",
+              "shortest_score",
+              10, true,
+              operation);
+    y.load100(file2, "mm9", 500000, 3, 4000000, true, "except Y",
+              "shortest_score",
+              10, true,
+              operation);
+    vector<MatrixXd> chr = y.get_strata()["chr1"];
+    vector<double> tmpD = innerP(chr);
+}
+void test(){
+    vector<string> fileLst{"../NaganoPartial/1CDX1.1/new_adj","../NaganoPartial/1CDX1"
+                                                              ".2/new_adj","../NaganoPartial/1CDX1.3/new_adj"};
+    string operation = "convolution";
+
+    scHiCs y = scHiCs(fileLst, "mm9", 500000, 3, 4000000, true, "except Y",
+                      "shortest_score",
+                      10, true,
+                      operation);
+    vector<MatrixXd> chr = y.get_strata()["chr1"];
+    vector<double> tmpD = innerP(chr);
+}
 int main() {
-    allNew(20);
+    testNew();
+    test();
 }
