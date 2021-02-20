@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/bj/CLionProjects/eigenScHiC/embedding/reproducibility.cpp" "/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles/scHiCEigen.dir/embedding/reproducibility.cpp.o"
-  "/Users/bj/CLionProjects/eigenScHiC/load/ContactMaps.cpp" "/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles/scHiCEigen.dir/load/ContactMaps.cpp.o"
-  "/Users/bj/CLionProjects/eigenScHiC/load/load_hic_file.cpp" "/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles/scHiCEigen.dir/load/load_hic_file.cpp.o"
-  "/Users/bj/CLionProjects/eigenScHiC/load/processing_utils.cpp" "/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles/scHiCEigen.dir/load/processing_utils.cpp.o"
-  "/Users/bj/CLionProjects/eigenScHiC/test/test_reproducibility.cpp" "/Users/bj/CLionProjects/eigenScHiC/cmake-build-debug/CMakeFiles/scHiCEigen.dir/test/test_reproducibility.cpp.o"
+  "/home/hongxi/scHiCEigen/embedding/reproducibility.cpp" "/home/hongxi/scHiCEigen/cmake-build-debug/CMakeFiles/scHiCEigen.dir/embedding/reproducibility.cpp.o"
+  "/home/hongxi/scHiCEigen/load/ContactMaps.cpp" "/home/hongxi/scHiCEigen/cmake-build-debug/CMakeFiles/scHiCEigen.dir/load/ContactMaps.cpp.o"
+  "/home/hongxi/scHiCEigen/load/load_hic_file.cpp" "/home/hongxi/scHiCEigen/cmake-build-debug/CMakeFiles/scHiCEigen.dir/load/load_hic_file.cpp.o"
+  "/home/hongxi/scHiCEigen/load/processing_utils.cpp" "/home/hongxi/scHiCEigen/cmake-build-debug/CMakeFiles/scHiCEigen.dir/load/processing_utils.cpp.o"
+  "/home/hongxi/scHiCEigen/test/test_reproducibility.cpp" "/home/hongxi/scHiCEigen/cmake-build-debug/CMakeFiles/scHiCEigen.dir/test/test_reproducibility.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
@@ -19,8 +19,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/local/include"
-  "/usr/local/include/eigen3"
+  "/home/hongxi/eigen"
   )
 
 # Targets to which this target links.
