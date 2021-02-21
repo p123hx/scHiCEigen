@@ -99,7 +99,7 @@ void scHiCs::load100(vector<string> &list_of_files, string reference_genome,
 
         }
     }
-    cout << "Loading HiC data...\n";
+    cout << this->num_of_cells<<": Loading HiC data...\n";
     if (parallelize) {
         throw "Not implemented yet";
     }

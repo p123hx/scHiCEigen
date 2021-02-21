@@ -1816,8 +1816,9 @@ void allNew(int n) {
          << innerTt2 << " t3: " << innerTt3 << " t4: " << innerTt4
          << endl;
     fout.close();
-    allF<<100<<","<<fastT<<","<<fastTt1<<","<<fastTt2<<","<<fastTt3<<","<<fastTt4<<"\n";
-    allI<<100<<","<<innerT<<","<<innerTt1<<","<<innerTt2<<","<<innerTt3<<","<<innerTt4<<"\n";
+    allF<<n<<","<<fastT<<","<<fastTt1<<","<<fastTt2<<","<<fastTt3<<","<<fastTt4<<"\n";
+    allI<<n<<","<<innerT<<","<<innerTt1<<","<<innerTt2<<","<<innerTt3<<","
+                                                                       ""<<innerTt4<<"\n";
     for (int cellC = n; cellC < 1000; cellC += n) {
         vector<string> fileLst100(fileLst1000.begin() + cellC, fileLst1000.begin() +
                                                                n + cellC);
@@ -1923,6 +1924,8 @@ void allNew(int n) {
         allF<<cellC + n<<","<<fastT<<","<<fastTt1<<","<<fastTt2<<","<<fastTt3<<","<<fastTt4<<"\n";
         allI<<cellC + n<<","<<innerT<<","<<innerTt1<<","<<innerTt2<<","<<innerTt3<<","<<innerTt4<<"\n";
     }
+    allF.close();
+    allI.close();
 }
 void fastNew(int n) {
     vector<string> fileLst1000 = f1000();

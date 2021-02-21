@@ -36,7 +36,7 @@ MatrixXd convolution(MatrixXd &mat, int kernel_shape) {
     int h_src = h_dst, w_src = w_dst;
     for (int i = 0; i < h_dst; ++i) {
         low_k = max(0, i - int((kernel_shape - 1.0) / 2.0));
-        high_k = min(h_src - i, i + int(kernel_shape / 2.0));
+        high_k = min(h_src - 1, i + int(kernel_shape / 2.0));
         for (int j = 0; j < w_dst; j++) {
             low_l = std::max(0, j - int((kernel_shape - 1.0) / 2.0));
             high_l = std::min(w_src - 1, j + int(kernel_shape / 2.0));
