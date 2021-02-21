@@ -260,7 +260,7 @@ print_time, double sigma, unsigned window_size
 //         << "Time 3:" << duration3.count() << endl
 //         << "Time 4:" << duration4.count() << endl
 //    cout << "total: " << tout << endl;
-    cout << distance_mat << endl;
+//    cout << distance_mat << endl;
     vector<double> tv = {(double) tout, (double) tout1, (double) tout2,(double)tout3,
                          (double)tout4};
     return tv;
